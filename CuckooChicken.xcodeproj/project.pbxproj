@@ -15,6 +15,7 @@
 		82B9E13F1D86CE4000A1CA30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E13D1D86CE4000A1CA30 /* Main.storyboard */; };
 		82B9E1411D86CE4000A1CA30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E1401D86CE4000A1CA30 /* Assets.xcassets */; };
 		82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */; };
+		82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1521D86CFCD00A1CA30 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		82B9E1401D86CE4000A1CA30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B9E1431D86CE4000A1CA30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82B9E1451D86CE4000A1CA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B9E1511D86CFCD00A1CA30 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		82B9E1521D86CFCD00A1CA30 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				82B9E1381D86CE4000A1CA30 /* GameScene.sks */,
 				82B9E13A1D86CE4000A1CA30 /* GameViewController.h */,
 				82B9E13B1D86CE4000A1CA30 /* GameViewController.m */,
+				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
+				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
 				82B9E1401D86CE4000A1CA30 /* Assets.xcassets */,
 				82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
 				82B9E1311D86CE4000A1CA30 /* main.m in Sources */,
+				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
