@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EQ6-y1-Iak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EQ6-y1-Iak">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="252"/>
+            <point key="canvasLocation" x="1098" y="290"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Dqh-NB-4LM">
@@ -34,12 +34,36 @@
                     <view key="view" contentMode="scaleToFill" id="6Ae-SC-jLg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-mN-9dL">
+                                <rect key="frame" x="277" y="133" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="setValueBtn:" destination="EQ6-y1-Iak" eventType="touchUpInside" id="uWk-Zv-kMe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-Iq-iKB">
+                                <rect key="frame" x="279" y="45" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I3G-Iq-iKB" firstAttribute="top" secondItem="ag5-PR-wDF" secondAttribute="bottom" constant="25" id="eij-Md-Lyb"/>
+                            <constraint firstItem="dfg-mN-9dL" firstAttribute="top" secondItem="I3G-Iq-iKB" secondAttribute="bottom" constant="67" id="elw-L5-t5U"/>
+                            <constraint firstItem="I3G-Iq-iKB" firstAttribute="centerX" secondItem="6Ae-SC-jLg" secondAttribute="centerX" id="mzR-ar-mAr"/>
+                            <constraint firstItem="dfg-mN-9dL" firstAttribute="centerX" secondItem="6Ae-SC-jLg" secondAttribute="centerX" id="xtz-k3-coS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="viewLabel" destination="I3G-Iq-iKB" id="cbc-e3-Jte"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkH-cJ-x7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="371"/>
+            <point key="canvasLocation" x="61" y="371"/>
         </scene>
     </scenes>
 </document>
