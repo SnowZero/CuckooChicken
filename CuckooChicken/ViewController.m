@@ -23,8 +23,23 @@
     // Do any additional setup after loading the view.
     [self setupRemoteConfig];
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"类别修改" message:@"11 " delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"修改",nil];
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert show];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex==0){
+        //點了取消
+    }else if(buttonIndex==1){
+        //點了確定，在Log顯示使用者輸入的字串
+        UITextField *textfield =  [alertView textFieldAtIndex: 0];
+        NSLog(@"user input:%@",[textfield text]);
+
+    }
+}
 
 //讀取Firebase資料
 -(void)setupRemoteConfig{
