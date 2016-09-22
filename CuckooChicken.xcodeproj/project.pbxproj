@@ -18,6 +18,8 @@
 		82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */; };
 		82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1521D86CFCD00A1CA30 /* ViewController.m */; };
 		82ECC8D51D86E58200995012 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82ECC8D41D86E58200995012 /* GoogleService-Info.plist */; };
+		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
+		E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E119727A1D91511200B0AB77 /* RegisteredViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		82B9E1521D86CFCD00A1CA30 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82ECC8D41D86E58200995012 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuckooChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11972731D914FAC00B0AB77 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		E11972741D914FAC00B0AB77 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		E11972791D91511200B0AB77 /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		E119727A1D91511200B0AB77 /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
 		E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +109,10 @@
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
+				E11972731D914FAC00B0AB77 /* SignInViewController.h */,
+				E11972741D914FAC00B0AB77 /* SignInViewController.m */,
+				E11972791D91511200B0AB77 /* RegisteredViewController.h */,
+				E119727A1D91511200B0AB77 /* RegisteredViewController.m */,
 				82B9E1401D86CE4000A1CA30 /* Assets.xcassets */,
 				82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */,
 				82B9E1451D86CE4000A1CA30 /* Info.plist */,
@@ -244,9 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
+				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
 				82B9E1311D86CE4000A1CA30 /* main.m in Sources */,
+				E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */,
 				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
