@@ -9,6 +9,8 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 
+@import Firebase;
+
 @implementation GameViewController
 
 - (void)viewDidLoad

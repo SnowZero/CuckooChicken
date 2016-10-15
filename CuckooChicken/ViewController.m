@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FireBaseManager.h"
 @import Firebase;
 
 @interface ViewController (){
@@ -55,7 +56,7 @@
   
         
     }];
-    
+
     
 }
 
@@ -69,7 +70,7 @@
     test  = [test childByAutoId];
     NSDictionary *data = @{@"name":@"AA",@"password":@"123"};
     [test setValue:data];
-    
+
     
 }
 

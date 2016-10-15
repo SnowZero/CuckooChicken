@@ -15,6 +15,8 @@
 		8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097991DB1ED9A00A624EA /* egg-2.png */; };
 		827097A01DB1ED9A00A624EA /* eagle_back1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8270979A1DB1ED9A00A624EA /* eagle_back1.png */; };
 		827097A11DB1ED9A00A624EA /* eagle_back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8270979B1DB1ED9A00A624EA /* eagle_back2.png */; };
+		827097A51DB200AA00A624EA /* FireBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097A41DB200AA00A624EA /* FireBaseManager.m */; };
+		827097A81DB2277600A624EA /* MatchPlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097A71DB2277600A624EA /* MatchPlayersViewController.m */; };
 		82B9E1311D86CE4000A1CA30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1301D86CE4000A1CA30 /* main.m */; };
 		82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1331D86CE4000A1CA30 /* AppDelegate.m */; };
 		82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1361D86CE4000A1CA30 /* GameScene.m */; };
@@ -39,6 +41,10 @@
 		827097991DB1ED9A00A624EA /* egg-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg-2.png"; sourceTree = "<group>"; };
 		8270979A1DB1ED9A00A624EA /* eagle_back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle_back1.png; sourceTree = "<group>"; };
 		8270979B1DB1ED9A00A624EA /* eagle_back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle_back2.png; sourceTree = "<group>"; };
+		827097A31DB200AA00A624EA /* FireBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireBaseManager.h; sourceTree = "<group>"; };
+		827097A41DB200AA00A624EA /* FireBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireBaseManager.m; sourceTree = "<group>"; };
+		827097A61DB2277600A624EA /* MatchPlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchPlayersViewController.h; sourceTree = "<group>"; };
+		827097A71DB2277600A624EA /* MatchPlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchPlayersViewController.m; sourceTree = "<group>"; };
 		82B9E12C1D86CE4000A1CA30 /* CuckooChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuckooChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B9E1301D86CE4000A1CA30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82B9E1321D86CE4000A1CA30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +150,10 @@
 				82B9E1381D86CE4000A1CA30 /* GameScene.sks */,
 				82B9E13A1D86CE4000A1CA30 /* GameViewController.h */,
 				82B9E13B1D86CE4000A1CA30 /* GameViewController.m */,
+				827097A61DB2277600A624EA /* MatchPlayersViewController.h */,
+				827097A71DB2277600A624EA /* MatchPlayersViewController.m */,
+				827097A31DB200AA00A624EA /* FireBaseManager.h */,
+				827097A41DB200AA00A624EA /* FireBaseManager.m */,
 				827097921DB1EB8800A624EA /* GameObject */,
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
@@ -302,10 +312,12 @@
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
+				827097A51DB200AA00A624EA /* FireBaseManager.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
 				82B9E1311D86CE4000A1CA30 /* main.m in Sources */,
 				E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */,
 				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
+				827097A81DB2277600A624EA /* MatchPlayersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

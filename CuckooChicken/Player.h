@@ -10,6 +10,8 @@
 
 @interface Player : SKSpriteNode
 
-+ (Player*)newPlayer:(float)mySize;
+- (Player*) newPlayer:(float)mySize;
+- (void) setAnimation:(NSString*)animationKey
+             myPlayer:(SKSpriteNode*)myPlayer;
 
 @end
