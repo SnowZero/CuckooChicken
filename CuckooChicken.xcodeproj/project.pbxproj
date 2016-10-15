@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1B8FBC1247055B6CF0A1E290 /* Pods_CuckooChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */; };
+		827097951DB1EBE300A624EA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097941DB1EBE300A624EA /* Player.m */; };
+		8270979C1DB1ED9A00A624EA /* eagle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097961DB1ED9A00A624EA /* eagle-1.png */; };
+		8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097971DB1ED9A00A624EA /* eagle-2.png */; };
+		8270979E1DB1ED9A00A624EA /* egg-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097981DB1ED9A00A624EA /* egg-1.png */; };
+		8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097991DB1ED9A00A624EA /* egg-2.png */; };
+		827097A01DB1ED9A00A624EA /* eagle_back1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8270979A1DB1ED9A00A624EA /* eagle_back1.png */; };
+		827097A11DB1ED9A00A624EA /* eagle_back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8270979B1DB1ED9A00A624EA /* eagle_back2.png */; };
 		82B9E1311D86CE4000A1CA30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1301D86CE4000A1CA30 /* main.m */; };
 		82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1331D86CE4000A1CA30 /* AppDelegate.m */; };
 		82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1361D86CE4000A1CA30 /* GameScene.m */; };
@@ -24,6 +31,14 @@
 
 /* Begin PBXFileReference section */
 		5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.debug.xcconfig"; sourceTree = "<group>"; };
+		827097931DB1EBE300A624EA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		827097941DB1EBE300A624EA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		827097961DB1ED9A00A624EA /* eagle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle-1.png"; sourceTree = "<group>"; };
+		827097971DB1ED9A00A624EA /* eagle-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle-2.png"; sourceTree = "<group>"; };
+		827097981DB1ED9A00A624EA /* egg-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg-1.png"; sourceTree = "<group>"; };
+		827097991DB1ED9A00A624EA /* egg-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg-2.png"; sourceTree = "<group>"; };
+		8270979A1DB1ED9A00A624EA /* eagle_back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle_back1.png; sourceTree = "<group>"; };
+		8270979B1DB1ED9A00A624EA /* eagle_back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle_back2.png; sourceTree = "<group>"; };
 		82B9E12C1D86CE4000A1CA30 /* CuckooChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuckooChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B9E1301D86CE4000A1CA30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82B9E1321D86CE4000A1CA30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +92,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		827097921DB1EB8800A624EA /* GameObject */ = {
+			isa = PBXGroup;
+			children = (
+				827097931DB1EBE300A624EA /* Player.h */,
+				827097941DB1EBE300A624EA /* Player.m */,
+				827097A21DB1EDA200A624EA /* image */,
+			);
+			name = GameObject;
+			sourceTree = "<group>";
+		};
+		827097A21DB1EDA200A624EA /* image */ = {
+			isa = PBXGroup;
+			children = (
+				827097961DB1ED9A00A624EA /* eagle-1.png */,
+				827097971DB1ED9A00A624EA /* eagle-2.png */,
+				827097981DB1ED9A00A624EA /* egg-1.png */,
+				827097991DB1ED9A00A624EA /* egg-2.png */,
+				8270979A1DB1ED9A00A624EA /* eagle_back1.png */,
+				8270979B1DB1ED9A00A624EA /* eagle_back2.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 		82B9E1231D86CE4000A1CA30 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +144,7 @@
 				82B9E1381D86CE4000A1CA30 /* GameScene.sks */,
 				82B9E13A1D86CE4000A1CA30 /* GameViewController.h */,
 				82B9E13B1D86CE4000A1CA30 /* GameViewController.m */,
+				827097921DB1EB8800A624EA /* GameObject */,
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
@@ -190,9 +229,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8270979C1DB1ED9A00A624EA /* eagle-1.png in Resources */,
 				82B9E1391D86CE4000A1CA30 /* GameScene.sks in Resources */,
 				82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */,
 				82ECC8D51D86E58200995012 /* GoogleService-Info.plist in Resources */,
+				8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */,
+				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
+				8270979E1DB1ED9A00A624EA /* egg-1.png in Resources */,
+				827097A11DB1ED9A00A624EA /* eagle_back2.png in Resources */,
+				827097A01DB1ED9A00A624EA /* eagle_back1.png in Resources */,
 				82B9E1411D86CE4000A1CA30 /* Assets.xcassets in Resources */,
 				82B9E13F1D86CE4000A1CA30 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827097951DB1EBE300A624EA /* Player.m in Sources */,
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
