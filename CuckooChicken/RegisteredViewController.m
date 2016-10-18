@@ -10,7 +10,6 @@
 #import "ViewController.h"
 #import "FireBaseDataController.h"
 
-
 @import Firebase;
 @interface RegisteredViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *registeredViewMail;
@@ -27,8 +26,6 @@
     // Do any additional setup after loading the view.
     
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -75,16 +72,8 @@
             [alertcontroller addAction:ok];
             //將警告視窗呈現在畫面上
             [self presentViewController:alertcontroller animated:YES completion:nil];
-            
         }
-        
-        
-        
     }
-
-    
-    
-   
 }
 /*
 #pragma mark - Navigation
