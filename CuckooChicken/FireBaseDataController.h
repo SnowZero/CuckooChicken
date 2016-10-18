@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@import Firebase;
 
 @interface FireBaseDataController : NSObject
+{
+    FIRDatabaseReference *ref;
+    
+}
+@property (nonatomic,strong) NSMutableArray * userDataMail ;
+@property (nonatomic,strong) NSMutableArray * userDataPassword ;
 
 @end

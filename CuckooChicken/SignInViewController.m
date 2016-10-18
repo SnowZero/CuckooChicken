@@ -7,8 +7,11 @@
 //
 
 #import "SignInViewController.h"
+@import Firebase;
 
 @interface SignInViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *gameForMail;
+@property (weak, nonatomic) IBOutlet UITextField *gamePassword;
 
 @end
 
@@ -18,22 +21,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-- (IBAction)gameIdNumber:(UITextField *)sender {
-}
-- (IBAction)gamePassword:(UITextField *)sender {
-}
+
 - (IBAction)gameSianIn:(UIButton *)sender {
 }
 - (IBAction)forgetPassword:(UIButton *)sender {
     //做出一個Alert對話框，先做出2個訊息框 2016-09-22
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"忘記密碼" message:@"請輸入帳號跟Mail" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"忘記密碼" message:@"請輸入Mail" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
-        textField.placeholder = @"帳號";
-    }];
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"Mail";
         textField.secureTextEntry = YES;
     }];
+    
     //做出"確定"跟"取消"的按鈕 2016-09-22
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:nil];
@@ -49,7 +47,8 @@
 }
 -(IBAction)backToMain:(UIStoryboardSegue*)sender {
     
-    NSLog(@"backToMain executed.");
+    NSLog(@"backToMain storyboard.");
+    
     
 }
 /*

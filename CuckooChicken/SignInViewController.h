@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SignInViewController : UIViewController
+@property (nonatomic,strong) NSString *shoouldDisplyText;
 
 @end

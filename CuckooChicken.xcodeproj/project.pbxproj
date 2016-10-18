@@ -20,6 +20,7 @@
 		82ECC8D51D86E58200995012 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82ECC8D41D86E58200995012 /* GoogleService-Info.plist */; };
 		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
 		E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E119727A1D91511200B0AB77 /* RegisteredViewController.m */; };
+		E11E93571DAE6FDB00669D81 /* FireBaseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		E11972741D914FAC00B0AB77 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		E11972791D91511200B0AB77 /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
 		E119727A1D91511200B0AB77 /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		E11E93551DAE6FDB00669D81 /* FireBaseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireBaseDataController.h; sourceTree = "<group>"; };
+		E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireBaseDataController.m; sourceTree = "<group>"; };
 		E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				82ECC8D41D86E58200995012 /* GoogleService-Info.plist */,
+				E11E93551DAE6FDB00669D81 /* FireBaseDataController.h */,
+				E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */,
 				82B9E1321D86CE4000A1CA30 /* AppDelegate.h */,
 				82B9E1331D86CE4000A1CA30 /* AppDelegate.m */,
 				82B9E1351D86CE4000A1CA30 /* GameScene.h */,
@@ -163,7 +168,6 @@
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = KVU42XKSXZ;
 					};
 				};
 			};
@@ -255,6 +259,7 @@
 			files = (
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
+				E11E93571DAE6FDB00669D81 /* FireBaseDataController.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
 				82B9E1311D86CE4000A1CA30 /* main.m in Sources */,
@@ -374,6 +379,7 @@
 			baseConfigurationReference = 5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snow.CuckooChicken;
@@ -386,6 +392,7 @@
 			baseConfigurationReference = E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snow.CuckooChicken;
