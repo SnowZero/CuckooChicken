@@ -9,14 +9,18 @@
 #import "FireBaseDataController.h"
 
 @import Firebase;
+
 @interface FireBaseDataController()
 
 @end
 
 @implementation FireBaseDataController
 
+
+
 -(instancetype)init{
     self = [super init] ;
+    ref = [FIRDatabaseReference new];
     _userDataMail = [NSMutableArray new] ;
     _userDataPassword =[NSMutableArray new];
     
@@ -25,24 +29,29 @@
 //讀取Firebase資料
 -(void)setupRemoteConfig{
     
-    __block NSDictionary * post;
+    
     NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
     ref = [[FIRDatabase database] referenceFromURL:strUrl];
     //只讀取一次  observeSingleEventOfType
     //數值改變讀取
+    __block NSDictionary *post;
     [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         post = snapshot.value;
-        
-       // _viewLabel.text = post[@"condition"];
-    }];
+        NSLog(@"%@",post[@"condition"]);
     
-    for(id key in post[@"mail"]) {
-        _userDataMail = [post [@"mail"] objectForKey:key];
+    for( NSString * key in post) {
+//        _userDataMail = [post [@"mail"] objectForKey:key];
+        NSDictionary * abc = post[key];
+        NSLog(@"%@qqqqq",abc[@"name"]);
+        NSLog(@"%@qqqqq",abc[@"password"]);
     }
-    for(id key in post[@"password"]) {
-        _userDataPassword = [post [@"password"] objectForKey:key];
-    }
+        }];
+//    for(id key in post[@"password"]) {
+//        _userDataPassword = [post [@"password"] objectForKey:key];
+
     
+//}
+
 }
 
 //// setFirebase

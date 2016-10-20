@@ -133,12 +133,14 @@
 		023088C61DB36BE30037180E /* GameBackground */ = {
 			isa = PBXGroup;
 			children = (
+				827097921DB1EB8800A624EA /* GameObject */,
 				023088EE1DB3707A0037180E /* Skill */,
 				023088C91DB36D060037180E /* CellBackgroundImage */,
 				023088C81DB36CBF0037180E /* headImage */,
 				023088C71DB36CAD0037180E /* BackgroundImage */,
 			);
 			name = GameBackground;
+			path = CuckooChicken;
 			sourceTree = "<group>";
 		};
 		023088C71DB36CAD0037180E /* BackgroundImage */ = {
@@ -235,6 +237,8 @@
 		82B9E1231D86CE4000A1CA30 = {
 			isa = PBXGroup;
 			children = (
+				82B9E12F1D86CE4000A1CA30 /* Supporting Files */,
+				023088C61DB36BE30037180E /* GameBackground */,
 				82B9E12E1D86CE4000A1CA30 /* CuckooChicken */,
 				82B9E12D1D86CE4000A1CA30 /* Products */,
 				31C6D386EDD182D38C4651AA /* Pods */,
@@ -267,8 +271,6 @@
 				827097A71DB2277600A624EA /* MatchPlayersViewController.m */,
 				827097A31DB200AA00A624EA /* FireBaseManager.h */,
 				827097A41DB200AA00A624EA /* FireBaseManager.m */,
-				827097921DB1EB8800A624EA /* GameObject */,
-				023088C61DB36BE30037180E /* GameBackground */,
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
@@ -279,7 +281,6 @@
 				82B9E1401D86CE4000A1CA30 /* Assets.xcassets */,
 				82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */,
 				82B9E1451D86CE4000A1CA30 /* Info.plist */,
-				82B9E12F1D86CE4000A1CA30 /* Supporting Files */,
 			);
 			path = CuckooChicken;
 			sourceTree = "<group>";
@@ -290,6 +291,7 @@
 				82B9E1301D86CE4000A1CA30 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = CuckooChicken;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

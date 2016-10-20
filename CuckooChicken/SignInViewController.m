@@ -7,9 +7,14 @@
 //
 
 #import "SignInViewController.h"
+#import "FireBaseManager.h"
+
 @import Firebase;
 
 @interface SignInViewController ()
+{
+//    FIRDatabaseReference *ref;
+}
 @property (weak, nonatomic) IBOutlet UITextField *gameForMail;
 @property (weak, nonatomic) IBOutlet UITextField *gamePassword;
 
@@ -19,11 +24,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    FireBaseManager * manager = [FireBaseManager newFBData];
+    NSDictionary * managerData = manager.userData;
+    NSLog(@"執行到就顯示");
 }
 
 - (IBAction)gameSianIn:(UIButton *)sender {
 }
+
 - (IBAction)forgetPassword:(UIButton *)sender {
     //做出一個Alert對話框，先做出2個訊息框 2016-09-22
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"忘記密碼" message:@"請輸入Mail" preferredStyle:UIAlertControllerStyleAlert];
@@ -45,6 +54,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(IBAction)backToMain:(UIStoryboardSegue*)sender {
     
     NSLog(@"backToMain storyboard.");

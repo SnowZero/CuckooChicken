@@ -10,5 +10,4 @@
 
 @interface SignInViewController : UIViewController
 @property (nonatomic,strong) NSString *shoouldDisplyText;
-
 @end

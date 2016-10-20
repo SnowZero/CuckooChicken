@@ -20,5 +20,13 @@ static FireBaseManager *firebase = nil;
     return firebase;
 }
 
+-(void) setData:(NSDictionary*) data
+{
+    firebase.userData = data;
+}
+
+-(NSDictionary *)getData {
+    return firebase.userData;
+}
 
 @end

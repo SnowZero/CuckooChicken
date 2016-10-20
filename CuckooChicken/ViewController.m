@@ -13,7 +13,9 @@
 
 @interface ViewController ()
 {
-    FIRDatabaseReference *ref;
+//    FIRDatabaseReference *ref;
+    NSTimer * test;
+    NSDictionary * post;
 }
 @property (weak, nonatomic) IBOutlet UILabel *viewLabel;
 @end
@@ -22,48 +24,76 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-        
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"类别修改" message:@"11 " delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"修改",nil];
-    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    [alert show];
+    
+    test = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(aaa) userInfo:nil repeats:true];
+    
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex==0){
-        //點了取消
-    }else if(buttonIndex==1){
-        //點了確定，在Log顯示使用者輸入的字串
-        UITextField *textfield =  [alertView textFieldAtIndex: 0];
-        NSLog(@"user input:%@",[textfield text]);
+- (void) aaa {
+    NSLog(@"hello");
+    if (post != nil) {
+        
+        FireBaseManager * testdata = [FireBaseManager newFBData];
+        [testdata setData:post];
+        
+        [test invalidate];
+        test = nil;
+        
+        ViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"Registerd"];
+        
+                    // 跳到下一頁
+                    [self presentViewController:svc animated:YES completion:nil];
+                    NSLog(@"跳到下一頁了");
+    
     }
 }
-//讀取Firebase資料
--(void)setupRemoteConfig{
 
+- (void) viewDidAppear:(BOOL)animated {
+    
+    
+    FIRDatabaseReference *ref;
     NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
+    
     ref = [[FIRDatabase database] referenceFromURL:strUrl];
-    //只讀取一次  observeSingleEventOfType
-    //數值改變讀取
+    
     [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        NSDictionary *post = snapshot.value;
-        _viewLabel.text = post[@"condition"];
+        
+        post = snapshot.value;
+        
+        NSLog(@"%@", post[@"user"][@"mail"]);
+        NSLog(@"%@", post[@"user"][@"password"]);
+        
     }];
+    
 }
 
-// setFirebase
-- (IBAction)setValueBtn:(id)sender {
-    
-    // [(路徑) child: @""] 去取得下一層欄位 如果沒有這個欄位則新增
-    
-    FIRDatabaseReference *test = [ref child:@"user"];
-    // childByAutoId 自動生成不重複的亂數ID 
-    test  = [test childByAutoId];
-    NSDictionary *data = @{@"name":@"AA",@"password":@"123"};
-    [test setValue:data];
-}
+
+
+//讀取Firebase資料
+//-(void)getupRemoteConfig{
+//    
+//    
+//    NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
+//    ref = [[FIRDatabase database] referenceFromURL:strUrl];
+//    //只讀取一次  observeSingleEventOfType
+//    //數值改變讀取
+//    [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+//        NSDictionary *post = snapshot.value;
+//        _viewLabel.text = post[@"condition"];
+//    }];
+//}
+//
+//// setFirebase
+//- (IBAction)setValueBtn:(id)sender {
+//    
+//    // [(路徑) child: @""] 去取得下一層欄位 如果沒有這個欄位則新增
+//    
+//    FIRDatabaseReference *test = [ref child:@"user"];
+//    // childByAutoId 自動生成不重複的亂數ID 
+//    test  = [test childByAutoId];
+//    NSDictionary *data = @{@"name":@"AA",@"password":@"123"};
+//    [test setValue:data];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

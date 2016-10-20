@@ -7,7 +7,6 @@
 //
 
 #import "SignInViewController.h"
-#import "FireBaseDataController.h"
 
 @interface RegisteredViewController : SignInViewController
 

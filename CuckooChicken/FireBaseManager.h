@@ -14,5 +14,7 @@
 
 +(instancetype) newFBData;
 
+-(void) setData:(NSDictionary*) data;
 
+-(NSDictionary*) getData;
 @end
