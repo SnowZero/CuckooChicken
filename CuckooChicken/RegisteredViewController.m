@@ -16,7 +16,6 @@
 {
     NSString *mail;
     NSString *password;
-    
     NSDictionary * managerData;
 }
 
@@ -76,23 +75,42 @@
 
 - (IBAction)registeredLogin:(UIButton *)sender {
     
-//      NSString * usermail = self.registeredViewMail.text;
-//      NSString * userpassword = self.registeredViewPassword.text;
+        NSString * usermail = self.registeredViewMail.text;
+        NSString * userpassword = self.registeredViewPassword.text;
 //    NSString * usercheckpassword = self.registeredViewCheckPassword.text;
-    NSString * userName = managerData[@"user"][@"mail"];
-    NSString * userPossword = managerData[@"user"][@"password"];
     
         for(NSDictionary * key in managerData[@"user"]) {
         
-//            NSDictionary * test = [managerData[@"user"] objectForKey:key];
+           NSDictionary * test = [managerData[@"user"] objectForKey:key];
             
-//            NSLog(@"%@", managerData[@"user"][@"mail"]);
-//            NSLog(@"%@", managerData[@"user"][@"password"]);
+            if ([test[@"mail"] isEqualToString:@"usermail"] && [test[@"password"] isEqualToString:@"userpassword"]){
             
-        if ([key[@"mail"] isEqualToString:@"01"]) {
+            NSLog(@"有重複");
+            NSLog(@"%@",test[@"user"][@"mail"]);
+            NSLog(@"%@",test[@"user"][@"password"]);
+                   
+//            NSLog(@"帳號密碼重複");
+            // 帳號密碼重複跳出警告視窗
+            UIAlertController * alertcontroller = [UIAlertController alertControllerWithTitle:@"帳號密碼重複" message:@"帳號密碼已有人使用" preferredStyle:UIAlertControllerStyleAlert];
+            //準備警告視窗上的按鈕
+            UIAlertAction * ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:nil];
+            //將按鈕加到警告視窗上面
+            [alertcontroller addAction:ok];
+            //將警告視窗呈現在畫面上
+            [self presentViewController:alertcontroller animated:YES completion:nil];
+                
+            } else {
+        
             
-            NSLog(@"%@",key[@"user"][@"mail"]);
-            NSLog(@"%@",key[@"user"][@"password"]);
+            // 準備跳到下一頁的物件
+            SignInViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+            
+            svc.shoouldDisplyText = usermail;
+            // 跳到下一頁
+            [self presentViewController:svc animated:YES completion:nil];
+            
+            NSLog(@"註冊成功，跳到下一頁了");
+
         }
     }
 }
@@ -104,30 +122,8 @@
 //        password = post.userDataPassword[i];
 //        NSString *checkPassword = fireBaseData.userDataPassword[i];
 //    }
-    
-//        if([usermail isEqualToString:(mail) ] && [userpassword isEqualToString:(password)]) {
-//            
-//            NSLog(@"註冊成功");
-//            // 準備跳到下一頁的物件
-//            SignInViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
-//            
-//            svc.shoouldDisplyText = usermail;
-//            // 跳到下一頁
-//            [self presentViewController:svc animated:YES completion:nil];
-//            NSLog(@"跳到下一頁了");
-//        }
-//        } else {
-//            NSLog(@"帳號密碼重複");
-//            // 帳號密碼重複跳出警告視窗
-//            UIAlertController * alertcontroller = [UIAlertController alertControllerWithTitle:@"帳號密碼重複" message:@"帳號密碼已有人使用" preferredStyle:UIAlertControllerStyleAlert];
-//            //準備警告視窗上的按鈕
-//            UIAlertAction * ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:nil];
-//            //將按鈕加到警告視窗上面
-//            [alertcontroller addAction:ok];
-//            //將警告視窗呈現在畫面上
-//            [self presentViewController:alertcontroller animated:YES completion:nil];
-//        }
-    
+
+
 
 /*
 #pragma mark - Navigation
