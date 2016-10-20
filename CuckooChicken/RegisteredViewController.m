@@ -78,16 +78,16 @@
         NSString * usermail = self.registeredViewMail.text;
         NSString * userpassword = self.registeredViewPassword.text;
 //    NSString * usercheckpassword = self.registeredViewCheckPassword.text;
-    
+        NSLog(@"usermail=%@",usermail);
         for(NSDictionary * key in managerData[@"user"]) {
         
            NSDictionary * test = [managerData[@"user"] objectForKey:key];
             
-            if ([test[@"mail"] isEqualToString:@"usermail"] && [test[@"password"] isEqualToString:@"userpassword"]){
+            if ([test[@"mail"] isEqualToString:usermail] && [test[@"password"] isEqualToString:userpassword]){
             
             NSLog(@"有重複");
-            NSLog(@"%@",test[@"user"][@"mail"]);
-            NSLog(@"%@",test[@"user"][@"password"]);
+            NSLog(@"%@",test[@"mail"]);
+            NSLog(@"%@",test[@"password"]);
                    
 //            NSLog(@"帳號密碼重複");
             // 帳號密碼重複跳出警告視窗
