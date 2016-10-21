@@ -120,6 +120,43 @@
     }
 }
 
+- (IBAction)signedUp:(id)sender {
+    NSString *email = _registeredViewMail.text;
+    NSString *password = _registeredViewPassword.text;
+    [[FIRAuth auth] createUserWithEmail:email password:password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        if (error){
+            NSLog(@"signedUp error = %@", error.localizedDescription);
+            return;
+        }
+        [self setDisplayName:user];
+    }];
+}
+
+- (void)setDisplayName:(FIRUser *)user {
+    FIRUserProfileChangeRequest *changeRequest = [user profileChangeRequest];
+    // Use first part of email as the default display name
+    changeRequest.displayName = [[user.email componentsSeparatedByString:@"@"] objectAtIndex:0];
+    [changeRequest commitChangesWithCompletion:^(NSError * _Nullable error) {
+        if (error){
+            NSLog(@"%@", error.localizedDescription);
+            return;
+        }
+        [self signedIn:[FIRAuth auth].currentUser];
+    }];
+    
+    NSLog(@" user == %@", changeRequest.displayName);
+}
+
+- (void)signedIn:(FIRUser *)user {
+    [MeasurementHelper sendLoginEvent];
+    
+    [AppState sharedInstance].displayName = user.displayName.length > 0 ? user.displayName :user.email;
+    [AppState sharedInstance].photoUrl = user.photoURL;
+    [AppState sharedInstance].signedIn = YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationKeysSignedIn
+                                                        object:nil userInfo:nil];
+    // 下面輸入轉場的code
+}
 //- (IBAction)test:(id)sender {
 //
 //    // Sign In with credentials

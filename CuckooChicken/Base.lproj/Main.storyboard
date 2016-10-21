@@ -246,6 +246,14 @@
                                     <action selector="cancelButton:" destination="zMc-rd-6rD" eventType="touchUpInside" id="aMF-Lq-R38"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCi-hT-kQv">
+                                <frame key="frameInset" minX="156" minY="605" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="測試按鈕"/>
+                                <connections>
+                                    <action selector="signedUp:" destination="zMc-rd-6rD" eventType="touchUpInside" id="uPx-mI-ZTY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
