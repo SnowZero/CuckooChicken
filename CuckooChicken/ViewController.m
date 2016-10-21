@@ -30,7 +30,7 @@
 }
 
 - (void) aaa {
-    NSLog(@"hello");
+
     if (post != nil) {
         
         FireBaseManager * testdata = [FireBaseManager newFBData];
@@ -39,11 +39,11 @@
         [test invalidate];
         test = nil;
         
-        ViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"Registerd"];
-        
-                    // 跳到下一頁
-                    [self presentViewController:svc animated:YES completion:nil];
-                    NSLog(@"跳到下一頁了");
+//        ViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInView"];
+//        
+//                    // 跳到下一頁
+//                    [self presentViewController:svc animated:YES completion:nil];
+//                    NSLog(@"跳到下一頁了");
     
     }
 }

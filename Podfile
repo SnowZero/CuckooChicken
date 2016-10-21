@@ -5,10 +5,14 @@ use_frameworks!
 target 'CuckooChicken' do
 
 
-pod 'Firebase', '>= 2.5.1'
+pod 'Firebase'
 pod 'Firebase/Core'
-pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Firebase/AdMob'
 pod 'Firebase/Auth'
+pod 'Firebase/Crash'
+pod 'Firebase/Database'
+pod 'Firebase/RemoteConfig'
 
 
 end

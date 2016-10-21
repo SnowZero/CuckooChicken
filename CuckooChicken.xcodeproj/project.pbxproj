@@ -53,6 +53,9 @@
 		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
 		E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E119727A1D91511200B0AB77 /* RegisteredViewController.m */; };
 		E11E93571DAE6FDB00669D81 /* FireBaseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */; };
+		E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2BE1DB8EFE90091ABEF /* AppState.m */; };
+		E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C11DB8F00F0091ABEF /* Constants.m */; };
+		E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +118,13 @@
 		E119727A1D91511200B0AB77 /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
 		E11E93551DAE6FDB00669D81 /* FireBaseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireBaseDataController.h; sourceTree = "<group>"; };
 		E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireBaseDataController.m; sourceTree = "<group>"; };
+		E16CE2BD1DB8EFE90091ABEF /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
+		E16CE2BE1DB8EFE90091ABEF /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
+		E16CE2C01DB8F00F0091ABEF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E16CE2C11DB8F00F0091ABEF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		E16CE2C31DB8F0B00091ABEF /* CuckooChicken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuckooChicken.entitlements; sourceTree = "<group>"; };
+		E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementHelper.h; sourceTree = "<group>"; };
+		E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementHelper.m; sourceTree = "<group>"; };
 		E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +267,7 @@
 		82B9E12E1D86CE4000A1CA30 /* CuckooChicken */ = {
 			isa = PBXGroup;
 			children = (
+				E16CE2C31DB8F0B00091ABEF /* CuckooChicken.entitlements */,
 				82ECC8D41D86E58200995012 /* GoogleService-Info.plist */,
 				E11E93551DAE6FDB00669D81 /* FireBaseDataController.h */,
 				E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */,
@@ -271,6 +282,12 @@
 				827097A71DB2277600A624EA /* MatchPlayersViewController.m */,
 				827097A31DB200AA00A624EA /* FireBaseManager.h */,
 				827097A41DB200AA00A624EA /* FireBaseManager.m */,
+				E16CE2BD1DB8EFE90091ABEF /* AppState.h */,
+				E16CE2BE1DB8EFE90091ABEF /* AppState.m */,
+				E16CE2C01DB8F00F0091ABEF /* Constants.h */,
+				E16CE2C11DB8F00F0091ABEF /* Constants.m */,
+				E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */,
+				E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */,
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
@@ -301,12 +318,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82B9E1481D86CE4000A1CA30 /* Build configuration list for PBXNativeTarget "CuckooChicken" */;
 			buildPhases = (
+				BAEC7AF91A232EC82FF91867 /* 📦 Check Pods Manifest.lock */,
 				9BB39BB8E35FD027585BEC00 /* [CP] Check Pods Manifest.lock */,
 				82B9E1281D86CE4000A1CA30 /* Sources */,
 				82B9E1291D86CE4000A1CA30 /* Frameworks */,
 				82B9E12A1D86CE4000A1CA30 /* Resources */,
 				EDFCB9EC949915143C006563 /* [CP] Embed Pods Frameworks */,
 				5C51A6B68E69C4E3478C7FE3 /* [CP] Copy Pods Resources */,
+				91CF7905E8BA4354A8BAE4C8 /* 📦 Embed Pods Frameworks */,
+				CAE53711594932DB4BE2B324 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -328,6 +348,12 @@
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H32W7C9N84;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -409,6 +435,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		91CF7905E8BA4354A8BAE4C8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9BB39BB8E35FD027585BEC00 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +463,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BAEC7AF91A232EC82FF91867 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE53711594932DB4BE2B324 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDFCB9EC949915143C006563 /* [CP] Embed Pods Frameworks */ = {
@@ -448,11 +519,14 @@
 			files = (
 				827097951DB1EBE300A624EA /* Player.m in Sources */,
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
+				E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
 				E11E93571DAE6FDB00669D81 /* FireBaseDataController.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				827097A51DB200AA00A624EA /* FireBaseManager.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
+				E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */,
+				E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */,
 				82B9E1311D86CE4000A1CA30 /* main.m in Sources */,
 				E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */,
 				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
@@ -571,7 +645,8 @@
 			baseConfigurationReference = 5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
+				DEVELOPMENT_TEAM = H32W7C9N84;
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snow.CuckooChicken;
@@ -584,7 +659,8 @@
 			baseConfigurationReference = E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
+				DEVELOPMENT_TEAM = H32W7C9N84;
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snow.CuckooChicken;

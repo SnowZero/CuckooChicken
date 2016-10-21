@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-oc-scs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="289"/>
+            <point key="canvasLocation" x="342" y="-407"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098" y="290"/>
+            <point key="canvasLocation" x="-238" y="311"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Dqh-NB-4LM">
@@ -69,6 +69,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-mN-9dL">
                                 <frame key="frameInset" minX="277" minY="133" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ZjE-BU-bgi" kind="show" id="bRR-rn-opz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-Iq-iKB">
                                 <frame key="frameInset" minX="279" minY="45" width="42" height="21"/>
@@ -88,12 +91,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkH-cJ-x7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="240"/>
+            <point key="canvasLocation" x="551" y="311"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="d0M-4f-m08">
             <objects>
-                <viewController storyboardIdentifier="Registerd" id="ZjE-BU-bgi" customClass="SignInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZjE-BU-bgi" customClass="SignInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TxC-HE-FQi"/>
                         <viewControllerLayoutGuide type="bottom" id="Wk2-c3-CIg"/>
@@ -167,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUp-l6-CY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1898" y="311"/>
+            <point key="canvasLocation" x="1398" y="311"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gYD-TM-Fmi">
@@ -232,7 +235,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="確定"/>
                                 <connections>
-                                    <action selector="registeredLogin:" destination="zMc-rd-6rD" eventType="touchUpInside" id="pPX-hB-YHO"/>
+                                    <action selector="registeredLogin:" destination="zMc-rd-6rD" eventType="touchUpInside" id="EPc-Iw-ySk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-G0-DVx">
@@ -253,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUf-AJ-vx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2663" y="311"/>
+            <point key="canvasLocation" x="2247" y="311"/>
         </scene>
     </scenes>
 </document>

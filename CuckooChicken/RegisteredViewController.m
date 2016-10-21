@@ -9,6 +9,9 @@
 #import "RegisteredViewController.h"
 #import "ViewController.h"
 #import "FireBaseManager.h"
+#import "AppState.h"
+#import "Constants.h"
+#import "MeasurementHelper.h"
 
 @import Firebase;
 
@@ -78,18 +81,18 @@
         NSString * usermail = self.registeredViewMail.text;
         NSString * userpassword = self.registeredViewPassword.text;
 //    NSString * usercheckpassword = self.registeredViewCheckPassword.text;
-        NSLog(@"usermail=%@",usermail);
+//        NSLog(@"usermail=%@",usermail);
+    
         for(NSDictionary * key in managerData[@"user"]) {
         
            NSDictionary * test = [managerData[@"user"] objectForKey:key];
             
-            if ([test[@"mail"] isEqualToString:usermail] && [test[@"password"] isEqualToString:userpassword]){
+            if ([test[@"mail"] isEqualToString:usermail] && [test[@"password"] isEqualToString:userpassword]) {
             
-            NSLog(@"有重複");
+            NSLog(@"帳號密碼重複");
             NSLog(@"%@",test[@"mail"]);
             NSLog(@"%@",test[@"password"]);
-                   
-//            NSLog(@"帳號密碼重複");
+    
             // 帳號密碼重複跳出警告視窗
             UIAlertController * alertcontroller = [UIAlertController alertControllerWithTitle:@"帳號密碼重複" message:@"帳號密碼已有人使用" preferredStyle:UIAlertControllerStyleAlert];
             //準備警告視窗上的按鈕
@@ -98,22 +101,55 @@
             [alertcontroller addAction:ok];
             //將警告視窗呈現在畫面上
             [self presentViewController:alertcontroller animated:YES completion:nil];
+               
+              
                 
             } else {
         
             
             // 準備跳到下一頁的物件
-            SignInViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+            SignInViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInView"];
             
             svc.shoouldDisplyText = usermail;
             // 跳到下一頁
             [self presentViewController:svc animated:YES completion:nil];
             
             NSLog(@"註冊成功，跳到下一頁了");
-
+              
         }
     }
 }
+
+//- (IBAction)test:(id)sender {
+//
+//    // Sign In with credentials
+//    NSString *email = _registeredViewMail.text;
+//    NSString *password = _registeredViewPassword.text;
+//    [[FIRAuth auth] signInWithEmail:email
+//                           password:password
+//                         completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+//                             if (error){
+//                                 NSLog(@"signIn error = %@", error.localizedDescription);
+//                                 
+//                                 NSLog(@"Lynn signIn error = %@", error.userInfo);
+//                                 return ;
+//                             }
+//                             [self signedIn:user];
+//                         }];
+//}
+//
+//- (void)signedIn:(FIRUser *)user {
+//    [MeasurementHelper sendLoginEvent];
+//    
+//    [AppState sharedInstance].displayName = user.displayName.length > 0 ? user.displayName :user.email;
+//    [AppState sharedInstance].photoUrl = user.photoURL;
+//    [AppState sharedInstance].signedIn = YES;
+//    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationKeysSignedIn
+//                                                        object:nil userInfo:nil];
+//    [self performSegueWithIdentifier:SeguesSignInToAv sender:nil];
+//}
+
+
 //    if (fireBaseData != nil) {
     
 //    for (int i =0 ; i<=post.userDataMail.count ; i++) {
