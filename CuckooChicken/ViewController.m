@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self starGetFirebase];
     
     test = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(aaa) userInfo:nil repeats:true];
     
@@ -39,18 +40,18 @@
         [test invalidate];
         test = nil;
         
-//        ViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInView"];
-//        
-//                    // 跳到下一頁
-//                    [self presentViewController:svc animated:YES completion:nil];
-//                    NSLog(@"跳到下一頁了");
+        ViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInView"];
+        
+                    // 跳到下一頁
+                    [self presentViewController:svc animated:YES completion:nil];
+                    NSLog(@"跳到下一頁了");
     
     }
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    
-    
+
+- (void)starGetFirebase{
+
     FIRDatabaseReference *ref;
     NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
     
@@ -66,7 +67,6 @@
     }];
     
 }
-
 
 
 //讀取Firebase資料
