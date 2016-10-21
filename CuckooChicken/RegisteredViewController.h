@@ -8,6 +8,6 @@
 
 #import "SignInViewController.h"
 
-@interface RegisteredViewController : SignInViewController
+@interface RegisteredViewController : UIViewController
 
 @end

@@ -33,7 +33,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    FireBaseManager * manager = [FireBaseManager newFBData];
+    managerData = manager.userData;
     
 }
 - (void)didReceiveMemoryWarning {
@@ -41,35 +42,6 @@
 
 }
 
-
-- (void) viewDidAppear:(BOOL)animated {
-
-    
-//        FIRDatabaseReference *ref;
-//        NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
-//    
-//        ref = [[FIRDatabase database] referenceFromURL:strUrl];
-//    
-//        [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-//            
-//            post = snapshot.value;
-//    }];
-
-            FireBaseManager * manager = [FireBaseManager newFBData];
-            managerData = manager.userData;
-    
-//            NSLog(@"%@", managerData[@"user"][@"mail"]);
-//            NSLog(@"%@", managerData[@"user"][@"password"]);
-    
-//            NSString * userName = managerData[@"user"][@"mail"];
-//            NSString * userPossword = managerData[@"user"][@"password"];
-    
-//            NSLog(@"%@", managerData[@"user"][@"mail"]);
-//            NSLog(@"%@", managerData[@"user"][@"password"]);
-
-    
-
-}
 
 - (IBAction)cancelButton:(UIButton *)sender {
     //從註冊畫面跳回到登入畫面 2016-09-22
@@ -86,8 +58,10 @@
         for(NSDictionary * key in managerData[@"user"]) {
         
            NSDictionary * test = [managerData[@"user"] objectForKey:key];
+            NSString *mail = [NSString stringWithFormat:@"%@",test[@"mail"]];
+            NSString *password = [NSString stringWithFormat:@"%@",test[@"password"]];
             
-            if ([test[@"mail"] isEqualToString:usermail] && [test[@"password"] isEqualToString:userpassword]) {
+            if ([mail isEqualToString:usermail] && [password isEqualToString:userpassword]) {
             
             NSLog(@"帳號密碼重複");
             NSLog(@"%@",test[@"mail"]);
@@ -102,7 +76,6 @@
             //將警告視窗呈現在畫面上
             [self presentViewController:alertcontroller animated:YES completion:nil];
                
-              
                 
             } else {
         
