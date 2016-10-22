@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EQ6-y1-Iak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cz9-lk-kJN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -9,7 +9,7 @@
         <!--Match Players View Controller-->
         <scene sceneID="knY-Bf-X5i">
             <objects>
-                <viewController id="cz9-lk-kJN" customClass="MatchPlayersViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchVC" id="cz9-lk-kJN" customClass="MatchPlayersViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AnR-sM-2DH"/>
                         <viewControllerLayoutGuide type="bottom" id="yuW-Ei-2Xd"/>
@@ -34,12 +34,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-oc-scs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="342" y="-407"/>
+            <point key="canvasLocation" x="398" y="-448"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameVC" id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-238" y="311"/>
+            <point key="canvasLocation" x="-580" y="-159"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Dqh-NB-4LM">

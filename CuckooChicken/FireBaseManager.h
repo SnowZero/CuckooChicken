@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define PLAYER_TYPE_ATTACK @"PlayerAttack"
+#define PLAYER_TYPE_DEFENSE @"PlayerDefense"
 @interface FireBaseManager : NSObject
 
 @property(strong,nonatomic) __block NSDictionary *userData;
+@property(strong,nonatomic) NSString *playerType;
+@property(strong,nonatomic) NSString *gameRoomKey;
 
 +(instancetype) newFBData;
 

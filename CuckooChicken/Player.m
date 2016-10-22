@@ -33,14 +33,24 @@
 }
 
 - (void)setAnimation:(NSString *)animationKey myPlayer:(SKSpriteNode *)myPlayer{
+    FireBaseManager *userData = [FireBaseManager newFBData];
+    
     SKTexture *runTexture1;
     SKTexture *runTexture2;
-    if ([animationKey isEqualToString:@"eagle_back"]) {
-        runTexture1 = [SKTexture textureWithImageNamed:@"eagle_back1.png"];
-        runTexture2 = [SKTexture textureWithImageNamed:@"eagle_back2.png"];
-    }else if([animationKey isEqualToString:@"egg"]){
+    if ([animationKey isEqualToString:EAGLE_Animation]) {
+        if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
+            runTexture1 = [SKTexture textureWithImageNamed:@"eagle_back1.png"];
+            runTexture2 = [SKTexture textureWithImageNamed:@"eagle_back2.png"];
+        }else{
+            runTexture1 = [SKTexture textureWithImageNamed:@"eagle-1.png"];
+            runTexture2 = [SKTexture textureWithImageNamed:@"eagle-2.png"];
+        }
+
+
+    }else if([animationKey isEqualToString:EGG_Animation]){
         runTexture1 = [SKTexture textureWithImageNamed:@"egg-1.png"];
         runTexture2 = [SKTexture textureWithImageNamed:@"egg-2.png"];
+        
     }
     
     NSArray *TextureArray = @[runTexture1 ,runTexture2];
