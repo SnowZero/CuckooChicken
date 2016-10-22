@@ -25,9 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    FireBaseManager * manager = [FireBaseManager newFBData];
-//    NSDictionary * managerData = manager.userData;
-//    NSLog(@"執行到就顯示");
 }
 
 - (IBAction)gameSianIn:(UIButton *)sender {

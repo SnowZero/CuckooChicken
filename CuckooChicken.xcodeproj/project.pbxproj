@@ -53,7 +53,6 @@
 		82ECC8D51D86E58200995012 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82ECC8D41D86E58200995012 /* GoogleService-Info.plist */; };
 		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
 		E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E119727A1D91511200B0AB77 /* RegisteredViewController.m */; };
-		E11E93571DAE6FDB00669D81 /* FireBaseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */; };
 		E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2BE1DB8EFE90091ABEF /* AppState.m */; };
 		E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C11DB8F00F0091ABEF /* Constants.m */; };
 		E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */; };
@@ -118,15 +117,13 @@
 		E11972741D914FAC00B0AB77 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		E11972791D91511200B0AB77 /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
 		E119727A1D91511200B0AB77 /* RegisteredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
-		E11E93551DAE6FDB00669D81 /* FireBaseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireBaseDataController.h; sourceTree = "<group>"; };
-		E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireBaseDataController.m; sourceTree = "<group>"; };
-		E16CE2BD1DB8EFE90091ABEF /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppState.h; sourceTree = "<group>"; };
-		E16CE2BE1DB8EFE90091ABEF /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppState.m; sourceTree = "<group>"; };
-		E16CE2C01DB8F00F0091ABEF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		E16CE2C11DB8F00F0091ABEF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		E16CE2BD1DB8EFE90091ABEF /* AppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppState.h; path = CuckooChicken/AppState.h; sourceTree = "<group>"; };
+		E16CE2BE1DB8EFE90091ABEF /* AppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppState.m; path = CuckooChicken/AppState.m; sourceTree = "<group>"; };
+		E16CE2C01DB8F00F0091ABEF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = CuckooChicken/Constants.h; sourceTree = "<group>"; };
+		E16CE2C11DB8F00F0091ABEF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = CuckooChicken/Constants.m; sourceTree = "<group>"; };
 		E16CE2C31DB8F0B00091ABEF /* CuckooChicken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuckooChicken.entitlements; sourceTree = "<group>"; };
-		E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasurementHelper.h; sourceTree = "<group>"; };
-		E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasurementHelper.m; sourceTree = "<group>"; };
+		E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasurementHelper.h; path = CuckooChicken/MeasurementHelper.h; sourceTree = "<group>"; };
+		E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasurementHelper.m; path = CuckooChicken/MeasurementHelper.m; sourceTree = "<group>"; };
 		E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,8 +247,8 @@
 		82B9E1231D86CE4000A1CA30 = {
 			isa = PBXGroup;
 			children = (
-				82B9E12F1D86CE4000A1CA30 /* Supporting Files */,
-				023088C61DB36BE30037180E /* GameBackground */,
+				E119F18A1DBBC34C00EA023A /* Model */,
+				E119F18B1DBBC3FC00EA023A /* View */,
 				82B9E12E1D86CE4000A1CA30 /* CuckooChicken */,
 				82B9E12D1D86CE4000A1CA30 /* Products */,
 				31C6D386EDD182D38C4651AA /* Pods */,
@@ -272,8 +269,6 @@
 			children = (
 				E16CE2C31DB8F0B00091ABEF /* CuckooChicken.entitlements */,
 				82ECC8D41D86E58200995012 /* GoogleService-Info.plist */,
-				E11E93551DAE6FDB00669D81 /* FireBaseDataController.h */,
-				E11E93561DAE6FDB00669D81 /* FireBaseDataController.m */,
 				82B9E1321D86CE4000A1CA30 /* AppDelegate.h */,
 				82B9E1331D86CE4000A1CA30 /* AppDelegate.m */,
 				82B9E1351D86CE4000A1CA30 /* GameScene.h */,
@@ -285,12 +280,6 @@
 				827097A71DB2277600A624EA /* MatchPlayersViewController.m */,
 				827097A31DB200AA00A624EA /* FireBaseManager.h */,
 				827097A41DB200AA00A624EA /* FireBaseManager.m */,
-				E16CE2BD1DB8EFE90091ABEF /* AppState.h */,
-				E16CE2BE1DB8EFE90091ABEF /* AppState.m */,
-				E16CE2C01DB8F00F0091ABEF /* Constants.h */,
-				E16CE2C11DB8F00F0091ABEF /* Constants.m */,
-				E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */,
-				E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */,
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
@@ -312,6 +301,28 @@
 			);
 			name = "Supporting Files";
 			path = CuckooChicken;
+			sourceTree = "<group>";
+		};
+		E119F18A1DBBC34C00EA023A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E16CE2BD1DB8EFE90091ABEF /* AppState.h */,
+				E16CE2BE1DB8EFE90091ABEF /* AppState.m */,
+				E16CE2C01DB8F00F0091ABEF /* Constants.h */,
+				E16CE2C11DB8F00F0091ABEF /* Constants.m */,
+				E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */,
+				E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E119F18B1DBBC3FC00EA023A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82B9E12F1D86CE4000A1CA30 /* Supporting Files */,
+				023088C61DB36BE30037180E /* GameBackground */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,7 +536,6 @@
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
 				E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
-				E11E93571DAE6FDB00669D81 /* FireBaseDataController.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				827097A51DB200AA00A624EA /* FireBaseManager.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
