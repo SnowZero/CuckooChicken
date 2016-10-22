@@ -348,7 +348,7 @@
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = H32W7C9N84;
+						DevelopmentTeam = KVU42XKSXZ;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -646,7 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
-				DEVELOPMENT_TEAM = H32W7C9N84;
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snow.CuckooChicken;
@@ -660,7 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
-				DEVELOPMENT_TEAM = H32W7C9N84;
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snow.CuckooChicken;

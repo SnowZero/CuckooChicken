@@ -7,6 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "FireBaseManager.h"
+
+#define EAGLE_Animation @"eagle"
+#define EGG_Animation @"egg"
 
 @interface Player : SKSpriteNode
 
