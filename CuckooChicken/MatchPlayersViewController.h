@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SignInViewController.h"
 
 @interface MatchPlayersViewController : UIViewController
+@property (nonatomic,strong) NSString * goToMVC;
 
 @end

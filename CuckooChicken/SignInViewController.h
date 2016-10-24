@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MatchPlayersViewController.h"
 
 @interface SignInViewController : UIViewController
-@property (nonatomic,strong) NSString *shoouldDisplyText;
+
+@property (nonatomic,strong) NSString * goToSVC;
+
 @end

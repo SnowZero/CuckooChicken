@@ -6,6 +6,7 @@
 //
 //
 
+#import <UIKit/UIKit.h>
 #import "SignInViewController.h"
 
 @interface RegisteredViewController : UIViewController

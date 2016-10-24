@@ -71,7 +71,7 @@
         
         // 準備跳到下一頁的物件
         SignInViewController * svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInView"];
-        svc.shoouldDisplyText = usermail;
+        svc.goToSVC = usermail;
         // 跳到下一頁
         [self presentViewController:svc animated:YES completion:nil];
         

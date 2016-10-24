@@ -69,7 +69,13 @@
             
             NSLog(@"signIn error = %@", error.localizedDescription);
         }
+        
         // 輸入成功就進入遊戲
+        // 準備跳到下一頁的物件
+        MatchPlayersViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+        mvc.goToMVC = sianInMail;
+        // 跳到下一頁
+        [self presentViewController:mvc animated:YES completion:nil];
         NSLog(@"成功進入遊戲");
         
         }];
