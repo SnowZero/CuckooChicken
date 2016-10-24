@@ -20,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *registeredViewMail;
 @property (weak, nonatomic) IBOutlet UITextField *registeredViewPassword;
+@property (weak, nonatomic) IBOutlet UIImageView *showBackImage;
 
 
 @end
@@ -29,7 +30,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self showBackGroundImage];
     
+}
+
+- (void) showBackGroundImage {
+    UIImage *image = [UIImage imageNamed:@"GG.png"];
+    _showBackImage.image = image;
+
 }
 
 - (void)didReceiveMemoryWarning {

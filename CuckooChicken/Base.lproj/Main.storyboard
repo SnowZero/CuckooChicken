@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EQ6-y1-Iak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZjE-BU-bgi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-oc-scs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="-448"/>
+            <point key="canvasLocation" x="1398" y="-439"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-580" y="-159"/>
+            <point key="canvasLocation" x="585" y="-439"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="Dqh-NB-4LM">
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkH-cJ-x7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549.60000000000002" y="310.79460269865069"/>
+            <point key="canvasLocation" x="-343" y="689"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="d0M-4f-m08">
@@ -113,13 +113,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="主題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqX-4d-PZ1">
-                                <frame key="frameInset" minX="166" minY="28" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CbS-sw-nM6"/>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOU-oJ-5hk">
                                 <frame key="frameInset" minX="139" minY="160" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -170,15 +164,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CbS-sw-nM6" secondAttribute="trailing" id="7Im-Y6-Hx4"/>
+                            <constraint firstItem="Wk2-c3-CIg" firstAttribute="top" secondItem="CbS-sw-nM6" secondAttribute="bottom" id="JDS-cs-Abg"/>
+                            <constraint firstItem="CbS-sw-nM6" firstAttribute="top" secondItem="ytv-1J-lMN" secondAttribute="top" id="QeT-Ll-ZCf"/>
+                            <constraint firstItem="CbS-sw-nM6" firstAttribute="leading" secondItem="ytv-1J-lMN" secondAttribute="leading" id="vKP-6k-NbQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="gameForMail" destination="VOU-oJ-5hk" id="DvI-zY-gdJ"/>
                         <outlet property="gamePassword" destination="R3q-M6-VNL" id="qkG-cu-7NP"/>
+                        <outlet property="showViewBackGroundImage" destination="CbS-sw-nM6" id="fjI-Eb-NU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUp-l6-CY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1398" y="311"/>
+            <point key="canvasLocation" x="1397.5999999999999" y="310.79460269865069"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gYD-TM-Fmi">
@@ -210,6 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-yW-MXU"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="註冊帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-fD-O85">
                                 <frame key="frameInset" minX="152" minY="28" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -249,15 +251,22 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OLP-yW-MXU" secondAttribute="trailing" id="Dnb-kr-ada"/>
+                            <constraint firstItem="OLP-yW-MXU" firstAttribute="leading" secondItem="UG7-T7-wXI" secondAttribute="leading" id="FyZ-Fk-CsG"/>
+                            <constraint firstItem="OLP-yW-MXU" firstAttribute="top" secondItem="UG7-T7-wXI" secondAttribute="top" id="rva-lV-3WR"/>
+                            <constraint firstItem="99z-8M-SPh" firstAttribute="top" secondItem="OLP-yW-MXU" secondAttribute="bottom" id="v4m-Oc-a2G"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="registeredViewMail" destination="nAW-e5-49C" id="yIG-lz-BPM"/>
                         <outlet property="registeredViewPassword" destination="7cE-vk-gk9" id="hiS-iD-yku"/>
+                        <outlet property="showBackImage" destination="OLP-yW-MXU" id="Yca-cW-yHO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUf-AJ-vx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2247" y="311"/>
+            <point key="canvasLocation" x="2245.5999999999999" y="310.79460269865069"/>
         </scene>
     </scenes>
 </document>
