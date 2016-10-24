@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-oc-scs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="-448"/>
+            <point key="canvasLocation" x="1398" y="-438"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -52,9 +52,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-580" y="-159"/>
+            <point key="canvasLocation" x="588" y="-438"/>
         </scene>
-        <!--Delegate-->
+        <!--View Controller-->
         <scene sceneID="Dqh-NB-4LM">
             <objects>
                 <viewController id="EQ6-y1-Iak" customClass="ViewController" sceneMemberID="viewController">
@@ -79,14 +79,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeu-EQ-EBM" customClass="FBSDKLoginButton">
-                                <frame key="frameInset" minX="189" minY="259" width="132" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <outlet property="delegate" destination="EQ6-y1-Iak" id="zlT-Ac-opk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -101,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="549.60000000000002" y="310.79460269865069"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Delegate-->
         <scene sceneID="d0M-4f-m08">
             <objects>
                 <viewController storyboardIdentifier="SignInView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZjE-BU-bgi" customClass="SignInViewController" sceneMemberID="viewController">
@@ -143,14 +135,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-ef-XdE" customClass="FBSDKLoginButton">
-                                <frame key="frameInset" minX="163" minY="492" width="49" height="30"/>
+                                <frame key="frameInset" minX="96" minY="482" width="183" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FB登入"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l75-7K-AqC">
-                                <frame key="frameInset" minX="156" minY="550" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="快速登入"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZjE-BU-bgi" id="kGg-Fv-cVn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-TD-fdW">
                                 <frame key="frameInset" minX="174" minY="294" width="62" height="30"/>
@@ -178,25 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUp-l6-CY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1398" y="311"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="gYD-TM-Fmi">
-            <objects>
-                <viewController id="QrV-jZ-8D5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JN7-W7-PGz"/>
-                        <viewControllerLayoutGuide type="bottom" id="v51-yg-Uh2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="njN-TO-VfF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9pV-Q8-BP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1670" y="1137"/>
+            <point key="canvasLocation" x="1397.5999999999999" y="310.79460269865069"/>
         </scene>
         <!--Registered View Controller-->
         <scene sceneID="7YW-Im-234">

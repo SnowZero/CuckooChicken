@@ -8,13 +8,11 @@
 
 #import "ViewController.h"
 #import "FireBaseManager.h"
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @import Firebase;
 
 
-@interface ViewController () <FBSDKLoginButtonDelegate>
+@interface ViewController ()
 {
 //    FIRDatabaseReference *ref;
     NSTimer * test;
@@ -32,52 +30,8 @@
     
 //    test = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(aaa) userInfo:nil repeats:true];
     
-    // 在ViewController創造一個Facebook的登入按鈕(Facebook版)
-//    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-//    loginButton.center = self.view.center;
-//    [self.view addSubview:loginButton];
-    
-    // Facebook官方登入方法
-//    NSArray *permissions = [[NSArray alloc] initWithObjects:
-//                            @"email",
-//                            nil];
-//    
-//    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-//    [login logOut];
-//    
-//    [login
-//     logInWithReadPermissions: permissions
-//     fromViewController:self
-//     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-//         
-//         if (error) {
-//             NSLog(@"Process error");
-//         } else if (result.isCancelled) {
-//             NSLog(@"Cancelled");
-//         } else {
-//             NSLog(@"Logged in %@", result.token.userID);
-//         }
-//         
-//     }];
-
-//    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-//    loginButton.readPermissions =
-//    @[@"public_profile", @"email", @"user_friends"];
-//    loginButton.center = self.view.center;
-//    loginButton.delegate = self;
-//    [self.view addSubview:loginButton];
-    
 }
 
-- (IBAction)fbTest:(UIButton *)sender {
-    
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.readPermissions =
-    @[@"public_profile", @"email", @"user_friends"];
-    loginButton.delegate = self;
- 
-    
-}
 
 - (void) aaa {
 
@@ -142,40 +96,5 @@
 //    NSDictionary *data = @{@"name":@"AA",@"password":@"123"};
 //    [test setValue:data];
 //}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)loginButton:(FBSDKLoginButton *)testLoginButton
-didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
-              error:(NSError *)error {
-    
-    if (error == nil) {
-    NSLog(@"登入成功");
-        FIRAuthCredential *credential = [FIRFacebookAuthProvider
-                                         credentialWithAccessToken:[FBSDKAccessToken currentAccessToken]
-                                         .tokenString];
-        [[FIRAuth auth] signInWithCredential:credential
-                                  completion:^(FIRUser *user, NSError *error) {
-                                      
-                                      NSLog(@"登入firebase成功");
-                                      return;
-                                  }];
-    } else {
-        NSLog(@"%@", error.localizedDescription);
-    }
-}
-// Facebook登出時做的方法
-- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
-
-    NSLog(@"登出成功");
-}
-// 登入時回傳用的方法
-- (BOOL)loginButtonWillLogin:(FBSDKLoginButton *)loginButton {
-
-    return true;
-}
 
 @end

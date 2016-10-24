@@ -8,10 +8,12 @@
 
 #import "SignInViewController.h"
 #import "FireBaseManager.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @import Firebase;
 
-@interface SignInViewController ()
+@interface SignInViewController () <FBSDKLoginButtonDelegate>
 {
 //    FIRDatabaseReference *ref;
 }
@@ -139,11 +141,71 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)faceBookLogin:(UIButton *)sender {
+
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.readPermissions =
+    @[@"public_profile", @"email", @"user_friends"];
+    loginButton.delegate = self;
+    
+}
+
+
 -(IBAction)backToMain:(UIStoryboardSegue*)sender {
     
     NSLog(@"backToMain storyboard.");
     
 }
+
+- (void)loginButton:(FBSDKLoginButton *)testLoginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+              error:(NSError *)error {
+    
+    if (error == nil) {
+        NSLog(@"登入成功");
+        FIRAuthCredential *credential = [FIRFacebookAuthProvider
+                                         credentialWithAccessToken:[FBSDKAccessToken currentAccessToken]
+                                         .tokenString];
+        
+        
+        [[FIRAuth auth] signInWithCredential:credential
+                                  completion:^(FIRUser *user, NSError *error) {
+                                      
+                                      if (error) {
+                                          NSLog(@"TTTT");
+                                          NSLog(@"%@",error);
+                                      }else{
+                                          
+                                          // 準備跳到下一頁的物件
+                                          MatchPlayersViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+                                          // 跳到下一頁
+                                          [self presentViewController:mvc animated:YES completion:nil];
+                                          NSLog(@"登入firebase成功");
+                                          NSLog(@"CCC%@",user.uid);
+                                      }
+                                      
+                                  }];
+    } else {
+        NSLog(@"%@", error.localizedDescription);
+    }
+}
+// Facebook登出時做的方法
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    
+    //    NSError *error;
+    //    [[FIRAuth auth]signOut:&error];
+    //    if (!error) {
+    //        NSLog(@"登出成功");
+    //    }
+    
+    NSLog(@"登出成功");
+}
+// 登入時回傳用的方法
+- (BOOL)loginButtonWillLogin:(FBSDKLoginButton *)loginButton {
+    
+    return true;
+}
+
 
 /*
 #pragma mark - Navigation
