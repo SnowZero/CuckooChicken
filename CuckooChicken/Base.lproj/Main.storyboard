@@ -54,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="-580" y="-159"/>
         </scene>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="Dqh-NB-4LM">
             <objects>
                 <viewController id="EQ6-y1-Iak" customClass="ViewController" sceneMemberID="viewController">
@@ -84,7 +84,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="fbTest:" destination="EQ6-y1-Iak" eventType="touchUpInside" id="P3q-3X-rn1"/>
+                                    <outlet property="delegate" destination="EQ6-y1-Iak" id="zlT-Ac-opk"/>
                                 </connections>
                             </button>
                         </subviews>

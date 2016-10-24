@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
+
 @import Firebase;
 
 @interface AppDelegate ()
@@ -24,6 +25,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // FireBase
     [FIRApp configure];
     // FaceBook
+    
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
     return YES;
@@ -57,7 +59,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-// FaceBook
+// FireBase
 -(void)applicationDidFinishLaunching:(UIApplication *)application{
     [FIRApp configure];
 }
