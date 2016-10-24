@@ -186,7 +186,7 @@
     [loadingWordsView startAnimating];
     [_loadingView startAnimating];
     
-    [self performSelector:@selector(stopAnimating:) withObject:_loadingView afterDelay:5.0];
+    [self performSelector:@selector(stopAnimating:) withObject:_loadingView afterDelay:8.0];
 }
 
 //Loading 畫面

@@ -17,6 +17,7 @@
     FireBaseManager *userType;
     NSString *roomKey;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *showBackGroundImage;
 @property (nonatomic, strong) UIImageView *loadingViewForChange; //載入動畫 5秒
 @end
 
@@ -25,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self changeBackGroundView];
+    [self changeBackGroundView]; //顯示動畫
+    [self showBackGroundImages]; //顯示背景
     
     userType = [FireBaseManager newFBData];
     [[FIRAuth auth] signInWithEmail:@"snow@gmail.com"
@@ -41,6 +43,11 @@
     
     [self startGetFirebase];
 
+}
+
+- (void) showBackGroundImages {
+    UIImage *image = [UIImage imageNamed:@"backimage.png"];
+    _showBackGroundImage.image = image;
 }
 
 // Start connect Firebase
@@ -76,6 +83,7 @@
     //把Alert對話框顯示出來
     [self presentViewController:alertController animated:YES completion:nil];
 
+    
 
 
 

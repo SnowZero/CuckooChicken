@@ -31,8 +31,17 @@
 		0203B1A21DBE1F8C009DEE71 /* Loading_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1961DBE1F8C009DEE71 /* Loading_10.png */; };
 		0203B1A31DBE1F8C009DEE71 /* Loading_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1971DBE1F8C009DEE71 /* Loading_11.png */; };
 		0203B1A41DBE1F8C009DEE71 /* turnBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1981DBE1F8C009DEE71 /* turnBackground_1.png */; };
-		0203B1A81DBE21CB009DEE71 /* viewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1A71DBE21CB009DEE71 /* viewImage.png */; };
-		0203B1AA1DBE2704009DEE71 /* GG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1A91DBE2704009DEE71 /* GG.png */; };
+		0203B1AD1DBE2FD6009DEE71 /* backimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1AB1DBE2FD6009DEE71 /* backimage.png */; };
+		0203B1AE1DBE2FD6009DEE71 /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1AC1DBE2FD6009DEE71 /* Button.png */; };
+		0203B1B21DBE3364009DEE71 /* viewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1B01DBE3364009DEE71 /* viewImage.png */; };
+		0203B1B71DBE3885009DEE71 /* Button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1B31DBE3885009DEE71 /* Button4.png */; };
+		0203B1B81DBE3885009DEE71 /* Button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1B41DBE3885009DEE71 /* Button3.png */; };
+		0203B1B91DBE3885009DEE71 /* Button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1B51DBE3885009DEE71 /* Button1.png */; };
+		0203B1BA1DBE3885009DEE71 /* Button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1B61DBE3885009DEE71 /* Button2.png */; };
+		0203B1BC1DBE3902009DEE71 /* Button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1BB1DBE3902009DEE71 /* Button5.png */; };
+		0203B1BE1DBE3C07009DEE71 /* Button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1BD1DBE3C07009DEE71 /* Button6.png */; };
+		0203B1C01DBE3D09009DEE71 /* TextF1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1BF1DBE3D09009DEE71 /* TextF1.png */; };
+		0203B1C21DBE3EA0009DEE71 /* GG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1C11DBE3EA0009DEE71 /* GG.png */; };
 		023088CE1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CA1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png */; };
 		023088CF1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CB1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png */; };
 		023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CC1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png */; };
@@ -109,8 +118,17 @@
 		0203B1961DBE1F8C009DEE71 /* Loading_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading_10.png; sourceTree = "<group>"; };
 		0203B1971DBE1F8C009DEE71 /* Loading_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading_11.png; sourceTree = "<group>"; };
 		0203B1981DBE1F8C009DEE71 /* turnBackground_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turnBackground_1.png; sourceTree = "<group>"; };
-		0203B1A71DBE21CB009DEE71 /* viewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewImage.png; sourceTree = "<group>"; };
-		0203B1A91DBE2704009DEE71 /* GG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GG.png; sourceTree = "<group>"; };
+		0203B1AB1DBE2FD6009DEE71 /* backimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backimage.png; sourceTree = "<group>"; };
+		0203B1AC1DBE2FD6009DEE71 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
+		0203B1B01DBE3364009DEE71 /* viewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewImage.png; sourceTree = "<group>"; };
+		0203B1B31DBE3885009DEE71 /* Button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button4.png; sourceTree = "<group>"; };
+		0203B1B41DBE3885009DEE71 /* Button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button3.png; sourceTree = "<group>"; };
+		0203B1B51DBE3885009DEE71 /* Button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button1.png; sourceTree = "<group>"; };
+		0203B1B61DBE3885009DEE71 /* Button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button2.png; sourceTree = "<group>"; };
+		0203B1BB1DBE3902009DEE71 /* Button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button5.png; sourceTree = "<group>"; };
+		0203B1BD1DBE3C07009DEE71 /* Button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button6.png; sourceTree = "<group>"; };
+		0203B1BF1DBE3D09009DEE71 /* TextF1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextF1.png; sourceTree = "<group>"; };
+		0203B1C11DBE3EA0009DEE71 /* GG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GG.png; sourceTree = "<group>"; };
 		023088CA1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.20.04.png"; sourceTree = "<group>"; };
 		023088CB1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.19.35.png"; sourceTree = "<group>"; };
 		023088CC1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.20.55.png"; sourceTree = "<group>"; };
@@ -198,8 +216,17 @@
 		0203B1781DBE1F46009DEE71 /* LoadingImage */ = {
 			isa = PBXGroup;
 			children = (
-				0203B1A91DBE2704009DEE71 /* GG.png */,
-				0203B1A71DBE21CB009DEE71 /* viewImage.png */,
+				0203B1BF1DBE3D09009DEE71 /* TextF1.png */,
+				0203B1BD1DBE3C07009DEE71 /* Button6.png */,
+				0203B1BB1DBE3902009DEE71 /* Button5.png */,
+				0203B1B31DBE3885009DEE71 /* Button4.png */,
+				0203B1B41DBE3885009DEE71 /* Button3.png */,
+				0203B1B51DBE3885009DEE71 /* Button1.png */,
+				0203B1B61DBE3885009DEE71 /* Button2.png */,
+				0203B1C11DBE3EA0009DEE71 /* GG.png */,
+				0203B1B01DBE3364009DEE71 /* viewImage.png */,
+				0203B1AB1DBE2FD6009DEE71 /* backimage.png */,
+				0203B1AC1DBE2FD6009DEE71 /* Button.png */,
 				0203B1811DBE1F7F009DEE71 /* Background.png */,
 				0203B18D1DBE1F8C009DEE71 /* Loading_1.png */,
 				0203B18E1DBE1F8C009DEE71 /* Loading_2.png */,
@@ -492,22 +519,28 @@
 				0203B19C1DBE1F8C009DEE71 /* Loading_4.png in Resources */,
 				0203B18A1DBE1F7F009DEE71 /* character_3.png in Resources */,
 				023088D91DB36E580037180E /* GameBackground.png in Resources */,
+				0203B1AE1DBE2FD6009DEE71 /* Button.png in Resources */,
 				82B9E1391D86CE4000A1CA30 /* GameScene.sks in Resources */,
+				0203B1B71DBE3885009DEE71 /* Button4.png in Resources */,
 				023088F41DB370A80037180E /* 牧師兵區域治療.png in Resources */,
 				023088E71DB370080037180E /* 抽扭蛋.png in Resources */,
 				82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */,
+				0203B1B81DBE3885009DEE71 /* Button3.png in Resources */,
 				82ECC8D51D86E58200995012 /* GoogleService-Info.plist in Resources */,
 				023088EB1DB3701A0037180E /* 找朋友.png in Resources */,
+				0203B1C01DBE3D09009DEE71 /* TextF1.png in Resources */,
 				0203B19D1DBE1F8C009DEE71 /* Loading_5.png in Resources */,
 				023088DB1DB36E580037180E /* Optionview.png in Resources */,
 				0203B18C1DBE1F7F009DEE71 /* character_5.png in Resources */,
 				023088CE1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png in Resources */,
+				0203B1B91DBE3885009DEE71 /* Button1.png in Resources */,
+				0203B1BA1DBE3885009DEE71 /* Button2.png in Resources */,
 				0203B1A01DBE1F8C009DEE71 /* Loading_8.png in Resources */,
 				023088F51DB370A80037180E /* 魔法兵激光.png in Resources */,
 				023088F61DB370A80037180E /* 盾兵技能.png in Resources */,
 				0203B19B1DBE1F8C009DEE71 /* Loading_3.png in Resources */,
 				0203B17D1DBE1F68009DEE71 /* turn_1.png in Resources */,
-				0203B1A81DBE21CB009DEE71 /* viewImage.png in Resources */,
+				0203B1AD1DBE2FD6009DEE71 /* backimage.png in Resources */,
 				0203B19A1DBE1F8C009DEE71 /* Loading_2.png in Resources */,
 				023088ED1DB3701A0037180E /* 小兵選擇圖.png in Resources */,
 				8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */,
@@ -519,7 +552,6 @@
 				023088E61DB370080037180E /* 狀態.png in Resources */,
 				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
 				023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */,
-				0203B1AA1DBE2704009DEE71 /* GG.png in Resources */,
 				023088D81DB36E580037180E /* Group 2.png in Resources */,
 				023088D31DB36E000037180E /* Group.png in Resources */,
 				023088DA1DB36E580037180E /* ViewBackground.png in Resources */,
@@ -527,11 +559,15 @@
 				0203B1881DBE1F7F009DEE71 /* character_1.png in Resources */,
 				023088DD1DB36E920037180E /* Back.png in Resources */,
 				0203B1A11DBE1F8C009DEE71 /* Loading_9.png in Resources */,
+				0203B1BC1DBE3902009DEE71 /* Button5.png in Resources */,
 				8270979E1DB1ED9A00A624EA /* egg-1.png in Resources */,
 				827097A11DB1ED9A00A624EA /* eagle_back2.png in Resources */,
+				0203B1B21DBE3364009DEE71 /* viewImage.png in Resources */,
 				827097A01DB1ED9A00A624EA /* eagle_back1.png in Resources */,
 				023088E51DB370080037180E /* 配對.png in Resources */,
+				0203B1BE1DBE3C07009DEE71 /* Button6.png in Resources */,
 				0203B19E1DBE1F8C009DEE71 /* Loading_6.png in Resources */,
+				0203B1C21DBE3EA0009DEE71 /* GG.png in Resources */,
 				0203B18B1DBE1F7F009DEE71 /* character_4.png in Resources */,
 				0203B1A31DBE1F8C009DEE71 /* Loading_11.png in Resources */,
 				0203B1A41DBE1F8C009DEE71 /* turnBackground_1.png in Resources */,
