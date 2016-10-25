@@ -49,11 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-oc-scs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="1398" y="-438"/>
-=======
             <point key="canvasLocation" x="1397.5999999999999" y="-439.43028485757122"/>
->>>>>>> 4a7e742c73629a7aa8b25d544c20c802b4ba7244
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -71,11 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="588" y="-438"/>
-=======
             <point key="canvasLocation" x="585" y="-439"/>
->>>>>>> 4a7e742c73629a7aa8b25d544c20c802b4ba7244
         </scene>
         <!--View Controller-->
         <scene sceneID="Dqh-NB-4LM">
@@ -155,18 +147,12 @@
                                 <frame key="frameInset" minX="96" minY="482" width="183" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FB登入"/>
-<<<<<<< HEAD
                                 <connections>
-                                    <outlet property="delegate" destination="ZjE-BU-bgi" id="kGg-Fv-cVn"/>
+                                    <outlet property="delegate" destination="ZjE-BU-bgi" id="ucH-F9-kqc"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-TD-fdW">
-                                <frame key="frameInset" minX="174" minY="294" width="62" height="30"/>
-=======
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-TD-fdW">
                                 <frame key="frameInset" minX="213" minY="294" width="64" height="33"/>
->>>>>>> 4a7e742c73629a7aa8b25d544c20c802b4ba7244
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button2.png"/>
                                 <connections>
@@ -207,8 +193,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUp-l6-CY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1397.5999999999999" y="310.79460269865069"/>
-<<<<<<< HEAD
-=======
         </scene>
         <!--View Controller-->
         <scene sceneID="gYD-TM-Fmi">
@@ -227,7 +211,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pV-Q8-BP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1670" y="1137"/>
->>>>>>> 4a7e742c73629a7aa8b25d544c20c802b4ba7244
         </scene>
         <!--Registered View Controller-->
         <scene sceneID="7YW-Im-234">
