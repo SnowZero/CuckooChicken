@@ -96,6 +96,15 @@
 
 }
 
+- (IBAction)finishedEdit:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)backgroundTapped:(id)sender {
+    [self.view endEditing:YES];
+}
+
+
 //- (void)setDisplayName:(FIRUser *)user {
 //    FIRUserProfileChangeRequest *changeRequest = [user profileChangeRequest];
 //    // Use first part of email as the default display name

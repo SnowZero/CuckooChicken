@@ -305,6 +305,13 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     }
 }
 
+- (IBAction)finishedEdit:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)backgroundTapped:(id)sender {
+    [self.view endEditing:YES];
+}
 
 /*
 #pragma mark - Navigation

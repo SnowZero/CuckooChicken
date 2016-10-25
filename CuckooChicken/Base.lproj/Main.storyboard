@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZjE-BU-bgi">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cz9-lk-kJN">
->>>>>>> 8267ab27a8675b9a6492a190474618479c3291f0
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -115,7 +111,7 @@
                         <viewControllerLayoutGuide type="top" id="TxC-HE-FQi"/>
                         <viewControllerLayoutGuide type="bottom" id="Wk2-c3-CIg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ytv-1J-lMN">
+                    <view key="view" contentMode="scaleToFill" id="ytv-1J-lMN" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -153,6 +149,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="finishedEdit:" destination="ZjE-BU-bgi" eventType="editingDidEndOnExit" id="Zhp-J4-BNE"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3q-M6-VNL">
                                 <frame key="frameInset" minX="92" minY="286" width="193" height="30"/>
@@ -160,6 +159,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="finishedEdit:" destination="ZjE-BU-bgi" eventType="editingDidEndOnExit" id="XCD-DW-9n8"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-ZW-EEy">
                                 <frame key="frameInset" minX="79" minY="186" width="218" height="68"/>
@@ -185,6 +187,9 @@
                             <constraint firstItem="CbS-sw-nM6" firstAttribute="top" secondItem="ytv-1J-lMN" secondAttribute="top" id="QeT-Ll-ZCf"/>
                             <constraint firstItem="CbS-sw-nM6" firstAttribute="leading" secondItem="ytv-1J-lMN" secondAttribute="leading" id="vKP-6k-NbQ"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTapped:" destination="ZjE-BU-bgi" eventType="touchUpInside" id="3uW-zZ-97g"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="gameForMail" destination="VOU-oJ-5hk" id="DvI-zY-gdJ"/>
@@ -222,18 +227,11 @@
                         <viewControllerLayoutGuide type="top" id="NfV-Jn-MhE"/>
                         <viewControllerLayoutGuide type="bottom" id="99z-8M-SPh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UG7-T7-wXI">
+                    <view key="view" contentMode="scaleToFill" id="UG7-T7-wXI" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-yW-MXU"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="註冊帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-fD-O85">
-                                <frame key="frameInset" minX="152" minY="28" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xm-Rh-zyb">
                                 <frame key="frameInset" minX="162" minY="387" width="52" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -256,6 +254,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="finishedEdit:" destination="zMc-rd-6rD" eventType="editingDidEndOnExit" id="TVX-Hm-o3z"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Text_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="DrL-pE-w7Q">
                                 <frame key="frameInset" minX="75" minY="189" width="225" height="67"/>
@@ -271,7 +272,17 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="finishedEdit:" destination="zMc-rd-6rD" eventType="editingDidEndOnExit" id="JBa-zA-tIf"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="註冊帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-fD-O85">
+                                <frame key="frameInset" minX="153" minY="87" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -280,6 +291,9 @@
                             <constraint firstItem="OLP-yW-MXU" firstAttribute="top" secondItem="UG7-T7-wXI" secondAttribute="top" id="rva-lV-3WR"/>
                             <constraint firstItem="99z-8M-SPh" firstAttribute="top" secondItem="OLP-yW-MXU" secondAttribute="bottom" id="v4m-Oc-a2G"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTapped:" destination="zMc-rd-6rD" eventType="touchUpInside" id="kqc-lL-RKV"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="registeredViewMail" destination="nAW-e5-49C" id="yIG-lz-BPM"/>
