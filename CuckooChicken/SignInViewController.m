@@ -27,10 +27,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setLoadingView]; //啟用動畫 5秒
     [self showViewImage];
 }
 - (void) showViewImage {
+    
+    static dispatch_once_t changeToken = 0;
+    dispatch_once(&changeToken, ^{
+        [self setLoadingView]; //啟用動畫 5秒
+    });
     
     UIImage *image = [UIImage imageNamed:@"viewImage.png"];
     _showViewBackGroundImage.image = image;
@@ -171,7 +175,7 @@
     UIImageView *loadingWordsView = [[UIImageView alloc] initWithFrame:CGRectMake(loatX, loatY, 200, 40)];
     
     [loadingWordsView setAnimationImages:loadingWords]; //將 LoadingView 顯示在畫面
-    [loadingWordsView setAnimationDuration:5.0];        //LoadingView 顯示數度
+    [loadingWordsView setAnimationDuration:4.0];        //LoadingView 顯示數度
     [loadingWordsView setAnimationRepeatCount:0];       //LoadingView 重複出現
     
     
@@ -213,7 +217,7 @@
     mouse.frame = CGRectMake(0, 0, mouseWidth, mouseHeight);
     
     [mouse setAnimationImages:mouseBack];
-    [mouse setAnimationDuration:6];
+    [mouse setAnimationDuration:3];
     [mouse setAnimationRepeatCount:0];
     
     [self.view addSubview:backgroundView];  //將拿到使用者的畫面的中心，顯示在畫面上。
