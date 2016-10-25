@@ -17,7 +17,8 @@
     FireBaseManager *userType;
     NSString *roomKey;
 }
-
+@property (weak, nonatomic) IBOutlet UIImageView *showBackGroundImage;
+@property (nonatomic, strong) UIImageView *loadingViewForChange; //載入動畫 5秒
 @end
 
 @implementation MatchPlayersViewController
@@ -25,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self changeBackGroundView]; //顯示動畫
+    [self showBackGroundImages]; //顯示背景
     
     userType = [FireBaseManager newFBData];
     [[FIRAuth auth] signInWithEmail:@"snow@gmail.com"
@@ -40,6 +43,11 @@
     
     [self startGetFirebase];
 
+}
+
+- (void) showBackGroundImages {
+    UIImage *image = [UIImage imageNamed:@"backimage.png"];
+    _showBackGroundImage.image = image;
 }
 
 // Start connect Firebase
@@ -75,6 +83,7 @@
     //把Alert對話框顯示出來
     [self presentViewController:alertController animated:YES completion:nil];
 
+    
 
 
 
@@ -178,6 +187,58 @@
         [self presentViewController:svc animated:YES completion:nil];
     }];
 
+}
+//Loading 畫面
+- (void) changeBackGroundView {
+    NSArray *loadingWords = @[[UIImage imageNamed:@"Loading_1.png"], [UIImage imageNamed:@"Loading_2.png"], [UIImage imageNamed:@"Loading_3.png"], [UIImage imageNamed:@"Loading_4.png"], [UIImage imageNamed:@"Loading_5.png"], [UIImage imageNamed:@"Loading_6.png"], [UIImage imageNamed:@"Loading_7.png"], [UIImage imageNamed:@"Loading_8.png"], [UIImage imageNamed:@"Loading_9.png"], [UIImage imageNamed:@"Loading_10.png"], [UIImage imageNamed:@"Loading_11.png"]];
+    //換場的圖
+    NSArray *changeImage = @[[UIImage imageNamed:@"turn_1.png"], [UIImage imageNamed:@"turn_2.png"]];
+    //換場背景
+    UIImage *changeBackGroundView = [UIImage imageNamed:@"turnBackground_1.png"];
+    //準備畫面 LoadingView
+    _loadingViewForChange = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [_loadingViewForChange setUserInteractionEnabled:true];       //touch事件 預設是 false
+    _loadingViewForChange.image = changeBackGroundView;
+    [self.view addSubview:_loadingViewForChange];
+    
+    CGFloat loatX = (self.view.frame.size.width-300)/2 ;    //LoadingImage X
+    CGFloat loatY = self.view.frame.size.height*0.9 ;       //LoadingImage Y
+    UIImageView *bbbb  = [[UIImageView alloc] initWithFrame:CGRectMake(loatX, loatY, 200, 40)];
+    
+    [bbbb setAnimationImages:loadingWords]; //將 LoadingView 顯示在畫面
+    [bbbb setAnimationDuration:5.0];        //LoadingView 顯示數度
+    [bbbb setAnimationRepeatCount:0];       //LoadingView 重複出現
+    [self.view addSubview:bbbb];
+    [bbbb startAnimating];
+    
+    CGFloat floatWidth = self.view.frame.size.height/1.937 ;
+    CGFloat floatHeight = self.view.frame.size.height/1.937 ;
+    
+    UIImageView *changesImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4.5, self.view.frame.size.height*0.25, (floatWidth*0.6),(floatHeight*0.5))];
+    
+    [changesImageView setAnimationImages:changeImage];
+    [changesImageView setAnimationDuration:2.0];
+    [changesImageView setAnimationRepeatCount:0];
+    
+    [self.view addSubview:changesImageView];    //顯示在畫面上
+    _loadingViewForChange.tag = 999;
+    [changesImageView startAnimating];
+    
+    [self performSelector:@selector(stopAnimating:) withObject:_loadingViewForChange afterDelay:5.0];
+}
+
+//停止Loading 畫面
+- (void) stopAnimating:(UIImageView*)sender {
+    
+    for (UIView *viewSon in self.view.subviews) {
+        if (viewSon.tag == 999) {
+            [viewSon removeFromSuperview];           //停止顯示子示圖，並從父示圖中移除
+        } else if ([viewSon isKindOfClass:[UIImageView class]]){
+            //檢測viewSon 是UIImageView 的子類別
+            [(UIImageView*)viewSon stopAnimating];  //不是就停止動畫
+        }
+    }
+    
 }
 
 

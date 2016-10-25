@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cz9-lk-kJN">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZjE-BU-bgi">
+>>>>>>> b8ceb55b46737f1a640ef81b905e4d249912a702
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,23 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-zm-w8q">
-                                <state key="normal" title="開始配對"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-Jr-Wn3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-zm-w8q">
+                                <state key="normal" image="Button5.png">
+                                    <color key="titleColor" red="0.99955612421035767" green="0.0" blue="0.03453594446182251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="MatchButton:" destination="cz9-lk-kJN" eventType="touchUpInside" id="mGM-DB-dvR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button.png" translatesAutoresizingMaskIntoConstraints="NO" id="rSn-gO-UgI"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yuW-Ei-2Xd" firstAttribute="top" secondItem="jJe-Jr-Wn3" secondAttribute="bottom" id="HeI-yN-qeU"/>
+                            <constraint firstItem="jJe-Jr-Wn3" firstAttribute="top" secondItem="lyd-O6-SyI" secondAttribute="top" id="IB0-Ju-T0Z"/>
+                            <constraint firstItem="jJe-Jr-Wn3" firstAttribute="leading" secondItem="lyd-O6-SyI" secondAttribute="leading" id="YPE-XB-DYG"/>
+                            <constraint firstItem="rSn-gO-UgI" firstAttribute="centerX" secondItem="lyd-O6-SyI" secondAttribute="centerX" id="gd5-OR-sj7"/>
                             <constraint firstItem="IlJ-zm-w8q" firstAttribute="centerX" secondItem="lyd-O6-SyI" secondAttribute="centerX" id="geh-uk-cmi"/>
+                            <constraint firstAttribute="trailing" secondItem="jJe-Jr-Wn3" secondAttribute="trailing" id="hyj-HB-1gU"/>
+                            <constraint firstItem="rSn-gO-UgI" firstAttribute="leading" secondItem="lyd-O6-SyI" secondAttribute="leading" constant="94" id="s9i-4j-NM1"/>
+                            <constraint firstItem="rSn-gO-UgI" firstAttribute="centerY" secondItem="lyd-O6-SyI" secondAttribute="centerY" id="seR-A1-olM"/>
                             <constraint firstItem="IlJ-zm-w8q" firstAttribute="centerY" secondItem="lyd-O6-SyI" secondAttribute="centerY" id="vEw-cv-Hq9"/>
+                            <constraint firstItem="rSn-gO-UgI" firstAttribute="top" secondItem="AnR-sM-2DH" secondAttribute="bottom" constant="267" id="vNe-jY-QJP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="showBackGroundImage" destination="jJe-Jr-Wn3" id="sbG-Pl-tBh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-oc-scs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="-448"/>
+            <point key="canvasLocation" x="1397.5999999999999" y="-439.43028485757122"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -52,9 +71,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-580" y="-159"/>
+            <point key="canvasLocation" x="585" y="-439"/>
         </scene>
-        <!--Delegate-->
+        <!--View Controller-->
         <scene sceneID="Dqh-NB-4LM">
             <objects>
                 <viewController id="EQ6-y1-Iak" customClass="ViewController" sceneMemberID="viewController">
@@ -79,14 +98,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeu-EQ-EBM" customClass="FBSDKLoginButton">
-                                <frame key="frameInset" minX="189" minY="259" width="132" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <outlet property="delegate" destination="EQ6-y1-Iak" id="zlT-Ac-opk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -99,9 +110,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkH-cJ-x7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549.60000000000002" y="310.79460269865069"/>
+            <point key="canvasLocation" x="-343" y="689"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Delegate-->
         <scene sceneID="d0M-4f-m08">
             <objects>
                 <viewController storyboardIdentifier="SignInView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZjE-BU-bgi" customClass="SignInViewController" sceneMemberID="viewController">
@@ -113,72 +124,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="主題" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqX-4d-PZ1">
-                                <frame key="frameInset" minX="166" minY="28" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CbS-sw-nM6"/>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOU-oJ-5hk">
-                                <frame key="frameInset" minX="139" minY="160" width="97" height="30"/>
+                                <frame key="frameInset" minX="128" minY="160" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3q-M6-VNL">
-                                <frame key="frameInset" minX="139" minY="256" width="97" height="30"/>
+                                <frame key="frameInset" minX="131" minY="239" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4n-Gp-nnN">
-                                <frame key="frameInset" minX="172" minY="436" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4n-Gp-nnN">
+                                <frame key="frameInset" minX="137" minY="439" width="102" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="註冊"/>
+                                <state key="normal" image="Button4.png"/>
                                 <connections>
                                     <segue destination="zMc-rd-6rD" kind="show" id="3PS-uI-pMu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-ef-XdE" customClass="FBSDKLoginButton">
-                                <frame key="frameInset" minX="163" minY="492" width="49" height="30"/>
+                                <frame key="frameInset" minX="96" minY="482" width="183" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FB登入"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZjE-BU-bgi" id="ucH-F9-kqc"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l75-7K-AqC">
-                                <frame key="frameInset" minX="156" minY="550" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-TD-fdW">
+                                <frame key="frameInset" minX="213" minY="294" width="64" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="快速登入"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-TD-fdW">
-                                <frame key="frameInset" minX="174" minY="294" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="忘記密碼"/>
+                                <state key="normal" image="Button2.png"/>
                                 <connections>
                                     <action selector="forgetPassword:" destination="ZjE-BU-bgi" eventType="touchUpInside" id="fAL-P6-1jx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pir-Kp-pA4">
-                                <frame key="frameInset" minX="172" minY="375" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pir-Kp-pA4">
+                                <frame key="frameInset" minX="127" minY="345" width="120" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登入"/>
+                                <state key="normal" image="Button1.png"/>
                                 <connections>
                                     <action selector="gameSianIn:" destination="ZjE-BU-bgi" eventType="touchUpInside" id="BHR-vf-idq"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextF1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-ZW-EEy">
+                                <frame key="frameInset" minX="121" minY="140" width="136" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextF1.png" translatesAutoresizingMaskIntoConstraints="NO" id="gdE-OX-F7D">
+                                <frame key="frameInset" minX="121" minY="220" width="136" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CbS-sw-nM6" secondAttribute="trailing" id="7Im-Y6-Hx4"/>
+                            <constraint firstItem="Wk2-c3-CIg" firstAttribute="top" secondItem="CbS-sw-nM6" secondAttribute="bottom" id="JDS-cs-Abg"/>
+                            <constraint firstItem="CbS-sw-nM6" firstAttribute="top" secondItem="ytv-1J-lMN" secondAttribute="top" id="QeT-Ll-ZCf"/>
+                            <constraint firstItem="CbS-sw-nM6" firstAttribute="leading" secondItem="ytv-1J-lMN" secondAttribute="leading" id="vKP-6k-NbQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="gameForMail" destination="VOU-oJ-5hk" id="DvI-zY-gdJ"/>
                         <outlet property="gamePassword" destination="R3q-M6-VNL" id="qkG-cu-7NP"/>
+                        <outlet property="showViewBackGroundImage" destination="CbS-sw-nM6" id="fjI-Eb-NU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUp-l6-CY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1398" y="311"/>
+            <point key="canvasLocation" x="1397.5999999999999" y="310.79460269865069"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gYD-TM-Fmi">
@@ -210,6 +228,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-yW-MXU"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="註冊帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-fD-O85">
                                 <frame key="frameInset" minX="152" minY="28" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -218,46 +237,71 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cE-vk-gk9">
-                                <frame key="frameInset" minX="139" minY="258" width="97" height="30"/>
+                                <frame key="frameInset" minX="124" minY="258" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xm-Rh-zyb">
-                                <frame key="frameInset" minX="172" minY="378" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xm-Rh-zyb">
+                                <frame key="frameInset" minX="154" minY="371" width="68" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="確定"/>
+                                <state key="normal" image="Button6.png"/>
                                 <connections>
                                     <action selector="registeredLogin:" destination="zMc-rd-6rD" eventType="touchUpInside" id="EPc-Iw-ySk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-G0-DVx">
-                                <frame key="frameInset" minX="172" minY="461" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-G0-DVx">
+                                <frame key="frameInset" minX="156" minY="459" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="取消"/>
+                                <state key="normal" image="Button3.png"/>
                                 <connections>
                                     <action selector="cancelButton:" destination="zMc-rd-6rD" eventType="touchUpInside" id="aMF-Lq-R38"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAW-e5-49C">
-                                <frame key="frameInset" minX="139" minY="160" width="97" height="30"/>
+                                <frame key="frameInset" minX="129" minY="160" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextF1.png" translatesAutoresizingMaskIntoConstraints="NO" id="DrL-pE-w7Q">
+                                <frame key="frameInset" minX="120" minY="141" width="136" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextF1.png" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-hi-X5U">
+                                <frame key="frameInset" minX="120" minY="239" width="136" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OLP-yW-MXU" secondAttribute="trailing" id="Dnb-kr-ada"/>
+                            <constraint firstItem="OLP-yW-MXU" firstAttribute="leading" secondItem="UG7-T7-wXI" secondAttribute="leading" id="FyZ-Fk-CsG"/>
+                            <constraint firstItem="OLP-yW-MXU" firstAttribute="top" secondItem="UG7-T7-wXI" secondAttribute="top" id="rva-lV-3WR"/>
+                            <constraint firstItem="99z-8M-SPh" firstAttribute="top" secondItem="OLP-yW-MXU" secondAttribute="bottom" id="v4m-Oc-a2G"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="registeredViewMail" destination="nAW-e5-49C" id="yIG-lz-BPM"/>
                         <outlet property="registeredViewPassword" destination="7cE-vk-gk9" id="hiS-iD-yku"/>
+                        <outlet property="showBackImage" destination="OLP-yW-MXU" id="Yca-cW-yHO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUf-AJ-vx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2247" y="311"/>
+            <point key="canvasLocation" x="2245.5999999999999" y="310.79460269865069"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button.png" width="443" height="318"/>
+        <image name="Button1.png" width="73" height="63"/>
+        <image name="Button2.png" width="64" height="20"/>
+        <image name="Button3.png" width="65" height="35"/>
+        <image name="Button4.png" width="68" height="45"/>
+        <image name="Button5.png" width="90" height="27"/>
+        <image name="Button6.png" width="68" height="45"/>
+        <image name="TextF1.png" width="410" height="143"/>
+    </resources>
 </document>
