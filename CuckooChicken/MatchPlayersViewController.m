@@ -18,10 +18,12 @@
     NSString *roomKey;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *showBackGroundImage;
+@property (weak, nonatomic) IBOutlet UIButton *changeImageCKCK;
 @property (nonatomic, strong) UIImageView *loadingViewForChange; //載入動畫 5秒
 @end
 
 @implementation MatchPlayersViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,8 +48,11 @@
 }
 
 - (void) showBackGroundImages {
+    //配對用的背景圖
     UIImage *image = [UIImage imageNamed:@"backimage.png"];
     _showBackGroundImage.image = image;
+    //配對用的Ｂutton圖
+    [_changeImageCKCK setBackgroundImage:[UIImage imageNamed:@"Button_6.png"] forState:UIControlStateNormal];
 }
 
 // Start connect Firebase
@@ -83,10 +88,16 @@
     //把Alert對話框顯示出來
     [self presentViewController:alertController animated:YES completion:nil];
 
-    
+    // call pragma mark touch in changeButtonImage
+    [_changeImageCKCK addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchDown];
 
-
-
+}
+#pragma mark touch in changeButtonImage
+-(void)buttonAction{
+    // [_changeImageCKCK setTitle:@"已按" forState:UIControlStateNormal];
+    // [_changeImageCKCK setTitle:@"已按" forState:UIControlStateHighlighted];
+    [_changeImageCKCK setBackgroundImage:[UIImage imageNamed:@"Button_6.png"] forState:UIControlStateNormal];
+    [_changeImageCKCK setBackgroundImage:[UIImage imageNamed:@"Button_7.png"] forState:UIControlStateHighlighted];
 }
 //偵測是否取得資料 Check data
 -(void)checkGetData{
@@ -188,7 +199,7 @@
     }];
 
 }
-//Loading 畫面
+#pragma Mark is Start Show Loading View  Make:One
 - (void) changeBackGroundView {
     NSArray *loadingWords = @[[UIImage imageNamed:@"Loading_1.png"], [UIImage imageNamed:@"Loading_2.png"], [UIImage imageNamed:@"Loading_3.png"], [UIImage imageNamed:@"Loading_4.png"], [UIImage imageNamed:@"Loading_5.png"], [UIImage imageNamed:@"Loading_6.png"], [UIImage imageNamed:@"Loading_7.png"], [UIImage imageNamed:@"Loading_8.png"], [UIImage imageNamed:@"Loading_9.png"], [UIImage imageNamed:@"Loading_10.png"], [UIImage imageNamed:@"Loading_11.png"]];
     //換場的圖
@@ -227,7 +238,7 @@
     [self performSelector:@selector(stopAnimating:) withObject:_loadingViewForChange afterDelay:5.0];
 }
 
-//停止Loading 畫面
+#pragma Mark is Stop Show Loading View  Mark:Two
 - (void) stopAnimating:(UIImageView*)sender {
     
     for (UIView *viewSon in self.view.subviews) {
@@ -238,6 +249,7 @@
             [(UIImageView*)viewSon stopAnimating];  //不是就停止動畫
         }
     }
+    
     
 }
 

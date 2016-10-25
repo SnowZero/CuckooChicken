@@ -105,7 +105,6 @@
         // 再加進1個 TextField
         textField.placeholder = @"Mail";
         
-            
         }];
     
     //做出"確定"跟"取消"的按鈕 2016-09-22
@@ -221,7 +220,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 }
 
 
-//Loading 畫面
+#pragma Mark is Start Show Loading View  Make:One
 - (void) setLoadingView {
     
     
@@ -256,7 +255,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     [self performSelector:@selector(stopAnimating:) withObject:_loadingView afterDelay:8.0];
 }
 
-//Loading 畫面
+#pragma Mark is Start Show Loading View  Make:Two
 - (void) changeMouseSuit {
     //準備動畫圖
     NSArray *mouseBack = @[[UIImage imageNamed:@"character_1.png"],[UIImage imageNamed:@"character_2.png"],[UIImage imageNamed:@"character_3.png"],[UIImage imageNamed:@"character_4.png"],[UIImage imageNamed:@"character_5.png"]];
@@ -293,7 +292,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     
 }
 
-//停止Loading 畫面
+#pragma Mark is Stop Show Loading View  Mark:Three
 - (void) stopAnimating:(UIImageView*)sender {
     
     for (UIView *viewSon in self.view.subviews) {

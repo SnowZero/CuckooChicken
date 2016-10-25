@@ -35,7 +35,7 @@
 }
 
 - (void) showBackGroundImage {
-    UIImage *image = [UIImage imageNamed:@"GG.png"];
+    UIImage *image = [UIImage imageNamed:@"viewImage_2.png"];
     _showBackImage.image = image;
 
 }
