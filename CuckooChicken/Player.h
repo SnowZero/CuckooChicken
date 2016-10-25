@@ -11,11 +11,18 @@
 
 #define EAGLE_Animation @"eagle"
 #define EGG_Animation @"egg"
+#define PlAYER @"player"
+#define ENEMY @"enemy"
 
 @interface Player : SKSpriteNode
 
-- (Player*) newPlayer:(float)mySize;
+@property(strong,nonatomic) SKSpriteNode *hpUI;
+@property(nonatomic,assign) double hp;
+
+
+- (Player*) newPlayer:(NSString*)mySize;
 - (void) setAnimation:(NSString*)animationKey
              myPlayer:(SKSpriteNode*)myPlayer;
+
 
 @end
