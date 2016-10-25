@@ -53,7 +53,7 @@ typedef void(^FIRBTask)(void);
     player.physicsBody.dynamic = false;
     
     enemy = [Player new];
-    enemy = [player newPlayer:ENEMY];
+    enemy = [enemy newPlayer:ENEMY];
     if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
         [player setAnimation:EAGLE_Animation myPlayer:player];
         [player setAnimation:EGG_Animation myPlayer:enemy];
@@ -101,7 +101,7 @@ typedef void(^FIRBTask)(void);
         if (tmp) {
             enemy.position = CGPointMake([tmp[@"posX"] floatValue]*self.frame.size.width,
                                          enemy.position.y);
-            NSString *getHp = fireData[@"GameRoom"][userData.gameRoomKey][userData.enemyType][userData.playerType];
+            NSString *getHp = fireData[@"GameRoom"][userData.gameRoomKey][userData.enemyType][@"hp"];
             player.hp = [getHp doubleValue];
         }
 
@@ -127,7 +127,7 @@ typedef void(^FIRBTask)(void);
     //SKAction *End = [SKAction performSelector:@selector(getFIBPostion) onTarget:self];
     [Bullet runAction:[SKAction sequence:@[action,actionremove]]];
     [self addChild:Bullet];
-
+    [self setPlayerPostion:player.position.x :player.position.y];
 }
 -(void) enemyBullets{
     SKSpriteNode *Bullet = [SKSpriteNode spriteNodeWithImageNamed:@"BulletGalaga.png"];
@@ -176,6 +176,7 @@ typedef void(^FIRBTask)(void);
         player.position = CGPointMake(location.x, player.position.y);
         [self setPlayerPostion:player.position.x :player.position.y];
 
+
         
     }
 }
@@ -185,25 +186,35 @@ typedef void(^FIRBTask)(void);
     /* Called before each frame is rendered */
     //[self setPlayerPostion:player.position.x :player.position.y];
     [self viewUIHp];
-
+    CGPoint tmpPos = player.position;
 
 }
 
 -(void)setPlayerPostion:(CGFloat)posX : (CGFloat)posY{
+    __block double tmpHp = enemy.hp;
+    __block NSString *roomKey = userData.gameRoomKey;
+    __block FIRDatabaseReference *tmpRef = ref;
+    setUpload = ^{
+        
+        NSString *strPosX = [NSString stringWithFormat:@"%f",posX/self.frame.size.width];
+        NSString *strPosY = [NSString stringWithFormat:@"%f",posY];
+        
+        NSString *strHp = [NSString stringWithFormat:@"%f",tmpHp];
+        
+        NSDictionary *upData = @{@"posX":strPosX,@"posY":strPosY,@"hp":strHp};
+        NSString *path = [@"/GameRoom/" stringByAppendingString:roomKey];
+        path = [path stringByAppendingFormat:@"/%@",userData.playerType];
+        
+        
+        NSDictionary *childUpdates = @{path:upData};
+        [tmpRef updateChildValues:childUpdates];
+        
+    };
     
-    NSString *strPosX = [NSString stringWithFormat:@"%f",posX/self.frame.size.width];
-    NSString *strPosY = [NSString stringWithFormat:@"%f",posY];
-    
-    NSString *strHp = [NSString stringWithFormat:@"%f",enemy.hp];
+    dispatch_queue_t concurrQueue = dispatch_queue_create("aConcurrentQ", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_sync(concurrQueue, setUpload);
 
-    NSDictionary *upData = @{@"posX":strPosX,@"posY":strPosY,userData.enemyType:strHp};
-    NSString *path = [@"/GameRoom/" stringByAppendingString:userData.gameRoomKey];
-    path = [path stringByAppendingFormat:@"/%@",userData.playerType];
 
-    
-    NSDictionary *childUpdates = @{path:upData};
-    [ref updateChildValues:childUpdates];
-    
 }
 
 
@@ -214,7 +225,7 @@ typedef void(^FIRBTask)(void);
     CGFloat Height = playerHp.size.height;
     playerHp.size = CGSizeMake(Width * (player.hp/100.0), Height);
     
-    SKSpriteNode *enemyHp = (SKSpriteNode*)[player childNodeWithName:ENEMY];
+    SKSpriteNode *enemyHp = (SKSpriteNode*)[enemy childNodeWithName:ENEMY];
     CGFloat enemyWidth = enemyHpMaxSize.width;
     CGFloat enemyHeight = enemyHp.size.height;
     enemyHp.size = CGSizeMake(enemyWidth * (enemy.hp/100.0), enemyHeight);
