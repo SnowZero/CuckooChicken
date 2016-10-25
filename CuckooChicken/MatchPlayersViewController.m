@@ -156,6 +156,7 @@
         [timer invalidate];
         timer = nil;
         userType.playerType = PLAYER_TYPE_ATTACK;
+        userType.enemyType = PLAYER_TYPE_DEFENSE;
         userType.gameRoomKey = key;
         [self gotoGameViewController];
 
@@ -174,6 +175,7 @@
     NSDictionary *childUpdates = @{[@"/GameRoom/" stringByAppendingString:thisRoom]:upData};
     [ref updateChildValues:childUpdates];
     userType.playerType = PLAYER_TYPE_DEFENSE;
+    userType.enemyType = PLAYER_TYPE_ATTACK;
     userType.gameRoomKey = thisRoom;
     [self gotoGameViewController];
 }

@@ -67,6 +67,7 @@
 		023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088F31DB370A80037180E /* 弓箭兵自動生成.png */; };
 		1B8FBC1247055B6CF0A1E290 /* Pods_CuckooChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */; };
 		823C08261DBB59A30046E94A /* BulletGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08251DBB59A30046E94A /* BulletGalaga.png */; };
+		823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08BE1DBF29F00046E94A /* UI_blood.png */; };
 		827097951DB1EBE300A624EA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097941DB1EBE300A624EA /* Player.m */; };
 		8270979C1DB1ED9A00A624EA /* eagle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097961DB1ED9A00A624EA /* eagle-1.png */; };
 		8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097971DB1ED9A00A624EA /* eagle-2.png */; };
@@ -154,6 +155,7 @@
 		023088F31DB370A80037180E /* 弓箭兵自動生成.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弓箭兵自動生成.png"; sourceTree = "<group>"; };
 		5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.debug.xcconfig"; sourceTree = "<group>"; };
 		823C08251DBB59A30046E94A /* BulletGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BulletGalaga.png; sourceTree = "<group>"; };
+		823C08BE1DBF29F00046E94A /* UI_blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_blood.png; sourceTree = "<group>"; };
 		827097931DB1EBE300A624EA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		827097941DB1EBE300A624EA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		827097961DB1ED9A00A624EA /* eagle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle-1.png"; sourceTree = "<group>"; };
@@ -337,11 +339,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		823C08BD1DBF29D60046E94A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				823C08BE1DBF29F00046E94A /* UI_blood.png */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		827097921DB1EB8800A624EA /* GameObject */ = {
 			isa = PBXGroup;
 			children = (
 				827097931DB1EBE300A624EA /* Player.h */,
 				827097941DB1EBE300A624EA /* Player.m */,
+				823C08BD1DBF29D60046E94A /* UI */,
 				827097A21DB1EDA200A624EA /* image */,
 			);
 			name = GameObject;
@@ -476,11 +487,12 @@
 		82B9E1241D86CE4000A1CA30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Snow;
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KVU42XKSXZ;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -553,6 +565,7 @@
 				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
 				023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */,
 				023088D81DB36E580037180E /* Group 2.png in Resources */,
+				823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */,
 				023088D31DB36E000037180E /* Group.png in Resources */,
 				023088DA1DB36E580037180E /* ViewBackground.png in Resources */,
 				023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */,
@@ -733,8 +746,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -778,8 +793,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -809,7 +826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
@@ -842,7 +859,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",

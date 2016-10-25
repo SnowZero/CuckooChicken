@@ -14,6 +14,7 @@
 
 @property(strong,nonatomic) __block NSDictionary *userData;
 @property(strong,nonatomic) NSString *playerType;
+@property(strong,nonatomic) NSString *enemyType;
 @property(strong,nonatomic) NSString *gameRoomKey;
 
 +(instancetype) newFBData;

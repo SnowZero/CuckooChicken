@@ -7,27 +7,40 @@
 //
 
 #import "Player.h"
-
+#import "FireBaseManager.h"
 
 
 @implementation Player{
     Player *player;
-
+    
 }
 
-- (Player*)newPlayer:(float)mySize{
+- (Player*)newPlayer:(NSString*)playerType{
     
     player = [Player spriteNodeWithImageNamed:@"eagle_back1"];
     
     player.name = @"player";
-    player.size = CGSizeMake(player.size.height * mySize, player.size.width * mySize);
     player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:player.size];
     player.physicsBody.affectedByGravity = NO;
     player.physicsBody.dynamic = false;
     player.physicsBody.categoryBitMask = 3;
     player.physicsBody.contactTestBitMask =1;
     
+    _hpUI = [SKSpriteNode spriteNodeWithImageNamed:@"UI_blood.png"];
+    _hpUI.size = CGSizeMake(player.size.width/1.4, player.size.height/12);
+    
+    _hpUI.zPosition = 1;
+    if ([playerType isEqualToString:PlAYER]) {
+        _hpUI.name = PlAYER;
+        _hpUI.position = CGPointMake(player.position.x, player.position.y-player.size.height/3);
 
+    }else {
+        _hpUI.name = ENEMY;
+        _hpUI.position = CGPointMake(player.position.x, player.position.y+player.size.height/3);
+    }
+    
+    NSLog(@"W:%f  H:%f",_hpUI.size.width,_hpUI.size.height);
+    [player addChild:_hpUI];
     return player;
 
 }
@@ -58,4 +71,5 @@
     [myPlayer runAction:[SKAction repeatActionForever:runAnimation]];
 
 }
+
 @end

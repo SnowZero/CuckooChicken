@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="585" y="-439"/>
         </scene>
-        <!--Delegate-->
+        <!--View Controller-->
         <scene sceneID="Dqh-NB-4LM">
             <objects>
                 <viewController id="EQ6-y1-Iak" customClass="ViewController" sceneMemberID="viewController">
@@ -94,14 +94,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeu-EQ-EBM" customClass="FBSDKLoginButton">
-                                <frame key="frameInset" minX="189" minY="259" width="132" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <outlet property="delegate" destination="EQ6-y1-Iak" id="zlT-Ac-opk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -116,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="-343" y="689"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Delegate-->
         <scene sceneID="d0M-4f-m08">
             <objects>
                 <viewController storyboardIdentifier="SignInView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZjE-BU-bgi" customClass="SignInViewController" sceneMemberID="viewController">
@@ -152,9 +144,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-ef-XdE" customClass="FBSDKLoginButton">
-                                <frame key="frameInset" minX="163" minY="492" width="49" height="30"/>
+                                <frame key="frameInset" minX="96" minY="482" width="183" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FB登入"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZjE-BU-bgi" id="ucH-F9-kqc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-TD-fdW">
                                 <frame key="frameInset" minX="213" minY="294" width="64" height="33"/>
