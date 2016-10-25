@@ -26,6 +26,7 @@ typedef void(^FIRBTask)(void);
     Player *player;
     Player *enemy;
     SKSpriteNode *hpUI;
+    SKSpriteNode *background;
     FireBaseManager *userData;
     FIRDatabaseReference *ref;
     CGSize playerHpMaxSize;
@@ -39,7 +40,10 @@ typedef void(^FIRBTask)(void);
     userData = [FireBaseManager newFBData];
     [self startFirebase];
     self.physicsWorld.contactDelegate = self;
-
+    background = (SKSpriteNode*)[self childNodeWithName:@"background"];
+    background.zPosition = -1;
+    background.size = CGSizeMake(self.frame.size.width, self.frame.size.height*2);
+    background.position = CGPointMake(background.position.x, background.position.y);
     
     PhysicsCatagory.Enemy = 1;
     PhysicsCatagory.PlayerBullet = 2;
@@ -65,7 +69,7 @@ typedef void(^FIRBTask)(void);
     enemy.physicsBody.dynamic = false;
     enemy.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
     enemy.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
-    enemy.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/6*5);
+    enemy.position = CGPointMake(self.frame.size.width/2, self.size.height/6*5);
 
     player.hp = 100;
     enemy.hp = 100;
@@ -112,7 +116,7 @@ typedef void(^FIRBTask)(void);
 
 -(void) playerBullets{
     SKSpriteNode *Bullet = [SKSpriteNode spriteNodeWithImageNamed:@"BulletGalaga.png"];
-    Bullet.zPosition = -5;
+    Bullet.zPosition = -0.5;
     Bullet.position = CGPointMake(player.position.x, player.position.y+5);
     Bullet.size = CGSizeMake(player.size.height/5, player.size.width/5);
     Bullet.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:Bullet.size];
@@ -131,7 +135,7 @@ typedef void(^FIRBTask)(void);
 }
 -(void) enemyBullets{
     SKSpriteNode *Bullet = [SKSpriteNode spriteNodeWithImageNamed:@"BulletGalaga.png"];
-    Bullet.zPosition = -5;
+    Bullet.zPosition = -0.5;
     Bullet.position = CGPointMake(enemy.position.x, enemy.position.y-1);
     Bullet.size = CGSizeMake(enemy.size.height/5, enemy.size.width/5);
     Bullet.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:Bullet.size];
@@ -186,8 +190,11 @@ typedef void(^FIRBTask)(void);
     /* Called before each frame is rendered */
     //[self setPlayerPostion:player.position.x :player.position.y];
     [self viewUIHp];
-    CGPoint tmpPos = player.position;
-
+    background.position = CGPointMake(background.position.x, background.position.y-3);
+    NSLog(@"pox:%f posY:%f",background.position.x,background.position.y);
+    if (background.position.y <= background.size.height/160.212) {
+        background.position = CGPointMake(self.frame.size.width/2, 1759.788);
+    }
 }
 
 -(void)setPlayerPostion:(CGFloat)posX : (CGFloat)posY{
