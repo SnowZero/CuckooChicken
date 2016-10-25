@@ -166,7 +166,7 @@
     
 }
 
-<<<<<<< HEAD
+
 - (void)loginButton:(FBSDKLoginButton *)testLoginButton
 didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
               error:(NSError *)error {
@@ -216,7 +216,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     return true;
 }
 
-=======
+
 //Loading 畫面
 - (void) setLoadingView {
     
@@ -301,7 +301,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
         }
     }
 }
->>>>>>> 4a7e742c73629a7aa8b25d544c20c802b4ba7244
+
 
 /*
 #pragma mark - Navigation
