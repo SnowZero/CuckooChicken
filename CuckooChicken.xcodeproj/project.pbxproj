@@ -67,11 +67,7 @@
 		023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088F31DB370A80037180E /* 弓箭兵自動生成.png */; };
 		1B8FBC1247055B6CF0A1E290 /* Pods_CuckooChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */; };
 		823C08261DBB59A30046E94A /* BulletGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08251DBB59A30046E94A /* BulletGalaga.png */; };
-		823C08B61DBE18320046E94A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C08B21DBE18320046E94A /* Bolts.framework */; };
-		823C08B71DBE18320046E94A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C08B31DBE18320046E94A /* FBSDKCoreKit.framework */; };
-		823C08B81DBE18320046E94A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C08B41DBE18320046E94A /* FBSDKLoginKit.framework */; };
-		823C08B91DBE18320046E94A /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C08B51DBE18320046E94A /* FBSDKShareKit.framework */; };
-		823C08BC1DBE2E5C0046E94A /* UI_blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08BB1DBE2E5C0046E94A /* UI_blood.png */; };
+		823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08BE1DBF29F00046E94A /* UI_blood.png */; };
 		827097951DB1EBE300A624EA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097941DB1EBE300A624EA /* Player.m */; };
 		8270979C1DB1ED9A00A624EA /* eagle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097961DB1ED9A00A624EA /* eagle-1.png */; };
 		8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097971DB1ED9A00A624EA /* eagle-2.png */; };
@@ -159,11 +155,7 @@
 		023088F31DB370A80037180E /* 弓箭兵自動生成.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弓箭兵自動生成.png"; sourceTree = "<group>"; };
 		5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.debug.xcconfig"; sourceTree = "<group>"; };
 		823C08251DBB59A30046E94A /* BulletGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BulletGalaga.png; sourceTree = "<group>"; };
-		823C08B21DBE18320046E94A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
-		823C08B31DBE18320046E94A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		823C08B41DBE18320046E94A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		823C08B51DBE18320046E94A /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
-		823C08BB1DBE2E5C0046E94A /* UI_blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_blood.png; sourceTree = "<group>"; };
+		823C08BE1DBF29F00046E94A /* UI_blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_blood.png; sourceTree = "<group>"; };
 		827097931DB1EBE300A624EA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		827097941DB1EBE300A624EA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		827097961DB1ED9A00A624EA /* eagle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle-1.png"; sourceTree = "<group>"; };
@@ -212,18 +204,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823C08B61DBE18320046E94A /* Bolts.framework in Frameworks */,
-				823C08B71DBE18320046E94A /* FBSDKCoreKit.framework in Frameworks */,
-				823C08B81DBE18320046E94A /* FBSDKLoginKit.framework in Frameworks */,
-				823C08B91DBE18320046E94A /* FBSDKShareKit.framework in Frameworks */,
 				1B8FBC1247055B6CF0A1E290 /* Pods_CuckooChicken.framework in Frameworks */,
-<<<<<<< HEAD
-=======
 				0203B1751DBE1C27009DEE71 /* FBSDKCoreKit.framework in Frameworks */,
 				0203B1771DBE1C27009DEE71 /* FBSDKShareKit.framework in Frameworks */,
 				0203B1761DBE1C27009DEE71 /* FBSDKLoginKit.framework in Frameworks */,
 				0203B1741DBE1C27009DEE71 /* Bolts.framework in Frameworks */,
->>>>>>> b8ceb55b46737f1a640ef81b905e4d249912a702
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,26 +330,19 @@
 		7030CA1CE3166D9D15E4BA4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				823C08B21DBE18320046E94A /* Bolts.framework */,
-				823C08B31DBE18320046E94A /* FBSDKCoreKit.framework */,
-				823C08B41DBE18320046E94A /* FBSDKLoginKit.framework */,
-				823C08B51DBE18320046E94A /* FBSDKShareKit.framework */,
-=======
 				0203B1701DBE1C26009DEE71 /* Bolts.framework */,
 				0203B1711DBE1C26009DEE71 /* FBSDKCoreKit.framework */,
 				0203B1721DBE1C26009DEE71 /* FBSDKLoginKit.framework */,
 				0203B1731DBE1C26009DEE71 /* FBSDKShareKit.framework */,
->>>>>>> b8ceb55b46737f1a640ef81b905e4d249912a702
 				897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		823C08BA1DBE2E4D0046E94A /* UI */ = {
+		823C08BD1DBF29D60046E94A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				823C08BB1DBE2E5C0046E94A /* UI_blood.png */,
+				823C08BE1DBF29F00046E94A /* UI_blood.png */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -374,7 +352,7 @@
 			children = (
 				827097931DB1EBE300A624EA /* Player.h */,
 				827097941DB1EBE300A624EA /* Player.m */,
-				823C08BA1DBE2E4D0046E94A /* UI */,
+				823C08BD1DBF29D60046E94A /* UI */,
 				827097A21DB1EDA200A624EA /* image */,
 			);
 			name = GameObject;
@@ -514,6 +492,7 @@
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KVU42XKSXZ;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -545,11 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				823C08BC1DBE2E5C0046E94A /* UI_blood.png in Resources */,
-=======
 				0203B19F1DBE1F8C009DEE71 /* Loading_7.png in Resources */,
->>>>>>> b8ceb55b46737f1a640ef81b905e4d249912a702
 				023088F71DB370A80037180E /* 盜賊兵技能轉換.png in Resources */,
 				823C08261DBB59A30046E94A /* BulletGalaga.png in Resources */,
 				8270979C1DB1ED9A00A624EA /* eagle-1.png in Resources */,
@@ -590,6 +565,7 @@
 				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
 				023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */,
 				023088D81DB36E580037180E /* Group 2.png in Resources */,
+				823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */,
 				023088D31DB36E000037180E /* Group.png in Resources */,
 				023088DA1DB36E580037180E /* ViewBackground.png in Resources */,
 				023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */,
@@ -850,7 +826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
@@ -883,7 +859,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
