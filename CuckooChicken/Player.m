@@ -24,20 +24,16 @@
     player.physicsBody.affectedByGravity = NO;
     player.physicsBody.dynamic = false;
     player.physicsBody.categoryBitMask = 3;
-    player.physicsBody.contactTestBitMask =1;
+    player.physicsBody.contactTestBitMask =4;
     
     _hpUI = [SKSpriteNode spriteNodeWithImageNamed:@"UI_blood.png"];
     _hpUI.size = CGSizeMake(player.size.width/1.4, player.size.height/12);
     
     _hpUI.zPosition = 1;
-    if ([playerType isEqualToString:PlAYER]) {
-        _hpUI.name = PlAYER;
-        _hpUI.position = CGPointMake(player.position.x, player.position.y-player.size.height/3);
+    
+    _hpUI.name = PlAYER;
+    _hpUI.position = CGPointMake(player.position.x, player.position.y-player.size.height/3);
 
-    }else {
-        _hpUI.name = ENEMY;
-        _hpUI.position = CGPointMake(player.position.x, player.position.y+player.size.height/3);
-    }
     
     NSLog(@"W:%f  H:%f",_hpUI.size.width,_hpUI.size.height);
     [player addChild:_hpUI];
@@ -51,14 +47,8 @@
     SKTexture *runTexture1;
     SKTexture *runTexture2;
     if ([animationKey isEqualToString:EAGLE_Animation]) {
-        if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
             runTexture1 = [SKTexture textureWithImageNamed:@"eagle_back1.png"];
             runTexture2 = [SKTexture textureWithImageNamed:@"eagle_back2.png"];
-        }else{
-            runTexture1 = [SKTexture textureWithImageNamed:@"eagle-1.png"];
-            runTexture2 = [SKTexture textureWithImageNamed:@"eagle-2.png"];
-        }
-
 
     }else if([animationKey isEqualToString:EGG_Animation]){
         runTexture1 = [SKTexture textureWithImageNamed:@"egg-1.png"];

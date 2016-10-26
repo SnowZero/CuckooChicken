@@ -69,6 +69,8 @@
 		026FDDD11DBF58840078B703 /* Button_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDD01DBF58840078B703 /* Button_7.png */; };
 		1B8FBC1247055B6CF0A1E290 /* Pods_CuckooChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */; };
 		822635A71DBF40660065E3CE /* GameBackground_loop.png in Resources */ = {isa = PBXBuildFile; fileRef = 822635A61DBF40660065E3CE /* GameBackground_loop.png */; };
+		822635C71DC0821F0065E3CE /* CallMonsterBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 822635C61DC0821F0065E3CE /* CallMonsterBar.png */; };
+		822635CA1DC08AC60065E3CE /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 822635C91DC08AC60065E3CE /* Monster.m */; };
 		823C08261DBB59A30046E94A /* BulletGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08251DBB59A30046E94A /* BulletGalaga.png */; };
 		823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08BE1DBF29F00046E94A /* UI_blood.png */; };
 		827097951DB1EBE300A624EA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097941DB1EBE300A624EA /* Player.m */; };
@@ -160,6 +162,9 @@
 		026FDDD01DBF58840078B703 /* Button_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_7.png; sourceTree = "<group>"; };
 		5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.debug.xcconfig"; sourceTree = "<group>"; };
 		822635A61DBF40660065E3CE /* GameBackground_loop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackground_loop.png; sourceTree = "<group>"; };
+		822635C61DC0821F0065E3CE /* CallMonsterBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CallMonsterBar.png; sourceTree = "<group>"; };
+		822635C81DC08AC60065E3CE /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
+		822635C91DC08AC60065E3CE /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
 		823C08251DBB59A30046E94A /* BulletGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BulletGalaga.png; sourceTree = "<group>"; };
 		823C08BE1DBF29F00046E94A /* UI_blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_blood.png; sourceTree = "<group>"; };
 		827097931DB1EBE300A624EA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -361,6 +366,8 @@
 			children = (
 				827097931DB1EBE300A624EA /* Player.h */,
 				827097941DB1EBE300A624EA /* Player.m */,
+				822635C81DC08AC60065E3CE /* Monster.h */,
+				822635C91DC08AC60065E3CE /* Monster.m */,
 				823C08BD1DBF29D60046E94A /* UI */,
 				827097A21DB1EDA200A624EA /* image */,
 			);
@@ -377,6 +384,7 @@
 				827097991DB1ED9A00A624EA /* egg-2.png */,
 				8270979A1DB1ED9A00A624EA /* eagle_back1.png */,
 				8270979B1DB1ED9A00A624EA /* eagle_back2.png */,
+				822635C61DC0821F0065E3CE /* CallMonsterBar.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -501,6 +509,7 @@
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KVU42XKSXZ;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -583,6 +592,7 @@
 				0203B1881DBE1F7F009DEE71 /* character_1.png in Resources */,
 				023088DD1DB36E920037180E /* Back.png in Resources */,
 				0203B1A11DBE1F8C009DEE71 /* Loading_9.png in Resources */,
+				822635C71DC0821F0065E3CE /* CallMonsterBar.png in Resources */,
 				8270979E1DB1ED9A00A624EA /* egg-1.png in Resources */,
 				827097A11DB1ED9A00A624EA /* eagle_back2.png in Resources */,
 				0203B1B21DBE3364009DEE71 /* viewImage.png in Resources */,
@@ -710,6 +720,7 @@
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
 				E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
+				822635CA1DC08AC60065E3CE /* Monster.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				827097A51DB200AA00A624EA /* FireBaseManager.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
@@ -839,7 +850,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
@@ -876,7 +887,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KVU42XKSXZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
