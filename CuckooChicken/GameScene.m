@@ -40,10 +40,13 @@ typedef void(^FIRBTask)(void);
     userData = [FireBaseManager newFBData];
     [self startFirebase];
     self.physicsWorld.contactDelegate = self;
-    background = (SKSpriteNode*)[self childNodeWithName:@"background"];
-    background.zPosition = -1;
+    //background = (SKSpriteNode*)[self childNodeWithName:@"background"];
+    background = [SKSpriteNode spriteNodeWithImageNamed:@"GameBackground_loop.png"];
+    background.zPosition = -5;
     background.size = CGSizeMake(self.frame.size.width, self.frame.size.height*2);
     background.position = CGPointMake(background.position.x, background.position.y);
+    [self addChild:background];
+    
     
     PhysicsCatagory.Enemy = 1;
     PhysicsCatagory.PlayerBullet = 2;
@@ -227,15 +230,21 @@ typedef void(^FIRBTask)(void);
 
 -(void)viewUIHp{
     //player.hpUI.size = CGSizeMake(Width * (player.hp/100.0), Height);
-    SKSpriteNode *playerHp = (SKSpriteNode*)[player childNodeWithName:PlAYER];
-    CGFloat Width = playerHpMaxSize.width;
-    CGFloat Height = playerHp.size.height;
-    playerHp.size = CGSizeMake(Width * (player.hp/100.0), Height);
+    if (player.hp>=0) {
+        SKSpriteNode *playerHp = (SKSpriteNode*)[player childNodeWithName:PlAYER];
+        CGFloat Width = playerHpMaxSize.width;
+        CGFloat Height = playerHp.size.height;
+        playerHp.size = CGSizeMake(Width * (player.hp/100.0), Height);
+    }
+    if (enemy.hp>=0) {
+        SKSpriteNode *enemyHp = (SKSpriteNode*)[enemy childNodeWithName:ENEMY];
+        CGFloat enemyWidth = enemyHpMaxSize.width;
+        CGFloat enemyHeight = enemyHp.size.height;
+        enemyHp.size = CGSizeMake(enemyWidth * (enemy.hp/100.0), enemyHeight);
+    }
+
     
-    SKSpriteNode *enemyHp = (SKSpriteNode*)[enemy childNodeWithName:ENEMY];
-    CGFloat enemyWidth = enemyHpMaxSize.width;
-    CGFloat enemyHeight = enemyHp.size.height;
-    enemyHp.size = CGSizeMake(enemyWidth * (enemy.hp/100.0), enemyHeight);
+
     
 }
 
