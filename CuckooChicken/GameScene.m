@@ -42,11 +42,11 @@ typedef void(^FIRBTask)(void);
 -(void)didMoveToView:(SKView *)view {
     
     userData = [FireBaseManager newFBData];
-//    userData.playerType = PLAYER_TYPE_ATTACK;
-//    userData.enemyType = PLAYER_TYPE_DEFENSE;
-////    userData.playerType = PLAYER_TYPE_DEFENSE;
-////    userData.enemyType = PLAYER_TYPE_ATTACK;
-//    userData.gameRoomKey = @"adsadasdasfdf";
+    userData.playerType = PLAYER_TYPE_ATTACK;
+    userData.enemyType = PLAYER_TYPE_DEFENSE;
+//    userData.playerType = PLAYER_TYPE_DEFENSE;
+//    userData.enemyType = PLAYER_TYPE_ATTACK;
+    userData.gameRoomKey = @"adsadasdasfdf";
     [self startFirebase];
     
     
@@ -84,7 +84,7 @@ typedef void(^FIRBTask)(void);
     //[self addChild:enemy];
 
     
-    NSTimer *playerBullets = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(playerBullets) userInfo:nil repeats:true];
+    NSTimer *playerBullets = [NSTimer scheduledTimerWithTimeInterval:0.6 target:self selector:@selector(playerBullets) userInfo:nil repeats:true];
     SKSpriteNode *hpNode = (SKSpriteNode*)[player childNodeWithName:PlAYER];
     playerHpMaxSize = hpNode.size;
     SKSpriteNode *hpNode2 = (SKSpriteNode*)[enemy childNodeWithName:ENEMY];
@@ -109,7 +109,8 @@ typedef void(^FIRBTask)(void);
                 createMonser = [Monster new];
                 [createMonser createMonsterById:1];
                 [self addChild:createMonser.monster];
-                
+                createMonser.monster.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
+                createMonser.monster.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
                 createMonser.monster.position = CGPointMake([tmp[@"posX"] floatValue]*self.frame.size.width,
                                                             [tmp[@"posY"] floatValue]*self.frame.size.height);
                 createMonser.monster.name = @"monster";
@@ -117,7 +118,6 @@ typedef void(^FIRBTask)(void);
                 FIRDatabaseReference *ref2 = [[[[ref child:@"GameRoom"] child:userData.gameRoomKey] child:PLAYER_TYPE_DEFENSE] child:@"AddMonster"];
                 [ref2 setValue:nil];
                 createMonser = nil;
-            
 
         }
             
@@ -147,10 +147,10 @@ typedef void(^FIRBTask)(void);
     Bullet.physicsBody.categoryBitMask = PhysicsCatagory.PlayerBullet;
     Bullet.physicsBody.contactTestBitMask = PhysicsCatagory.Enemy;
     Bullet.physicsBody.affectedByGravity = false;
-    Bullet.physicsBody.dynamic = true;
+    Bullet.physicsBody.dynamic = false;
     Bullet.name = @"Bullet";
     
-    SKAction *action = [SKAction moveToY:self.size.height+30 duration:0.6];
+    SKAction *action = [SKAction moveToY:self.size.height+30 duration:1];
     SKAction *actionremove = [SKAction removeFromParent];
     //SKAction *End = [SKAction performSelector:@selector(getFIBPostion) onTarget:self];
     [Bullet runAction:[SKAction sequence:@[action,actionremove]]];
@@ -159,9 +159,15 @@ typedef void(^FIRBTask)(void);
 
 // 碰撞
 -(void)didBeginContact:(SKPhysicsContact *)contact{
+    NSLog(@"碰撞");
     SKPhysicsBody *firstBody = contact.bodyA;
     SKPhysicsBody *seconBody = contact.bodyB;
-
+    if ((firstBody.categoryBitMask == PhysicsCatagory.Enemy && seconBody.categoryBitMask == PhysicsCatagory.PlayerBullet)||
+        (firstBody.categoryBitMask == PhysicsCatagory.PlayerBullet && seconBody.categoryBitMask ==PhysicsCatagory.Enemy)) {
+        [firstBody.node removeFromParent];
+        [seconBody.node removeFromParent];
+    
+    }
     
 }
 
@@ -175,6 +181,8 @@ typedef void(^FIRBTask)(void);
                 NSLog(@"碰到monster");
                 createMonser = [Monster new];
                 [createMonser createMonsterById:1];
+                createMonser.monster.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
+                createMonser.monster.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
                 [self addChild:createMonser.monster];
             }
         }
@@ -237,20 +245,6 @@ typedef void(^FIRBTask)(void);
     background.position = CGPointMake(background.position.x, background.position.y-3);
     if (background.position.y <= background.size.height/160.212) {
         background.position = CGPointMake(self.frame.size.width/2, 1759.788);
-    }
-    
-    SKSpriteNode *tmpMonster  = (SKSpriteNode*)[self childNodeWithName:@"monster"];
-    SKSpriteNode *bullet = (SKSpriteNode*)[self childNodeWithName:@"Bullet"];
-    if (CGRectIntersectsRect(tmpMonster.frame , bullet.frame))
-    {
-        tmpMonster.physicsBody.collisionBitMask--;
-        NSLog(@"hp--:%i",tmpMonster.physicsBody.collisionBitMask);
-        if (tmpMonster.physicsBody.collisionBitMask <-20) {
-            NSLog(@"死掉了");
-            SKAction *actionremove = [SKAction removeFromParent];
-            [tmpMonster runAction:[SKAction sequence:@[actionremove]]];
-            [bullet removeAllActions];
-        }
     }
     
 }

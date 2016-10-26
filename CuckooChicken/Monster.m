@@ -33,7 +33,7 @@ struct PhysicsCatagory{
     _monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_monster.size];
     _monster.physicsBody.affectedByGravity = false;
     _monster.physicsBody.dynamic = true;
-    _monster.physicsBody.categoryBitMask = 3;
+    _monster.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
     _monster.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
     _monster.name = @"monster";
 }
