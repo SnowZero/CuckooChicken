@@ -36,7 +36,7 @@
 		0203B1B21DBE3364009DEE71 /* viewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1B01DBE3364009DEE71 /* viewImage.png */; };
 		0203B1C01DBE3D09009DEE71 /* TextF1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1BF1DBE3D09009DEE71 /* TextF1.png */; };
 		0203B1C21DBE3EA0009DEE71 /* GG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1C11DBE3EA0009DEE71 /* GG.png */; };
-		023088CE1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CA1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png */; };
+		023088CE1DB36D4C0037180E /* 招喚01.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CA1DB36D4C0037180E /* 招喚01.png */; };
 		023088CF1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CB1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png */; };
 		023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CC1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png */; };
 		023088D11DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CD1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png */; };
@@ -129,7 +129,7 @@
 		0203B1B01DBE3364009DEE71 /* viewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewImage.png; sourceTree = "<group>"; };
 		0203B1BF1DBE3D09009DEE71 /* TextF1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextF1.png; sourceTree = "<group>"; };
 		0203B1C11DBE3EA0009DEE71 /* GG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GG.png; sourceTree = "<group>"; };
-		023088CA1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.20.04.png"; sourceTree = "<group>"; };
+		023088CA1DB36D4C0037180E /* 招喚01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "招喚01.png"; sourceTree = "<group>"; };
 		023088CB1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.19.35.png"; sourceTree = "<group>"; };
 		023088CC1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.20.55.png"; sourceTree = "<group>"; };
 		023088CD1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.20.32.png"; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 		023088C81DB36CBF0037180E /* headImage */ = {
 			isa = PBXGroup;
 			children = (
-				023088CA1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png */,
+				023088CA1DB36D4C0037180E /* 招喚01.png */,
 				023088CB1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png */,
 				023088CC1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png */,
 				023088CD1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png */,
@@ -565,7 +565,7 @@
 				0203B19D1DBE1F8C009DEE71 /* Loading_5.png in Resources */,
 				023088DB1DB36E580037180E /* Optionview.png in Resources */,
 				0203B18C1DBE1F7F009DEE71 /* character_5.png in Resources */,
-				023088CE1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.04.png in Resources */,
+				023088CE1DB36D4C0037180E /* 招喚01.png in Resources */,
 				0203B1A01DBE1F8C009DEE71 /* Loading_8.png in Resources */,
 				023088F51DB370A80037180E /* 魔法兵激光.png in Resources */,
 				023088F61DB370A80037180E /* 盾兵技能.png in Resources */,

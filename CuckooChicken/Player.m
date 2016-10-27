@@ -41,9 +41,7 @@
 
 }
 
-- (void)setAnimation:(NSString *)animationKey myPlayer:(SKSpriteNode *)myPlayer{
-    FireBaseManager *userData = [FireBaseManager newFBData];
-    
+- (void)setAnimation:(NSString *)animationKey myPlayer:(SKSpriteNode *)myPlayer{    
     SKTexture *runTexture1;
     SKTexture *runTexture2;
     if ([animationKey isEqualToString:EAGLE_Animation]) {

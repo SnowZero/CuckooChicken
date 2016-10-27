@@ -17,7 +17,7 @@ struct PhysicsCatagory{
     int Enemy;
     int PlayerBullet;
     int Player;
-    int EnemyBullet;
+    int ScoreWall;
 };
 
 //定義工作型別 將原本的型別取個新的名稱 （將一個匿名方法block定義）
@@ -29,26 +29,42 @@ typedef void(^FIRBTask)(void);
     SKSpriteNode *hpUI;
     SKSpriteNode *background;
     SKSpriteNode *callMonsterBar;
+    SKSpriteNode *scoreWall;
     Monster *createMonser;
     FireBaseManager *userData;
     FIRDatabaseReference *ref;
+    SKLabelNode *labelScore;
     CGSize playerHpMaxSize;
     CGSize enemyHpMaxSize;
     __block NSDictionary *fireData;
     struct PhysicsCatagory PhysicsCatagory;
     FIRBTask setUpload;
+    NSInteger Socre;
 }
 
 -(void)didMoveToView:(SKView *)view {
+    PhysicsCatagory.Enemy = 1;
+    PhysicsCatagory.PlayerBullet = 2;
+    PhysicsCatagory.Player = 3;
+    PhysicsCatagory.ScoreWall = 4;
+
     
     userData = [FireBaseManager newFBData];
-    userData.playerType = PLAYER_TYPE_ATTACK;
-    userData.enemyType = PLAYER_TYPE_DEFENSE;
+//    userData.playerType = PLAYER_TYPE_ATTACK;
+//    userData.enemyType = PLAYER_TYPE_DEFENSE;
 //    userData.playerType = PLAYER_TYPE_DEFENSE;
 //    userData.enemyType = PLAYER_TYPE_ATTACK;
-    userData.gameRoomKey = @"adsadasdasfdf";
+//    userData.gameRoomKey = @"adsadasdasfdf";
     [self startFirebase];
-    
+    labelScore = [SKLabelNode labelNodeWithFontNamed:@"Score"];
+    labelScore.text = @"Score : 0";
+    labelScore.fontSize = 50;
+    labelScore.position = CGPointMake(130, 32);
+    [self addChild:labelScore];
+    Socre =0;
+    scoreWall = (SKSpriteNode*)[self childNodeWithName:@"ScoreWall"];
+    scoreWall.physicsBody.categoryBitMask = PhysicsCatagory.ScoreWall;
+    scoreWall.physicsBody.contactTestBitMask = PhysicsCatagory.Enemy;
     
     self.physicsWorld.contactDelegate = self;
     //background = (SKSpriteNode*)[self childNodeWithName:@"background"];
@@ -59,12 +75,8 @@ typedef void(^FIRBTask)(void);
     [self addChild:background];
     
     callMonsterBar = (SKSpriteNode*)[self childNodeWithName:@"CallMonsterBar"];
-    callMonsterBar.zPosition = -1;
+
     
-    PhysicsCatagory.Enemy = 1;
-    PhysicsCatagory.PlayerBullet = 2;
-    PhysicsCatagory.Player = 3;
-    PhysicsCatagory.EnemyBullet = 4;
     
    /* Setup your scene here */
     player = [Player new];
@@ -166,9 +178,19 @@ typedef void(^FIRBTask)(void);
         (firstBody.categoryBitMask == PhysicsCatagory.PlayerBullet && seconBody.categoryBitMask ==PhysicsCatagory.Enemy)) {
         [firstBody.node removeFromParent];
         [seconBody.node removeFromParent];
-    
+        if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
+             Socre += 100;
+        }
+       
+        
+    }else if ( (firstBody.categoryBitMask == PhysicsCatagory.ScoreWall) || (seconBody.categoryBitMask == PhysicsCatagory.ScoreWall)){
+        
+        if ([userData.playerType isEqualToString:PLAYER_TYPE_DEFENSE]) {
+            Socre += 600;
+        }
+        
     }
-    
+        labelScore.text = [NSString stringWithFormat:@"Score : %li",(long)Socre];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -181,8 +203,7 @@ typedef void(^FIRBTask)(void);
                 NSLog(@"碰到monster");
                 createMonser = [Monster new];
                 [createMonser createMonsterById:1];
-                createMonser.monster.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
-                createMonser.monster.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
+                createMonser.monster.physicsBody.dynamic = false;
                 [self addChild:createMonser.monster];
             }
         }
@@ -206,7 +227,9 @@ typedef void(^FIRBTask)(void);
             NSDictionary *childUpdates = @{path:upData};
             [tmpRef updateChildValues:childUpdates];
             
-            
+            createMonser.monster.physicsBody.dynamic = true;
+            createMonser.monster.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
+            createMonser.monster.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
             [createMonser monsterAutoMove:self.size.height];
             
             createMonser = nil;
