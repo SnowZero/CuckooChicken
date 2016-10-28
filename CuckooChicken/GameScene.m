@@ -10,6 +10,7 @@
 #import "Player.h"
 #import "FireBaseManager.h"
 #import "Monster.h"
+#import "GameViewController.h"
 
 @import Firebase;
 
@@ -34,12 +35,15 @@ typedef void(^FIRBTask)(void);
     FireBaseManager *userData;
     FIRDatabaseReference *ref;
     SKLabelNode *labelScore;
+    SKLabelNode *labelTime;
     CGSize playerHpMaxSize;
     CGSize enemyHpMaxSize;
     __block NSDictionary *fireData;
     struct PhysicsCatagory PhysicsCatagory;
     FIRBTask setUpload;
     NSInteger Socre;
+    NSTimer *timerGame;
+    int timeCount;
 }
 
 -(void)didMoveToView:(SKView *)view {
@@ -47,19 +51,74 @@ typedef void(^FIRBTask)(void);
     PhysicsCatagory.PlayerBullet = 2;
     PhysicsCatagory.Player = 3;
     PhysicsCatagory.ScoreWall = 4;
-
     
     userData = [FireBaseManager newFBData];
 //    userData.playerType = PLAYER_TYPE_ATTACK;
 //    userData.enemyType = PLAYER_TYPE_DEFENSE;
-//    userData.playerType = PLAYER_TYPE_DEFENSE;
-//    userData.enemyType = PLAYER_TYPE_ATTACK;
+////    userData.playerType = PLAYER_TYPE_DEFENSE;
+////    userData.enemyType = PLAYER_TYPE_ATTACK;
 //    userData.gameRoomKey = @"adsadasdasfdf";
     [self startFirebase];
+    [self createUIStart];
+    
+
+    
+   /* Setup your scene here */
+    player = [Player new];
+    player = [player newPlayer:PlAYER];
+    player.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/6);
+    player.physicsBody.dynamic = false;
+    
+    if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
+        callMonsterBar.hidden = true;
+    }
+        [player setAnimation:EAGLE_Animation myPlayer:player];
+    player.hp = 100;
+
+    [self addChild:player];
+    
+    NSTimer *playerBullets = [NSTimer scheduledTimerWithTimeInterval:0.6 target:self selector:@selector(playerBullets) userInfo:nil repeats:true];
+    timerGame = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timingStarts) userInfo:nil repeats:true];
+
+    SKSpriteNode *hpNode = (SKSpriteNode*)[player childNodeWithName:PlAYER];
+    playerHpMaxSize = hpNode.size;
+}
+
+
+-(void)timingStarts{
+    timeCount+=1;
+    NSLog(@"+1");
+    labelTime.text = [NSString stringWithFormat:@"Time : %i",timeCount];
+    if (timeCount>60) {
+        [timerGame invalidate];
+        timerGame = nil;
+        [self gameOver];
+    }
+}
+-(void)gameOver{
+    FIRDatabaseReference *ref2 = [[ref child:@"GameRoom"] child:userData.gameRoomKey] ;
+    if (ref2) {
+        [ref2 setValue:nil];
+        
+        
+
+    }
+
+    
+}
+
+-(void)createUIStart{
+    labelTime = [SKLabelNode labelNodeWithFontNamed:@"Time"];
+    labelTime.text = @"Time : 0";
+    labelTime.fontSize = 50;
+    [self addChild:labelTime];
+    labelTime.position = CGPointMake(135, 80);
+    timeCount = 0;
+    
     labelScore = [SKLabelNode labelNodeWithFontNamed:@"Score"];
     labelScore.text = @"Score : 0";
     labelScore.fontSize = 50;
-    labelScore.position = CGPointMake(130, 32);
+    labelScore.position = CGPointMake(140, 32);
     [self addChild:labelScore];
     Socre =0;
     scoreWall = (SKSpriteNode*)[self childNodeWithName:@"ScoreWall"];
@@ -75,32 +134,11 @@ typedef void(^FIRBTask)(void);
     [self addChild:background];
     
     callMonsterBar = (SKSpriteNode*)[self childNodeWithName:@"CallMonsterBar"];
-
-    
-    
-   /* Setup your scene here */
-    player = [Player new];
-    player = [player newPlayer:PlAYER];
-    player.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/6);
-    player.physicsBody.dynamic = false;
-    
-    enemy = [Player new];
-    enemy = [enemy newPlayer:ENEMY];
+    SKShapeNode *uiMonsterGround = (SKSpriteNode*)[self childNodeWithName:@"AddMonsterGround"];
     if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
-        callMonsterBar.hidden = true;
+        uiMonsterGround.Hidden = true;
     }
-        [player setAnimation:EAGLE_Animation myPlayer:player];
-    player.hp = 100;
-    enemy.hp = 100;
-    [self addChild:player];
-    //[self addChild:enemy];
-
     
-    NSTimer *playerBullets = [NSTimer scheduledTimerWithTimeInterval:0.6 target:self selector:@selector(playerBullets) userInfo:nil repeats:true];
-    SKSpriteNode *hpNode = (SKSpriteNode*)[player childNodeWithName:PlAYER];
-    playerHpMaxSize = hpNode.size;
-    SKSpriteNode *hpNode2 = (SKSpriteNode*)[enemy childNodeWithName:ENEMY];
-    enemyHpMaxSize = hpNode2.size;
 }
 
 -(void)startFirebase{
@@ -204,6 +242,7 @@ typedef void(^FIRBTask)(void);
                 createMonser = [Monster new];
                 [createMonser createMonsterById:1];
                 createMonser.monster.physicsBody.dynamic = false;
+                createMonser.monster.zPosition = 2;
                 [self addChild:createMonser.monster];
             }
         }
