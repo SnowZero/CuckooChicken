@@ -16,6 +16,7 @@
 @property(strong,nonatomic) NSString *playerType;
 @property(strong,nonatomic) NSString *enemyType;
 @property(strong,nonatomic) NSString *gameRoomKey;
+@property(nonatomic,assign)  NSInteger score;
 
 +(instancetype) newFBData;
 

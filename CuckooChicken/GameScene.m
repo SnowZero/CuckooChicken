@@ -41,7 +41,7 @@ typedef void(^FIRBTask)(void);
     __block NSDictionary *fireData;
     struct PhysicsCatagory PhysicsCatagory;
     FIRBTask setUpload;
-    NSInteger Socre;
+    NSInteger score;
     NSTimer *timerGame;
     int timeCount;
 }
@@ -89,7 +89,7 @@ typedef void(^FIRBTask)(void);
     timeCount+=1;
     NSLog(@"+1");
     labelTime.text = [NSString stringWithFormat:@"Time : %i",timeCount];
-    if (timeCount>60) {
+    if (timeCount>30) {
         [timerGame invalidate];
         timerGame = nil;
         [self gameOver];
@@ -99,8 +99,11 @@ typedef void(^FIRBTask)(void);
     FIRDatabaseReference *ref2 = [[ref child:@"GameRoom"] child:userData.gameRoomKey] ;
     if (ref2) {
         [ref2 setValue:nil];
-        
-        
+        userData.score = score;
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"     bundle:nil];
+        UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+        //Call on the RootViewController to present the New View Controller
+        [self.view.window.rootViewController presentViewController:vc animated:YES completion:nil];
 
     }
 
@@ -120,7 +123,7 @@ typedef void(^FIRBTask)(void);
     labelScore.fontSize = 50;
     labelScore.position = CGPointMake(140, 32);
     [self addChild:labelScore];
-    Socre =0;
+    score =0;
     scoreWall = (SKSpriteNode*)[self childNodeWithName:@"ScoreWall"];
     scoreWall.physicsBody.categoryBitMask = PhysicsCatagory.ScoreWall;
     scoreWall.physicsBody.contactTestBitMask = PhysicsCatagory.Enemy;
@@ -217,18 +220,18 @@ typedef void(^FIRBTask)(void);
         [firstBody.node removeFromParent];
         [seconBody.node removeFromParent];
         if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
-             Socre += 100;
+             score += 100;
         }
        
         
     }else if ( (firstBody.categoryBitMask == PhysicsCatagory.ScoreWall) || (seconBody.categoryBitMask == PhysicsCatagory.ScoreWall)){
         
         if ([userData.playerType isEqualToString:PLAYER_TYPE_DEFENSE]) {
-            Socre += 600;
+            score += 600;
         }
         
     }
-        labelScore.text = [NSString stringWithFormat:@"Score : %li",(long)Socre];
+        labelScore.text = [NSString stringWithFormat:@"Score : %li",(long)score];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

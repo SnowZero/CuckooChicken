@@ -9,9 +9,10 @@
 #import "MatchPlayersViewController.h"
 #import "FireBaseManager.h"
 #import "ViewController.h"
+#import <GameKit/GameKit.h>
 @import Firebase;
 
-@interface MatchPlayersViewController (){
+@interface MatchPlayersViewController ()<GKGameCenterControllerDelegate>{
     NSDictionary *fireData;
     NSTimer *timer;
     FireBaseManager *userType;
@@ -28,8 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self changeBackGroundView]; //顯示動畫
+    //[self changeBackGroundView]; //顯示動畫
     [self showBackGroundImages]; //顯示背景
+    [self authPlayer];
     
     userType = [FireBaseManager newFBData];
     [[FIRAuth auth] signInWithEmail:@"snow@gmail.com"
@@ -253,6 +255,42 @@
     
 }
 
+
+-(void)authPlayer{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error) {
+        if (viewController != nil) {
+            [self presentViewController:viewController animated:true completion:nil];
+        }else{
+            NSLog(@"%d",[[GKLocalPlayer localPlayer] isAuthenticated]);
+        }
+    };
+        [self saveHighscore:userType.score];
+}
+
+-(void)saveHighscore:(NSInteger)number{
+    if (userType.score) {
+        if ([[GKLocalPlayer localPlayer] isAuthenticated]) {
+            GKScore* scoreRepoter =[[GKScore alloc] initWithLeaderboardIdentifier:@"Score"];
+            scoreRepoter.value = number;
+            NSArray *scoreArray = @[scoreRepoter];
+            [GKScore reportScores:scoreArray withCompletionHandler:nil];
+        }
+    }
+}
+- (IBAction)gameCenterBtn:(id)sender {
+    [self saveHighscore:userType.score];
+    [self showLeaderBoard];
+}
+
+-(void)showLeaderBoard{
+    GKGameCenterViewController *gvc = [GKGameCenterViewController new];
+    gvc.gameCenterDelegate = self;
+    [self presentViewController:gvc animated:true completion:nil];
+}
+-(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
+    [gameCenterViewController dismissViewControllerAnimated:true completion:nil];
+}
 
 
 

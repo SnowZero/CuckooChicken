@@ -26,6 +26,14 @@
                                     <action selector="MatchButton:" destination="cz9-lk-kJN" eventType="touchUpInside" id="mGM-DB-dvR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-9L-30S">
+                                <frame key="frameInset" minX="81" minY="596" width="53" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="GameCenter.png"/>
+                                <connections>
+                                    <action selector="gameCenterBtn:" destination="cz9-lk-kJN" eventType="touchUpInside" id="25v-uB-ugQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -311,6 +319,7 @@
         <image name="Button_2.png" width="52" height="46"/>
         <image name="Button_3.png" width="52" height="46"/>
         <image name="Button_4.png" width="52" height="46"/>
+        <image name="GameCenter.png" width="128" height="129"/>
         <image name="Text_1.png" width="402" height="127"/>
     </resources>
 </document>
