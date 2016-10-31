@@ -73,6 +73,16 @@
 		822635CA1DC08AC60065E3CE /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 822635C91DC08AC60065E3CE /* Monster.m */; };
 		823C08261DBB59A30046E94A /* BulletGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08251DBB59A30046E94A /* BulletGalaga.png */; };
 		823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08BE1DBF29F00046E94A /* UI_blood.png */; };
+		826D73311DC752CB00EE5242 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 826D73301DC752CB00EE5242 /* GameCenterManager.m */; };
+		826D73331DC7538800EE5242 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 826D73321DC7538800EE5242 /* GoogleService-Info.plist */; };
+		826D73371DC75A9300EE5242 /* pirate1.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D73351DC75A9300EE5242 /* pirate1.png */; };
+		826D733A1DC75CF900EE5242 /* pirate2.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D73391DC75CF900EE5242 /* pirate2.png */; };
+		826D733D1DC75DDD00EE5242 /* shield1.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D733B1DC75DDD00EE5242 /* shield1.png */; };
+		826D733E1DC75DDD00EE5242 /* shield2.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D733C1DC75DDD00EE5242 /* shield2.png */; };
+		826D73411DC75E9600EE5242 /* Magician1.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D733F1DC75E9600EE5242 /* Magician1.png */; };
+		826D73421DC75E9600EE5242 /* Magician2.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D73401DC75E9600EE5242 /* Magician2.png */; };
+		826D73451DC75F2E00EE5242 /* Priest1.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D73431DC75F2E00EE5242 /* Priest1.png */; };
+		826D73461DC75F2E00EE5242 /* Priest2.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D73441DC75F2E00EE5242 /* Priest2.png */; };
 		827097951DB1EBE300A624EA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097941DB1EBE300A624EA /* Player.m */; };
 		8270979C1DB1ED9A00A624EA /* eagle-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097961DB1ED9A00A624EA /* eagle-1.png */; };
 		8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 827097971DB1ED9A00A624EA /* eagle-2.png */; };
@@ -92,10 +102,7 @@
 		82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */; };
 		82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1521D86CFCD00A1CA30 /* ViewController.m */; };
 		82DBFF2F1DC4527A00E4647C /* GameCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DBFF2E1DC4527A00E4647C /* GameCenter.png */; };
-		82DBFF321DC4609A00E4647C /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DBFF311DC4609A00E4647C /* GameCenterManager.m */; };
 		82DBFF381DC46C5800E4647C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DBFF371DC46C5800E4647C /* GameKit.framework */; };
-		82DBFF3A1DC46E9100E4647C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82DBFF391DC46E9100E4647C /* GoogleService-Info.plist */; };
-		82DBFF3C1DC46EA400E4647C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82DBFF3B1DC46EA400E4647C /* GoogleService-Info.plist */; };
 		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
 		E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E119727A1D91511200B0AB77 /* RegisteredViewController.m */; };
 		E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2BE1DB8EFE90091ABEF /* AppState.m */; };
@@ -171,6 +178,17 @@
 		822635C91DC08AC60065E3CE /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
 		823C08251DBB59A30046E94A /* BulletGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BulletGalaga.png; sourceTree = "<group>"; };
 		823C08BE1DBF29F00046E94A /* UI_blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_blood.png; sourceTree = "<group>"; };
+		826D732F1DC752CB00EE5242 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterManager.h; path = CuckooChicken/GameCenterManager.h; sourceTree = "<group>"; };
+		826D73301DC752CB00EE5242 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = CuckooChicken/GameCenterManager.m; sourceTree = "<group>"; };
+		826D73321DC7538800EE5242 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		826D73351DC75A9300EE5242 /* pirate1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pirate1.png; sourceTree = "<group>"; };
+		826D73391DC75CF900EE5242 /* pirate2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pirate2.png; sourceTree = "<group>"; };
+		826D733B1DC75DDD00EE5242 /* shield1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield1.png; sourceTree = "<group>"; };
+		826D733C1DC75DDD00EE5242 /* shield2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield2.png; sourceTree = "<group>"; };
+		826D733F1DC75E9600EE5242 /* Magician1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Magician1.png; sourceTree = "<group>"; };
+		826D73401DC75E9600EE5242 /* Magician2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Magician2.png; sourceTree = "<group>"; };
+		826D73431DC75F2E00EE5242 /* Priest1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Priest1.png; sourceTree = "<group>"; };
+		826D73441DC75F2E00EE5242 /* Priest2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Priest2.png; sourceTree = "<group>"; };
 		827097931DB1EBE300A624EA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		827097941DB1EBE300A624EA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		827097961DB1ED9A00A624EA /* eagle-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle-1.png"; sourceTree = "<group>"; };
@@ -179,8 +197,8 @@
 		827097991DB1ED9A00A624EA /* egg-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg-2.png"; sourceTree = "<group>"; };
 		8270979A1DB1ED9A00A624EA /* eagle_back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle_back1.png; sourceTree = "<group>"; };
 		8270979B1DB1ED9A00A624EA /* eagle_back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle_back2.png; sourceTree = "<group>"; };
-		827097A31DB200AA00A624EA /* FireBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireBaseManager.h; sourceTree = "<group>"; };
-		827097A41DB200AA00A624EA /* FireBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireBaseManager.m; sourceTree = "<group>"; };
+		827097A31DB200AA00A624EA /* FireBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireBaseManager.h; path = CuckooChicken/FireBaseManager.h; sourceTree = "<group>"; };
+		827097A41DB200AA00A624EA /* FireBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireBaseManager.m; path = CuckooChicken/FireBaseManager.m; sourceTree = "<group>"; };
 		827097A61DB2277600A624EA /* MatchPlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchPlayersViewController.h; sourceTree = "<group>"; };
 		827097A71DB2277600A624EA /* MatchPlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchPlayersViewController.m; sourceTree = "<group>"; };
 		82B9E12C1D86CE4000A1CA30 /* CuckooChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuckooChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,11 +217,7 @@
 		82B9E1511D86CFCD00A1CA30 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82B9E1521D86CFCD00A1CA30 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82DBFF2E1DC4527A00E4647C /* GameCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameCenter.png; sourceTree = "<group>"; };
-		82DBFF301DC4609A00E4647C /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
-		82DBFF311DC4609A00E4647C /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 		82DBFF371DC46C5800E4647C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		82DBFF391DC46E9100E4647C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		82DBFF3B1DC46EA400E4647C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuckooChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11972731D914FAC00B0AB77 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		E11972741D914FAC00B0AB77 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
@@ -373,6 +387,18 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		826D73341DC7541600EE5242 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				82B9E1351D86CE4000A1CA30 /* GameScene.h */,
+				82B9E1361D86CE4000A1CA30 /* GameScene.m */,
+				82B9E1381D86CE4000A1CA30 /* GameScene.sks */,
+				82B9E13A1D86CE4000A1CA30 /* GameViewController.h */,
+				82B9E13B1D86CE4000A1CA30 /* GameViewController.m */,
+			);
+			name = GameScene;
+			sourceTree = "<group>";
+		};
 		827097921DB1EB8800A624EA /* GameObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +415,12 @@
 		827097A21DB1EDA200A624EA /* image */ = {
 			isa = PBXGroup;
 			children = (
+				826D73431DC75F2E00EE5242 /* Priest1.png */,
+				826D73441DC75F2E00EE5242 /* Priest2.png */,
+				826D733F1DC75E9600EE5242 /* Magician1.png */,
+				826D73401DC75E9600EE5242 /* Magician2.png */,
+				826D733B1DC75DDD00EE5242 /* shield1.png */,
+				826D733C1DC75DDD00EE5242 /* shield2.png */,
 				823C08251DBB59A30046E94A /* BulletGalaga.png */,
 				827097961DB1ED9A00A624EA /* eagle-1.png */,
 				827097971DB1ED9A00A624EA /* eagle-2.png */,
@@ -397,6 +429,8 @@
 				8270979A1DB1ED9A00A624EA /* eagle_back1.png */,
 				8270979B1DB1ED9A00A624EA /* eagle_back2.png */,
 				822635C61DC0821F0065E3CE /* CallMonsterBar.png */,
+				826D73351DC75A9300EE5242 /* pirate1.png */,
+				826D73391DC75CF900EE5242 /* pirate2.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -422,21 +456,14 @@
 		82B9E12E1D86CE4000A1CA30 /* CuckooChicken */ = {
 			isa = PBXGroup;
 			children = (
+				82B9E1321D86CE4000A1CA30 /* AppDelegate.h */,
+				82B9E1331D86CE4000A1CA30 /* AppDelegate.m */,
 				E119F18A1DBBC34C00EA023A /* Model */,
 				E119F18B1DBBC3FC00EA023A /* View */,
 				E16CE2C31DB8F0B00091ABEF /* CuckooChicken.entitlements */,
-				82DBFF3B1DC46EA400E4647C /* GoogleService-Info.plist */,
-				82B9E1321D86CE4000A1CA30 /* AppDelegate.h */,
-				82B9E1331D86CE4000A1CA30 /* AppDelegate.m */,
-				82B9E1351D86CE4000A1CA30 /* GameScene.h */,
-				82B9E1361D86CE4000A1CA30 /* GameScene.m */,
-				82B9E1381D86CE4000A1CA30 /* GameScene.sks */,
-				82B9E13A1D86CE4000A1CA30 /* GameViewController.h */,
-				82B9E13B1D86CE4000A1CA30 /* GameViewController.m */,
+				826D73341DC7541600EE5242 /* GameScene */,
 				827097A61DB2277600A624EA /* MatchPlayersViewController.h */,
 				827097A71DB2277600A624EA /* MatchPlayersViewController.m */,
-				827097A31DB200AA00A624EA /* FireBaseManager.h */,
-				827097A41DB200AA00A624EA /* FireBaseManager.m */,
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
@@ -447,6 +474,7 @@
 				82B9E1401D86CE4000A1CA30 /* Assets.xcassets */,
 				82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */,
 				82B9E1451D86CE4000A1CA30 /* Info.plist */,
+				826D73321DC7538800EE5242 /* GoogleService-Info.plist */,
 			);
 			path = CuckooChicken;
 			sourceTree = "<group>";
@@ -469,8 +497,10 @@
 				E16CE2C11DB8F00F0091ABEF /* Constants.m */,
 				E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */,
 				E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */,
-				82DBFF301DC4609A00E4647C /* GameCenterManager.h */,
-				82DBFF311DC4609A00E4647C /* GameCenterManager.m */,
+				826D732F1DC752CB00EE5242 /* GameCenterManager.h */,
+				826D73301DC752CB00EE5242 /* GameCenterManager.m */,
+				827097A31DB200AA00A624EA /* FireBaseManager.h */,
+				827097A41DB200AA00A624EA /* FireBaseManager.m */,
 			);
 			name = Model;
 			path = ..;
@@ -479,7 +509,6 @@
 		E119F18B1DBBC3FC00EA023A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				82DBFF391DC46E9100E4647C /* GoogleService-Info.plist */,
 				82B9E12F1D86CE4000A1CA30 /* Supporting Files */,
 				023088C61DB36BE30037180E /* GameBackground */,
 			);
@@ -581,6 +610,7 @@
 				026FDDCF1DBF57160078B703 /* Button_6.png in Resources */,
 				0203B1C01DBE3D09009DEE71 /* TextF1.png in Resources */,
 				0203B19D1DBE1F8C009DEE71 /* Loading_5.png in Resources */,
+				826D733E1DC75DDD00EE5242 /* shield2.png in Resources */,
 				023088DB1DB36E580037180E /* Optionview.png in Resources */,
 				0203B18C1DBE1F7F009DEE71 /* character_5.png in Resources */,
 				023088CE1DB36D4C0037180E /* 招喚01.png in Resources */,
@@ -592,16 +622,18 @@
 				0203B1AD1DBE2FD6009DEE71 /* backimage.png in Resources */,
 				0203B19A1DBE1F8C009DEE71 /* Loading_2.png in Resources */,
 				023088ED1DB3701A0037180E /* 小兵選擇圖.png in Resources */,
+				826D73421DC75E9600EE5242 /* Magician2.png in Resources */,
 				8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */,
 				0203B1871DBE1F7F009DEE71 /* Background.png in Resources */,
 				0203B1891DBE1F7F009DEE71 /* character_2.png in Resources */,
 				026FDDC31DBF44460078B703 /* viewImage_2.png in Resources */,
 				0203B17E1DBE1F68009DEE71 /* turn_2.png in Resources */,
-				82DBFF3C1DC46EA400E4647C /* GoogleService-Info.plist in Resources */,
 				023088D11DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png in Resources */,
 				023088CF1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png in Resources */,
+				826D73411DC75E9600EE5242 /* Magician1.png in Resources */,
 				023088E61DB370080037180E /* 狀態.png in Resources */,
 				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
+				826D73371DC75A9300EE5242 /* pirate1.png in Resources */,
 				023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */,
 				023088D81DB36E580037180E /* Group 2.png in Resources */,
 				823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */,
@@ -611,6 +643,8 @@
 				0203B1881DBE1F7F009DEE71 /* character_1.png in Resources */,
 				023088DD1DB36E920037180E /* Back.png in Resources */,
 				0203B1A11DBE1F8C009DEE71 /* Loading_9.png in Resources */,
+				826D733A1DC75CF900EE5242 /* pirate2.png in Resources */,
+				826D73461DC75F2E00EE5242 /* Priest2.png in Resources */,
 				822635C71DC0821F0065E3CE /* CallMonsterBar.png in Resources */,
 				8270979E1DB1ED9A00A624EA /* egg-1.png in Resources */,
 				827097A11DB1ED9A00A624EA /* eagle_back2.png in Resources */,
@@ -621,14 +655,16 @@
 				0203B19E1DBE1F8C009DEE71 /* Loading_6.png in Resources */,
 				026FDDCC1DBF53390078B703 /* Button_3.png in Resources */,
 				0203B1C21DBE3EA0009DEE71 /* GG.png in Resources */,
+				826D733D1DC75DDD00EE5242 /* shield1.png in Resources */,
 				0203B18B1DBE1F7F009DEE71 /* character_4.png in Resources */,
 				0203B1A31DBE1F8C009DEE71 /* Loading_11.png in Resources */,
 				0203B1A41DBE1F8C009DEE71 /* turnBackground_1.png in Resources */,
 				0203B1991DBE1F8C009DEE71 /* Loading_1.png in Resources */,
 				82B9E1411D86CE4000A1CA30 /* Assets.xcassets in Resources */,
-				82DBFF3A1DC46E9100E4647C /* GoogleService-Info.plist in Resources */,
+				826D73331DC7538800EE5242 /* GoogleService-Info.plist in Resources */,
 				026FDDC11DBF3A7C0078B703 /* GameBackground.png in Resources */,
 				023088E11DB36F210037180E /* 小基金幣.png in Resources */,
+				826D73451DC75F2E00EE5242 /* Priest1.png in Resources */,
 				023088E01DB36F210037180E /* 技能點數.png in Resources */,
 				023088EC1DB3701A0037180E /* 技能選擇圖.png in Resources */,
 				0203B1A21DBE1F8C009DEE71 /* Loading_10.png in Resources */,
@@ -747,7 +783,7 @@
 				E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */,
 				E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */,
 				82B9E1311D86CE4000A1CA30 /* main.m in Sources */,
-				82DBFF321DC4609A00E4647C /* GameCenterManager.m in Sources */,
+				826D73311DC752CB00EE5242 /* GameCenterManager.m in Sources */,
 				E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */,
 				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
 				827097A81DB2277600A624EA /* MatchPlayersViewController.m in Sources */,

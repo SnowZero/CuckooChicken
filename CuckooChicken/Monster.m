@@ -36,6 +36,7 @@ struct PhysicsCatagory{
     _monster.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
     _monster.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
     _monster.name = @"monster";
+    _monsterId = 1;
 }
 -(void)hitMonster{
     _monster.physicsBody.collisionBitMask--;
@@ -49,10 +50,41 @@ struct PhysicsCatagory{
 
 -(void)monsterAutoMove:(double)selfFrameSize{
     SKAction *action = [SKAction moveToY:-selfFrameSize-30 duration:10];
+    if (_monsterId == 2) {
+        action = [SKAction moveToY:-selfFrameSize-30 duration:10/2];
+    }
     SKAction *actionremove = [SKAction removeFromParent];
     [_monster runAction:[SKAction sequence:@[action,actionremove]]];
 }
 
+- (void)setAnimation{
+    SKTexture *runTexture1;
+    SKTexture *runTexture2;
+    NSString *imageName = @"";
+    switch (_monsterId) {
+        case 1:
+            imageName = @"shield";
+            break;
+        case 2:
+                imageName = @"pirate";
+            break;
+        case 3:
+            imageName = @"Magician";
+            break;
+        case 4:
+            imageName = @"Priest";
+            break;
+        default:
+            break;
+    }
+    NSString *imageName2 = [NSString stringWithFormat:@"%@%i.png",imageName,1];
+    runTexture1 = [SKTexture textureWithImageNamed:imageName2];
+    imageName = [NSString stringWithFormat:@"%@%i.png",imageName,2];
+    runTexture2 = [SKTexture textureWithImageNamed:imageName];
+    NSArray *TextureArray = @[runTexture1 ,runTexture2];
+    SKAction *runAnimation = [SKAction animateWithTextures:TextureArray timePerFrame:0.5];
+    [_monster runAction:[SKAction repeatActionForever:runAnimation]];
+}
 
 
 

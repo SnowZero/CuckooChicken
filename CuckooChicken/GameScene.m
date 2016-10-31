@@ -31,22 +31,25 @@ typedef void(^FIRBTask)(void);
     SKSpriteNode *background;
     SKSpriteNode *callMonsterBar;
     SKSpriteNode *scoreWall;
+    SKSpriteNode *defenseHPBar;
     Monster *createMonser;
     FireBaseManager *userData;
     FIRDatabaseReference *ref;
     SKLabelNode *labelScore;
     SKLabelNode *labelTime;
     CGSize playerHpMaxSize;
-    CGSize enemyHpMaxSize;
+    CGSize defenseHpMaxSize;
     __block NSDictionary *fireData;
     struct PhysicsCatagory PhysicsCatagory;
     FIRBTask setUpload;
     NSInteger score;
     NSTimer *timerGame;
     int timeCount;
+    int defenseHP;
 }
 
 -(void)didMoveToView:(SKView *)view {
+    defenseHP =100;
     PhysicsCatagory.Enemy = 1;
     PhysicsCatagory.PlayerBullet = 2;
     PhysicsCatagory.Player = 3;
@@ -84,12 +87,17 @@ typedef void(^FIRBTask)(void);
     playerHpMaxSize = hpNode.size;
 }
 
-
+// 計時
 -(void)timingStarts{
-    timeCount+=1;
+    //timeCount+=1;
     NSLog(@"+1");
     labelTime.text = [NSString stringWithFormat:@"Time : %i",timeCount];
-    if (timeCount>30) {
+//    if (timeCount>30) {
+//        [timerGame invalidate];
+//        timerGame = nil;
+//        //[self gameOver];
+//    }
+    if ((player.hp <0 )|| (defenseHP < 0)) {
         [timerGame invalidate];
         timerGame = nil;
         [self gameOver];
@@ -109,7 +117,7 @@ typedef void(^FIRBTask)(void);
 
     
 }
-
+// 初始化UI
 -(void)createUIStart{
     labelTime = [SKLabelNode labelNodeWithFontNamed:@"Time"];
     labelTime.text = @"Time : 0";
@@ -135,12 +143,19 @@ typedef void(^FIRBTask)(void);
     background.size = CGSizeMake(self.frame.size.width, self.frame.size.height*2);
     background.position = CGPointMake(background.position.x, background.position.y);
     [self addChild:background];
-    
-    callMonsterBar = (SKSpriteNode*)[self childNodeWithName:@"CallMonsterBar"];
-    SKShapeNode *uiMonsterGround = (SKSpriteNode*)[self childNodeWithName:@"AddMonsterGround"];
-    if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
-        uiMonsterGround.Hidden = true;
+    //初始化每個招怪UI的位置
+    for (int i=1; i<4; i++) {
+        NSString *UIName = [NSString stringWithFormat:@"AddMonsterGround%i",i];
+        SKSpriteNode *uiMonster = (SKSpriteNode*)[self childNodeWithName:UIName];
+        if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
+            uiMonster.hidden = true;
+        }
+        uiMonster.position = CGPointMake((self.frame.size.width/4)*i, uiMonster.position.y);
     }
+    callMonsterBar = (SKSpriteNode*)[self childNodeWithName:@"CallMonsterBar"];
+    defenseHPBar = (SKSpriteNode*)[self childNodeWithName:@"defenseHPBar"];
+    defenseHPBar.zPosition = 3;
+    defenseHpMaxSize = defenseHPBar.size;
     
 }
 
@@ -162,6 +177,8 @@ typedef void(^FIRBTask)(void);
                 createMonser = [Monster new];
                 [createMonser createMonsterById:1];
                 [self addChild:createMonser.monster];
+                createMonser.monsterId = [tmp[@"id"] intValue];
+                [createMonser setAnimation];
                 createMonser.monster.physicsBody.categoryBitMask = PhysicsCatagory.Enemy;
                 createMonser.monster.physicsBody.contactTestBitMask = PhysicsCatagory.PlayerBullet;
                 createMonser.monster.position = CGPointMake([tmp[@"posX"] floatValue]*self.frame.size.width,
@@ -180,7 +197,7 @@ typedef void(^FIRBTask)(void);
                 player.position = CGPointMake([tmp[@"posX"] floatValue]*self.frame.size.width,
                                              player.position.y);
                 NSString *getHp = fireData[@"GameRoom"][userData.gameRoomKey][userData.enemyType][@"hp"];
-                player.hp = [getHp doubleValue];
+                defenseHP = [getHp intValue];
             }
         }
 
@@ -221,11 +238,13 @@ typedef void(^FIRBTask)(void);
         [seconBody.node removeFromParent];
         if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
              score += 100;
+            defenseHP-=5;
+            [self setPlayerPostion:player.position.x :player.position.y];
         }
        
         
     }else if ( (firstBody.categoryBitMask == PhysicsCatagory.ScoreWall) || (seconBody.categoryBitMask == PhysicsCatagory.ScoreWall)){
-        
+        player.hp -=10;
         if ([userData.playerType isEqualToString:PLAYER_TYPE_DEFENSE]) {
             score += 600;
         }
@@ -240,13 +259,18 @@ typedef void(^FIRBTask)(void);
         for (UITouch *touch in touches) {
             CGPoint location = [touch locationInNode:self];
             SKNode *tounchNods =  [self nodeAtPoint:location];
-            if ([tounchNods.name isEqualToString:@"AddMonster"]) {
-                NSLog(@"碰到monster");
-                createMonser = [Monster new];
-                [createMonser createMonsterById:1];
-                createMonser.monster.physicsBody.dynamic = false;
-                createMonser.monster.zPosition = 2;
-                [self addChild:createMonser.monster];
+            for (int i=1; i<=4; i++) {
+                NSString * tounchNodsID = [NSString stringWithFormat:@"AddMonster%i",i];
+                if ([tounchNods.name isEqualToString:tounchNodsID]) {
+                    NSLog(@"碰到monster");
+                    createMonser = [Monster new];
+                    [createMonser createMonsterById:1];
+                    createMonser.monster.physicsBody.dynamic = false;
+                    createMonser.monster.zPosition = 2;
+                    [self addChild:createMonser.monster];
+                    createMonser.monsterId = i;
+                    [createMonser setAnimation];
+                }
             }
         }
     }
@@ -256,12 +280,17 @@ typedef void(^FIRBTask)(void);
     if (createMonser && [userData.playerType isEqualToString:PLAYER_TYPE_DEFENSE]) {
         for (UITouch *touch in touches) {
             CGPoint location = [touch locationInNode:self];
+            if (location.y < self.frame.size.height*3/5) {
+                location = CGPointMake(location.x,self.frame.size.height*3/5);
+                createMonser.monster.position = location;
+            }
             FIRDatabaseReference *tmpRef = ref;
             
             NSString *strPosX = [NSString stringWithFormat:@"%f",location.x/self.frame.size.width];
             NSString *strPosY = [NSString stringWithFormat:@"%f",location.y/self.frame.size.height];
-            
-            NSDictionary *upData = @{@"posX":strPosX,@"posY":strPosY};
+            NSString *strId = [NSString stringWithFormat:@"%i",createMonser.monsterId];
+
+            NSDictionary *upData = @{@"posX":strPosX,@"posY":strPosY,@"id":strId};
             NSString *path = [@"/GameRoom/" stringByAppendingString:userData.gameRoomKey];
             path = [path stringByAppendingFormat:@"/%@/AddMonster",PLAYER_TYPE_DEFENSE];
             
@@ -315,7 +344,7 @@ typedef void(^FIRBTask)(void);
 }
 
 -(void)setPlayerPostion:(CGFloat)posX : (CGFloat)posY{
-    __block double tmpHp = enemy.hp;
+    __block int tmpHp = defenseHP;
     __block NSString *roomKey = userData.gameRoomKey;
     __block FIRDatabaseReference *tmpRef = ref;
     setUpload = ^{
@@ -323,7 +352,7 @@ typedef void(^FIRBTask)(void);
         NSString *strPosX = [NSString stringWithFormat:@"%f",posX/self.frame.size.width];
         NSString *strPosY = [NSString stringWithFormat:@"%f",posY];
         
-        NSString *strHp = [NSString stringWithFormat:@"%f",tmpHp];
+        NSString *strHp = [NSString stringWithFormat:@"%i",tmpHp];
         
         NSDictionary *upData = @{@"posX":strPosX,@"posY":strPosY,@"hp":strHp};
         NSString *path = [@"/GameRoom/" stringByAppendingString:roomKey];
@@ -351,7 +380,7 @@ typedef void(^FIRBTask)(void);
         playerHp.size = CGSizeMake(Width * (player.hp/100.0), Height);
     }
 
-    
+    defenseHPBar.size = CGSizeMake(defenseHpMaxSize.width*defenseHP/100, defenseHPBar.size.height);
 }
 
 

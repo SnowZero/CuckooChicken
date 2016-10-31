@@ -11,8 +11,10 @@
 @interface Monster : SKSpriteNode
 @property(nonatomic,assign) double hp;
 @property(strong,nonnull) SKSpriteNode *monster;
+@property(nonatomic,assign) int monsterId;
 
 -(void)createMonsterById:(int)monsterId;
 -(void)hitMonster;
 -(void)monsterAutoMove:(double)selfFrameSize;
+-(void)setAnimation;
 @end
