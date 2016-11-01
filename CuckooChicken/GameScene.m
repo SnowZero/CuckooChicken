@@ -11,6 +11,7 @@
 #import "FireBaseManager.h"
 #import "Monster.h"
 #import "GameViewController.h"
+#import "CuckooChicken-Swift.h"
 
 @import Firebase;
 
@@ -97,23 +98,43 @@ typedef void(^FIRBTask)(void);
 //        timerGame = nil;
 //        //[self gameOver];
 //    }
-    if ((player.hp <0 )|| (defenseHP < 0)) {
+    if ((player.hp <= 0)|| (defenseHP <= 0)) {
         [timerGame invalidate];
         timerGame = nil;
         [self gameOver];
     }
 }
 -(void)gameOver{
-    FIRDatabaseReference *ref2 = [[ref child:@"GameRoom"] child:userData.gameRoomKey] ;
-    if (ref2) {
-        [ref2 setValue:nil];
-        userData.score = score;
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"     bundle:nil];
-        UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"MatchVC"];
-        //Call on the RootViewController to present the New View Controller
-        [self.view.window.rootViewController presentViewController:vc animated:YES completion:nil];
-
+//    FIRDatabaseReference *ref2 = [[ref child:@"GameRoom"] child:userData.gameRoomKey] ;
+//    if (ref2) {
+//        [ref2 setValue:nil];
+    
+    userData.score = score;
+    SKSpriteNode *ggNode = (SKSpriteNode*)[self childNodeWithName:@"GameOverBackground"];
+    SKSpriteNode *winOrFail = (SKSpriteNode*)[ggNode childNodeWithName:@"WinOrFail"];
+    if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
+        if (player.hp<=0) {
+            winOrFail.texture = [SKTexture textureWithImageNamed:@"Fail.png"];
+        }
+        if (defenseHP<=0) {
+            winOrFail.texture = [SKTexture textureWithImageNamed:@"Win.png"];
+        }
+    }else{
+        if (defenseHP<=0) {
+            winOrFail.texture = [SKTexture textureWithImageNamed:@"Fail.png"];
+        }
+        if (player.hp<=0) {
+            winOrFail.texture = [SKTexture textureWithImageNamed:@"Win.png"];
+        }
     }
+        SKLabelNode *ggLabel =  (SKLabelNode*)[ggNode childNodeWithName:@"ScoreLabel"];
+    ggLabel.text = [NSString stringWithFormat:@"您的戰績: %li分",(long)score];
+    SKAction *action = [SKAction moveToY:self.frame.size.height/2 duration:0.4];
+    //SKAction *actionremove = [SKAction removeFromParent];
+    //SKAction *End = [SKAction performSelector:@selector(getFIBPostion) onTarget:self];
+    [ggNode runAction:[SKAction sequence:@[action]]];
+    //停止物理引擎
+    self.physicsWorld.speed = 0.0;
 
     
 }
@@ -144,13 +165,13 @@ typedef void(^FIRBTask)(void);
     background.position = CGPointMake(background.position.x, background.position.y);
     [self addChild:background];
     //初始化每個招怪UI的位置
-    for (int i=1; i<4; i++) {
-        NSString *UIName = [NSString stringWithFormat:@"AddMonsterGround%i",i];
+    for (int i=1; i<=4; i++) {
+        NSString *UIName = [NSString stringWithFormat:@"AddMonster%i",i];
         SKSpriteNode *uiMonster = (SKSpriteNode*)[self childNodeWithName:UIName];
         if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
             uiMonster.hidden = true;
         }
-        uiMonster.position = CGPointMake((self.frame.size.width/4)*i, uiMonster.position.y);
+        uiMonster.position = CGPointMake((self.frame.size.width/5)*i, uiMonster.position.y);
     }
     callMonsterBar = (SKSpriteNode*)[self childNodeWithName:@"CallMonsterBar"];
     defenseHPBar = (SKSpriteNode*)[self childNodeWithName:@"defenseHPBar"];
@@ -255,10 +276,10 @@ typedef void(^FIRBTask)(void);
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    if ([userData.playerType isEqualToString:PLAYER_TYPE_DEFENSE]) {
-        for (UITouch *touch in touches) {
-            CGPoint location = [touch locationInNode:self];
-            SKNode *tounchNods =  [self nodeAtPoint:location];
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        SKNode *tounchNods =  [self nodeAtPoint:location];
+        if ([userData.playerType isEqualToString:PLAYER_TYPE_DEFENSE]) {
             for (int i=1; i<=4; i++) {
                 NSString * tounchNodsID = [NSString stringWithFormat:@"AddMonster%i",i];
                 if ([tounchNods.name isEqualToString:tounchNodsID]) {
@@ -273,7 +294,19 @@ typedef void(^FIRBTask)(void);
                 }
             }
         }
+        NSLog(@"%@",tounchNods.name);
+        if (([tounchNods.name isEqualToString:@"ggBtn"])||
+            ([tounchNods.name isEqualToString:@"ggBtnLabel"])) {
+            NSLog(@"點擊");
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"     bundle:nil];
+            UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+            //Call on the RootViewController to present the New View Controller
+            [self.view.window.rootViewController presentViewController:vc animated:YES completion:nil];
+            
+        
+        }
     }
+
 
 }
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -282,10 +315,10 @@ typedef void(^FIRBTask)(void);
             CGPoint location = [touch locationInNode:self];
             if (location.y < self.frame.size.height*3/5) {
                 location = CGPointMake(location.x,self.frame.size.height*3/5);
-                createMonser.monster.position = location;
-            }
+                            }
             FIRDatabaseReference *tmpRef = ref;
-            
+            createMonser.monster.position = location;
+
             NSString *strPosX = [NSString stringWithFormat:@"%f",location.x/self.frame.size.width];
             NSString *strPosY = [NSString stringWithFormat:@"%f",location.y/self.frame.size.height];
             NSString *strId = [NSString stringWithFormat:@"%i",createMonser.monsterId];

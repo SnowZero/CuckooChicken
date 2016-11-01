@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZjE-BU-bgi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AGg-Kh-vc4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,20 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-Jr-Wn3"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-9L-30S">
+                                <frame key="frameInset" minX="76" minY="582" width="53" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="GameCenter.png"/>
+                                <connections>
+                                    <action selector="gameCenterBtn:" destination="cz9-lk-kJN" eventType="touchUpInside" id="25v-uB-ugQ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-zm-w8q">
                                 <state key="normal">
                                     <color key="titleColor" red="0.99955612421035767" green="0.0" blue="0.03453594446182251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="MatchButton:" destination="cz9-lk-kJN" eventType="touchUpInside" id="mGM-DB-dvR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-9L-30S">
-                                <frame key="frameInset" minX="81" minY="596" width="53" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="GameCenter.png"/>
-                                <connections>
-                                    <action selector="gameCenterBtn:" destination="cz9-lk-kJN" eventType="touchUpInside" id="25v-uB-ugQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,6 +110,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkH-cJ-x7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-343" y="689"/>
+        </scene>
+        <!--Start Game View Controller-->
+        <scene sceneID="e7c-jb-ed4">
+            <objects>
+                <viewController id="AGg-Kh-vc4" customClass="StartGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vQR-WS-fhF"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdw-ow-rNX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XBP-si-Qxz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="HlL-H0-dtZ"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-w0-W6n">
+                                <frame key="frameInset" minX="100" minY="335" width="174" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Group.png"/>
+                                <connections>
+                                    <action selector="startGameBtn:" destination="AGg-Kh-vc4" eventType="touchUpInside" id="tWa-Tp-xaO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STARE GAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-ZC-M89">
+                                <frame key="frameInset" minX="128" minY="354" width="119" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGO-vF-9Mb">
+                                <frame key="frameInset" minX="311" minY="610" width="64" height="57"/>
+                                <state key="normal" image="Button_1.png"/>
+                                <connections>
+                                    <action selector="loginBtn:" destination="AGg-Kh-vc4" eventType="touchUpInside" id="fKS-Yn-asm"/>
+                                    <segue destination="ZjE-BU-bgi" kind="show" id="1zH-Bh-MhH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HlL-H0-dtZ" firstAttribute="top" secondItem="XBP-si-Qxz" secondAttribute="top" id="AlU-ZU-GMd"/>
+                            <constraint firstItem="HlL-H0-dtZ" firstAttribute="leading" secondItem="XBP-si-Qxz" secondAttribute="leading" id="DEK-4a-5dl"/>
+                            <constraint firstItem="hdw-ow-rNX" firstAttribute="top" secondItem="sGO-vF-9Mb" secondAttribute="bottom" id="SgM-ch-wPN"/>
+                            <constraint firstAttribute="trailing" secondItem="HlL-H0-dtZ" secondAttribute="trailing" id="Ze9-3s-eaP"/>
+                            <constraint firstAttribute="trailing" secondItem="sGO-vF-9Mb" secondAttribute="trailing" id="pu1-uE-zfP"/>
+                            <constraint firstItem="HlL-H0-dtZ" firstAttribute="bottom" secondItem="hdw-ow-rNX" secondAttribute="top" id="zwo-u2-jS4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOV-On-TSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389.60000000000002" y="305.39730134932535"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="d0M-4f-m08">
@@ -320,6 +372,11 @@
         <image name="Button_3.png" width="52" height="46"/>
         <image name="Button_4.png" width="52" height="46"/>
         <image name="GameCenter.png" width="128" height="129"/>
+        <image name="Group.png" width="402" height="127"/>
         <image name="Text_1.png" width="402" height="127"/>
+        <image name="viewImage.png" width="414" height="736"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1zH-Bh-MhH"/>
+    </inferredMetricsTieBreakers>
 </document>

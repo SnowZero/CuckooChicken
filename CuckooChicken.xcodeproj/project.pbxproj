@@ -68,6 +68,12 @@
 		026FDDCF1DBF57160078B703 /* Button_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDCE1DBF57160078B703 /* Button_6.png */; };
 		026FDDD11DBF58840078B703 /* Button_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDD01DBF58840078B703 /* Button_7.png */; };
 		1B8FBC1247055B6CF0A1E290 /* Pods_CuckooChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */; };
+		820720B61DC8B36C005D47A5 /* StartGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 820720B51DC8B36C005D47A5 /* StartGameViewController.m */; };
+		820720B91DC8C1F1005D47A5 /* GameOverBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 820720B81DC8C1F1005D47A5 /* GameOverBackground.png */; };
+		820720BC1DC8C1FC005D47A5 /* Fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 820720BA1DC8C1FB005D47A5 /* Fail.png */; };
+		820720BD1DC8C1FC005D47A5 /* Win.png in Resources */ = {isa = PBXBuildFile; fileRef = 820720BB1DC8C1FB005D47A5 /* Win.png */; };
+		820720BF1DC8C57B005D47A5 /* Button_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 820720BE1DC8C57B005D47A5 /* Button_new.png */; };
+		820720C21DC8C9EB005D47A5 /* SpriteKitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820720C11DC8C9EB005D47A5 /* SpriteKitButton.swift */; };
 		822635A71DBF40660065E3CE /* GameBackground_loop.png in Resources */ = {isa = PBXBuildFile; fileRef = 822635A61DBF40660065E3CE /* GameBackground_loop.png */; };
 		822635C71DC0821F0065E3CE /* CallMonsterBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 822635C61DC0821F0065E3CE /* CallMonsterBar.png */; };
 		822635CA1DC08AC60065E3CE /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 822635C91DC08AC60065E3CE /* Monster.m */; };
@@ -101,6 +107,7 @@
 		82B9E1411D86CE4000A1CA30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E1401D86CE4000A1CA30 /* Assets.xcassets */; };
 		82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */; };
 		82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1521D86CFCD00A1CA30 /* ViewController.m */; };
+		82C11ACA1DC8B08900BBC854 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C11AC91DC8B08900BBC854 /* heart.png */; };
 		82DBFF2F1DC4527A00E4647C /* GameCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DBFF2E1DC4527A00E4647C /* GameCenter.png */; };
 		82DBFF381DC46C5800E4647C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DBFF371DC46C5800E4647C /* GameKit.framework */; };
 		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
@@ -172,6 +179,14 @@
 		026FDDCE1DBF57160078B703 /* Button_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_6.png; sourceTree = "<group>"; };
 		026FDDD01DBF58840078B703 /* Button_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_7.png; sourceTree = "<group>"; };
 		5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.debug.xcconfig"; sourceTree = "<group>"; };
+		820720B41DC8B36C005D47A5 /* StartGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameViewController.h; sourceTree = "<group>"; };
+		820720B51DC8B36C005D47A5 /* StartGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameViewController.m; sourceTree = "<group>"; };
+		820720B81DC8C1F1005D47A5 /* GameOverBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameOverBackground.png; sourceTree = "<group>"; };
+		820720BA1DC8C1FB005D47A5 /* Fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fail.png; sourceTree = "<group>"; };
+		820720BB1DC8C1FB005D47A5 /* Win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Win.png; sourceTree = "<group>"; };
+		820720BE1DC8C57B005D47A5 /* Button_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_new.png; sourceTree = "<group>"; };
+		820720C01DC8C9EA005D47A5 /* CuckooChicken-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CuckooChicken-Bridging-Header.h"; sourceTree = "<group>"; };
+		820720C11DC8C9EB005D47A5 /* SpriteKitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitButton.swift; sourceTree = "<group>"; };
 		822635A61DBF40660065E3CE /* GameBackground_loop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackground_loop.png; sourceTree = "<group>"; };
 		822635C61DC0821F0065E3CE /* CallMonsterBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CallMonsterBar.png; sourceTree = "<group>"; };
 		822635C81DC08AC60065E3CE /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
@@ -216,6 +231,7 @@
 		82B9E1451D86CE4000A1CA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82B9E1511D86CFCD00A1CA30 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82B9E1521D86CFCD00A1CA30 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		82C11AC91DC8B08900BBC854 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		82DBFF2E1DC4527A00E4647C /* GameCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameCenter.png; sourceTree = "<group>"; };
 		82DBFF371DC46C5800E4647C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuckooChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +308,7 @@
 		023088C61DB36BE30037180E /* GameBackground */ = {
 			isa = PBXGroup;
 			children = (
+				820720B71DC8C1D5005D47A5 /* GameOverImage */,
 				0203B1781DBE1F46009DEE71 /* LoadingImage */,
 				827097921DB1EB8800A624EA /* GameObject */,
 				023088EE1DB3707A0037180E /* Skill */,
@@ -379,6 +396,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		820720B71DC8C1D5005D47A5 /* GameOverImage */ = {
+			isa = PBXGroup;
+			children = (
+				820720B81DC8C1F1005D47A5 /* GameOverBackground.png */,
+				820720BA1DC8C1FB005D47A5 /* Fail.png */,
+				820720BB1DC8C1FB005D47A5 /* Win.png */,
+				820720BE1DC8C57B005D47A5 /* Button_new.png */,
+			);
+			name = GameOverImage;
+			sourceTree = "<group>";
+		};
 		823C08BD1DBF29D60046E94A /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +459,7 @@
 				822635C61DC0821F0065E3CE /* CallMonsterBar.png */,
 				826D73351DC75A9300EE5242 /* pirate1.png */,
 				826D73391DC75CF900EE5242 /* pirate2.png */,
+				82C11AC91DC8B08900BBC854 /* heart.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -466,6 +495,8 @@
 				827097A71DB2277600A624EA /* MatchPlayersViewController.m */,
 				82B9E1511D86CFCD00A1CA30 /* ViewController.h */,
 				82B9E1521D86CFCD00A1CA30 /* ViewController.m */,
+				820720B41DC8B36C005D47A5 /* StartGameViewController.h */,
+				820720B51DC8B36C005D47A5 /* StartGameViewController.m */,
 				82B9E13D1D86CE4000A1CA30 /* Main.storyboard */,
 				E11972731D914FAC00B0AB77 /* SignInViewController.h */,
 				E11972741D914FAC00B0AB77 /* SignInViewController.m */,
@@ -491,6 +522,7 @@
 		E119F18A1DBBC34C00EA023A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				820720C11DC8C9EB005D47A5 /* SpriteKitButton.swift */,
 				E16CE2BD1DB8EFE90091ABEF /* AppState.h */,
 				E16CE2BE1DB8EFE90091ABEF /* AppState.m */,
 				E16CE2C01DB8F00F0091ABEF /* Constants.h */,
@@ -501,6 +533,7 @@
 				826D73301DC752CB00EE5242 /* GameCenterManager.m */,
 				827097A31DB200AA00A624EA /* FireBaseManager.h */,
 				827097A41DB200AA00A624EA /* FireBaseManager.m */,
+				820720C01DC8C9EA005D47A5 /* CuckooChicken-Bridging-Header.h */,
 			);
 			name = Model;
 			path = ..;
@@ -554,6 +587,7 @@
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 4UAE35VF63;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
@@ -598,9 +632,11 @@
 				0203B19C1DBE1F8C009DEE71 /* Loading_4.png in Resources */,
 				822635A71DBF40660065E3CE /* GameBackground_loop.png in Resources */,
 				0203B18A1DBE1F7F009DEE71 /* character_3.png in Resources */,
+				820720BF1DC8C57B005D47A5 /* Button_new.png in Resources */,
 				0203B1AE1DBE2FD6009DEE71 /* Button.png in Resources */,
 				82B9E1391D86CE4000A1CA30 /* GameScene.sks in Resources */,
 				023088F41DB370A80037180E /* 牧師兵區域治療.png in Resources */,
+				820720BD1DC8C1FC005D47A5 /* Win.png in Resources */,
 				82DBFF2F1DC4527A00E4647C /* GameCenter.png in Resources */,
 				026FDDC51DBF49230078B703 /* Text_1.png in Resources */,
 				023088E71DB370080037180E /* 抽扭蛋.png in Resources */,
@@ -617,6 +653,7 @@
 				0203B1A01DBE1F8C009DEE71 /* Loading_8.png in Resources */,
 				023088F51DB370A80037180E /* 魔法兵激光.png in Resources */,
 				023088F61DB370A80037180E /* 盾兵技能.png in Resources */,
+				82C11ACA1DC8B08900BBC854 /* heart.png in Resources */,
 				0203B19B1DBE1F8C009DEE71 /* Loading_3.png in Resources */,
 				0203B17D1DBE1F68009DEE71 /* turn_1.png in Resources */,
 				0203B1AD1DBE2FD6009DEE71 /* backimage.png in Resources */,
@@ -638,11 +675,13 @@
 				023088D81DB36E580037180E /* Group 2.png in Resources */,
 				823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */,
 				023088D31DB36E000037180E /* Group.png in Resources */,
+				820720BC1DC8C1FC005D47A5 /* Fail.png in Resources */,
 				023088DA1DB36E580037180E /* ViewBackground.png in Resources */,
 				023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */,
 				0203B1881DBE1F7F009DEE71 /* character_1.png in Resources */,
 				023088DD1DB36E920037180E /* Back.png in Resources */,
 				0203B1A11DBE1F8C009DEE71 /* Loading_9.png in Resources */,
+				820720B91DC8C1F1005D47A5 /* GameOverBackground.png in Resources */,
 				826D733A1DC75CF900EE5242 /* pirate2.png in Resources */,
 				826D73461DC75F2E00EE5242 /* Priest2.png in Resources */,
 				822635C71DC0821F0065E3CE /* CallMonsterBar.png in Resources */,
@@ -774,6 +813,7 @@
 			files = (
 				827097951DB1EBE300A624EA /* Player.m in Sources */,
 				82B9E13C1D86CE4000A1CA30 /* GameViewController.m in Sources */,
+				820720C21DC8C9EB005D47A5 /* SpriteKitButton.swift in Sources */,
 				E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
 				822635CA1DC08AC60065E3CE /* Monster.m in Sources */,
@@ -783,6 +823,7 @@
 				E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */,
 				E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */,
 				82B9E1311D86CE4000A1CA30 /* main.m in Sources */,
+				820720B61DC8B36C005D47A5 /* StartGameViewController.m in Sources */,
 				826D73311DC752CB00EE5242 /* GameCenterManager.m in Sources */,
 				E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */,
 				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
@@ -905,6 +946,7 @@
 			baseConfigurationReference = 5FD10F49BA2EF5B0B84AD9D3 /* Pods-CuckooChicken.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4UAE35VF63;
@@ -934,6 +976,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CuckooChicken-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -942,6 +987,7 @@
 			baseConfigurationReference = E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4UAE35VF63;
@@ -971,6 +1017,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CuckooChicken-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
