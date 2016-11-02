@@ -79,6 +79,7 @@
 		822635CA1DC08AC60065E3CE /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 822635C91DC08AC60065E3CE /* Monster.m */; };
 		823C08261DBB59A30046E94A /* BulletGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08251DBB59A30046E94A /* BulletGalaga.png */; };
 		823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08BE1DBF29F00046E94A /* UI_blood.png */; };
+		824284171DCA2AA90006AAC0 /* MatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 824284161DCA2AA90006AAC0 /* MatchManager.m */; };
 		826D73311DC752CB00EE5242 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 826D73301DC752CB00EE5242 /* GameCenterManager.m */; };
 		826D73331DC7538800EE5242 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 826D73321DC7538800EE5242 /* GoogleService-Info.plist */; };
 		826D73371DC75A9300EE5242 /* pirate1.png in Resources */ = {isa = PBXBuildFile; fileRef = 826D73351DC75A9300EE5242 /* pirate1.png */; };
@@ -195,6 +196,8 @@
 		822635C91DC08AC60065E3CE /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
 		823C08251DBB59A30046E94A /* BulletGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BulletGalaga.png; sourceTree = "<group>"; };
 		823C08BE1DBF29F00046E94A /* UI_blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_blood.png; sourceTree = "<group>"; };
+		824284151DCA2AA90006AAC0 /* MatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchManager.h; path = CuckooChicken/MatchManager.h; sourceTree = "<group>"; };
+		824284161DCA2AA90006AAC0 /* MatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchManager.m; path = CuckooChicken/MatchManager.m; sourceTree = "<group>"; };
 		826D732F1DC752CB00EE5242 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterManager.h; path = CuckooChicken/GameCenterManager.h; sourceTree = "<group>"; };
 		826D73301DC752CB00EE5242 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = CuckooChicken/GameCenterManager.m; sourceTree = "<group>"; };
 		826D73321DC7538800EE5242 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -541,6 +544,8 @@
 				826D73301DC752CB00EE5242 /* GameCenterManager.m */,
 				827097A31DB200AA00A624EA /* FireBaseManager.h */,
 				827097A41DB200AA00A624EA /* FireBaseManager.m */,
+				824284151DCA2AA90006AAC0 /* MatchManager.h */,
+				824284161DCA2AA90006AAC0 /* MatchManager.m */,
 				820720C01DC8C9EA005D47A5 /* CuckooChicken-Bridging-Header.h */,
 			);
 			name = Model;
@@ -825,6 +830,7 @@
 				820720C21DC8C9EB005D47A5 /* SpriteKitButton.swift in Sources */,
 				E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */,
 				E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */,
+				824284171DCA2AA90006AAC0 /* MatchManager.m in Sources */,
 				822635CA1DC08AC60065E3CE /* Monster.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				827097A51DB200AA00A624EA /* FireBaseManager.m in Sources */,
