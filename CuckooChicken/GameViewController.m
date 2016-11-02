@@ -30,7 +30,12 @@
     MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     // Present the scene.
+    scene.vc = self;
     [skView presentScene:scene];
+}
+
+-(void)showAlert:(id)object{
+    NSLog(@"dsdsds");
 }
 
 - (BOOL)shouldAutorotate

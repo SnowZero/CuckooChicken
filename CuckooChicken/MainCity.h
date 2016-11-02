@@ -7,7 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameViewController.h"
 #import <GameKit/GameKit.h>
 @interface MainCity : SKScene<GKGameCenterControllerDelegate>
+@property(strong,nonnull) GameViewController *vc;
 
 @end

@@ -18,7 +18,7 @@
     NSTimer *timer;
     FireBaseManager *userType;
     NSString *roomKey;
-    UIViewController *vc;
+    UIAlertController *alertController;
 }
 
 
@@ -26,10 +26,9 @@
 -(void)didMoveToView:(SKView *)view{
 //    NSLog(@"sdsdsd");MatchBtn GameCentet Button1
     //[self authPlayer];
-    vc = self.view.window.rootViewController;
     userType = [FireBaseManager newFBData];
     [self authPlayer];
-    vc = self.view.window.rootViewController;
+
     //UI Burron
     SpriteKitButton *MatchBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"Button_6.png" activeButtonImage:@"Button_7.png" buttonAction:^{
         [self MatchButton];
@@ -71,15 +70,15 @@
     //Wait for the connection
     timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(checkGetData) userInfo:nil repeats:true];
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"等待連接中..." message:nil preferredStyle:UIAlertControllerStyleAlert];
+    alertController = [UIAlertController alertControllerWithTitle:@"等待連接中..." message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [self cancelConnection];
     }];
     
     [alertController addAction:cancelAction];
     //把Alert對話框顯示出來
-    vc = self.view.window.rootViewController;
-    [vc presentViewController:alertController animated:YES completion:nil];
+
+    [_vc presentViewController:alertController animated:YES completion:nil];
     
 
 }
@@ -176,19 +175,22 @@
 }
 
 -(void)gotoGameViewController{
-    [vc dismissViewControllerAnimated:NO completion:^{
+    [alertController dismissViewControllerAnimated:NO completion:^{
         GameScene *scene = [GameScene nodeWithFileNamed:@"GameScene"];
         scene.scaleMode = SKSceneScaleModeAspectFill;
         // Present the scene.
         [self.view presentScene:scene];
     }];
+
+
+
 }
 
 -(void)authPlayer{
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
     localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error) {
         if (viewController != nil) {
-            [vc presentViewController:viewController animated:true completion:nil];
+            [_vc presentViewController:viewController animated:true completion:nil];
         }else{
             NSLog(@"%d",[[GKLocalPlayer localPlayer] isAuthenticated]);
         }
@@ -210,8 +212,8 @@
 -(void)showLeaderBoard{
     GKGameCenterViewController *gvc = [GKGameCenterViewController new];
     gvc.gameCenterDelegate = self;
-    UIViewController *vc2 = self.view.window.rootViewController;
-    [vc2 presentViewController:gvc animated:true completion:nil];
+    [_vc presentViewController:gvc animated:true completion:nil];
+    
 }
 -(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
     [gameCenterViewController dismissViewControllerAnimated:true completion:nil];
