@@ -26,10 +26,9 @@
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-//    GameScene *scene = [GameScene nodeWithFileNamed:@"GameScene"];
+//    GameScene *scene = [GameScene nodeWithFileNamed:@"MainCity"];
     MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    
     // Present the scene.
     [skView presentScene:scene];
 }

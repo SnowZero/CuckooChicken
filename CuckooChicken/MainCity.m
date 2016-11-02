@@ -24,7 +24,7 @@
 
 
 -(void)didMoveToView:(SKView *)view{
-//    NSLog(@"sdsdsd");MatchBtn GameCentet
+//    NSLog(@"sdsdsd");MatchBtn GameCentet Button1
     //[self authPlayer];
     vc = self.view.window.rootViewController;
     userType = [FireBaseManager newFBData];
@@ -38,8 +38,11 @@
         [self saveHighscore:userType.score];
         [self showLeaderBoard];
     }];
+    
+    // 第一個輸入要建立的Btn  第二個找畫面上Btn的位置
     [self resetUIPosition:MatchBtn :@"MatchBtn"];
     [self resetUIPosition:GameCenterBtn :@"GameCenter"];
+    // 初始化FireBase 取得資料
     [self startGetFirebase];
 }
 
