@@ -307,6 +307,7 @@ typedef void(^FIRBTask)(void);
             skView.ignoresSiblingOrder = YES;
             MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
             scene.scaleMode = SKSceneScaleModeAspectFill;
+            scene.vc = _vc;
             // Present the scene.
             [skView presentScene:scene];
 

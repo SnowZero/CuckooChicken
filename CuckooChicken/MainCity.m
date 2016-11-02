@@ -178,6 +178,7 @@
     [alertController dismissViewControllerAnimated:NO completion:^{
         GameScene *scene = [GameScene nodeWithFileNamed:@"GameScene"];
         scene.scaleMode = SKSceneScaleModeAspectFill;
+        scene.vc = _vc;
         // Present the scene.
         [self.view presentScene:scene];
     }];
