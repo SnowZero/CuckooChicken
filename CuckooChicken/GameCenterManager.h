@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GameViewController.h"
 #import <GameKit/GameKit.h>
 
-@interface GameCenterManager : NSObject
+@interface GameCenterManager : NSObject<GKGameCenterControllerDelegate>
 
--(void)authPlayer:(UIViewController*)thisVC;
+-(void)authPlayer:(GameViewController*)thisVC;
 -(void)saveHighscore:(int)number;
--(void)showLeaderBoard:(UIViewController*)thisVC;
+-(void)showLeaderBoard:(GameViewController*)thisVC;
 @end

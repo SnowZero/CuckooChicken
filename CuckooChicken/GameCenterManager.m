@@ -7,11 +7,14 @@
 //
 
 #import "GameCenterManager.h"
+#import "FireBaseManager.h"
 
-@implementation GameCenterManager
+@implementation GameCenterManager{
+
+}
 
 
--(void)authPlayer:(UIViewController*)thisVC{
+-(void)authPlayer:(GameViewController*)thisVC{
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
     localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error) {
         if (viewController != nil) {
@@ -31,9 +34,13 @@
     }
 }
 
--(void)showLeaderBoard:(UIViewController *)thisVC{
-
+-(void)showLeaderBoard:(GameViewController*)thisVC{
+    GKGameCenterViewController *gvc = [GKGameCenterViewController new];
+    gvc.gameCenterDelegate = self;
+    [thisVC presentViewController:gvc animated:true completion:nil];
 }
-
+-(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
+    [gameCenterViewController dismissViewControllerAnimated:true completion:nil];
+}
 
 @end
