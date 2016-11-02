@@ -8,7 +8,7 @@
         <!--Match Players View Controller-->
         <scene sceneID="knY-Bf-X5i">
             <objects>
-                <viewController storyboardIdentifier="MatchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cz9-lk-kJN" customClass="MatchPlayersViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchVC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cz9-lk-kJN" customClass="MatchPlayersViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AnR-sM-2DH"/>
                         <viewControllerLayoutGuide type="bottom" id="yuW-Ei-2Xd"/>
@@ -52,12 +52,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-oc-scs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1397.5999999999999" y="-439.43028485757122"/>
+            <point key="canvasLocation" x="-1436" y="-497"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="GameVC" id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchVC" id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>

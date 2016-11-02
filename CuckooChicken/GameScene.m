@@ -12,6 +12,8 @@
 #import "Monster.h"
 #import "GameViewController.h"
 #import "CuckooChicken-Swift.h"
+#import "MatchPlayersViewController.h"
+#import "MainCity.h"
 
 @import Firebase;
 
@@ -298,11 +300,16 @@ typedef void(^FIRBTask)(void);
         if (([tounchNods.name isEqualToString:@"ggBtn"])||
             ([tounchNods.name isEqualToString:@"ggBtnLabel"])) {
             NSLog(@"點擊");
-            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"     bundle:nil];
-            UIViewController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"MatchVC"];
-            //Call on the RootViewController to present the New View Controller
-            [self.view.window.rootViewController presentViewController:vc animated:YES completion:nil];
-            
+            SKView * skView = (SKView *)self.view;
+            skView.showsFPS = YES;
+            skView.showsNodeCount = YES;
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            skView.ignoresSiblingOrder = YES;
+            MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
+            scene.scaleMode = SKSceneScaleModeAspectFill;
+            // Present the scene.
+            [skView presentScene:scene];
+
         
         }
     }

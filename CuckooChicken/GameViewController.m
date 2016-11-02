@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+#import "MainCity.h"
 
 @import Firebase;
 
@@ -25,7 +26,8 @@
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-    GameScene *scene = [GameScene nodeWithFileNamed:@"GameScene"];
+//    GameScene *scene = [GameScene nodeWithFileNamed:@"GameScene"];
+    MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
