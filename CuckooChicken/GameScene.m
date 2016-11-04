@@ -300,18 +300,7 @@ typedef void(^FIRBTask)(void);
         if (([tounchNods.name isEqualToString:@"ggBtn"])||
             ([tounchNods.name isEqualToString:@"ggBtnLabel"])) {
             NSLog(@"點擊");
-            SKView * skView = (SKView *)self.view;
-            skView.showsFPS = YES;
-            skView.showsNodeCount = YES;
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = YES;
-            MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
-            scene.scaleMode = SKSceneScaleModeAspectFill;
-            scene.vc = _vc;
-            // Present the scene.
-            [skView presentScene:scene];
-
-        
+            [self showInviteFriendAlert];
         }
     }
 
@@ -423,6 +412,35 @@ typedef void(^FIRBTask)(void);
 
     defenseHPBar.size = CGSizeMake(defenseHpMaxSize.width*defenseHP/100, defenseHPBar.size.height);
 }
+-(void)showInviteFriendAlert{
+    NSString *message = [NSString stringWithFormat:@"您要邀請[%@]為好友嗎？", [userData getUserName:userData.enemyUID]];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [userData setUserFriend:userData.enemyUID];
+        [self goToHome];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self goToHome];
+    }];
+    [alertController addAction:ok];
+    [alertController addAction:cancelAction];
+    //把Alert對話框顯示出來
+    
+    [_vc presentViewController:alertController animated:YES completion:nil];
+}
 
+-(void)goToHome{
+    SKView * skView = (SKView *)self.view;
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
+    /* Sprite Kit applies additional optimizations to improve rendering performance */
+    skView.ignoresSiblingOrder = YES;
+    MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.vc = _vc;
+    // Present the scene.
+    [skView presentScene:scene];
+
+}
 
 @end

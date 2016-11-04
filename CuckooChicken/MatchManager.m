@@ -112,7 +112,7 @@
     // childByAutoId 自動生成不重複的亂數ID
     roomKey = [ref childByAutoId].key;
     ref  = [ref child:roomKey];
-    NSDictionary *data = @{@"staySum":@"1"};
+    NSDictionary *data = @{@"staySum":@"1",@"host":userType.userUID};
     [ref setValue:data];
     
     // Check Number of people
@@ -128,6 +128,7 @@
         userType.playerType = PLAYER_TYPE_ATTACK;
         userType.enemyType = PLAYER_TYPE_DEFENSE;
         userType.gameRoomKey = key;
+        userType.enemyUID = tmp[@"guest"];
         [self gotoGameViewController];
         
     }
@@ -140,13 +141,18 @@
     FIRDatabaseReference *ref;
     NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
     ref = [[FIRDatabase database] referenceFromURL:strUrl];
+    ref = [ref child:@"GameRoom"];
+    ref  = [ref child:thisRoom];
+//    NSDictionary *childUpdates = @{[@"/GameRoom/" stringByAppendingString:thisRoom]:upData};
+//    [ref updateChildValues:childUpdates];
+    [[ref child:@"staySum"] setValue:@"2"];
+    [[ref child:@"guest"] setValue:userType.userUID];
+
     
-    NSDictionary *upData = @{@"staySum":@"2"};
-    NSDictionary *childUpdates = @{[@"/GameRoom/" stringByAppendingString:thisRoom]:upData};
-    [ref updateChildValues:childUpdates];
     userType.playerType = PLAYER_TYPE_DEFENSE;
     userType.enemyType = PLAYER_TYPE_ATTACK;
     userType.gameRoomKey = thisRoom;
+    userType.enemyUID = fireData[@"GameRoom"][thisRoom][@"host"];
     [self gotoGameViewController];
 }
 

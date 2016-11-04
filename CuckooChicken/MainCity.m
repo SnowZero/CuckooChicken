@@ -18,7 +18,7 @@
 @implementation MainCity {
     NSDictionary *fireData;
     NSTimer *timer;
-    FireBaseManager *userType;
+    FireBaseManager *userDataManager;
     NSString *roomKey;
     UIAlertController *alertController;
     GameCenterManager *gameCenter;
@@ -27,30 +27,39 @@
 
 
 -(void)didMoveToView:(SKView *)view{
-//    NSLog(@"sdsdsd");MatchBtn GameCentet Button1
+//    NSLog(@"sdsdsd");MatchBtn GameCentet Button1 MyFriend
     //[self authPlayer];
-    userType = [FireBaseManager newFBData];
+    userDataManager = [FireBaseManager newFBData];
+    //[userDataManager startGetFirebase];
     gameCenter = [GameCenterManager new];
     [gameCenter authPlayer:_vc];
+    NSLog(@"UID : %@",userDataManager.userUID);
     MatchManager *match = [MatchManager new];
-    
+    NSLog(@"%@",userDataManager.userUID);
+    [userDataManager setUserName:@"小王"];
+    NSString *name = [userDataManager getUserName:userDataManager.userUID];
+    NSLog(@"dataName: %@",name);
+
     //UI Burron
-    SpriteKitButton *MatchBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"Button_6.png" activeButtonImage:@"Button_7.png" buttonAction:^{
+    SpriteKitButton *matchBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"Button_6.png" activeButtonImage:@"Button_7.png" buttonAction:^{
         //[self MatchButton];
         [match matchButton:_vc :self];
     }];
-    SpriteKitButton *GameCenterBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"GameCenter.png" activeButtonImage:@"GameCenter.png" buttonAction:^{
-        [gameCenter saveHighscore:userType.score];
+    SpriteKitButton *gameCenterBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"GameCenter.png" activeButtonImage:@"GameCenter.png" buttonAction:^{
+        [gameCenter saveHighscore:userDataManager.score];
         [gameCenter showLeaderBoard:_vc];
     }];
-    
-    // 第一個輸入要建立的Btn  第二個找畫面上Btn的位置
-    [self resetUIPosition:MatchBtn :@"MatchBtn"];
-    [self resetUIPosition:GameCenterBtn :@"GameCenter"];
-    // 初始化FireBase 取得資料
-    //[self startGetFirebase];
-}
+    SpriteKitButton *MyFriendBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"找朋友.png" activeButtonImage:@"找朋友.png" buttonAction:^{
+        [_vc showMyFriendTabelView];
 
+    }];
+    // 第一個輸入要建立的Btn  第二個找畫面上Btn的位置
+    [self resetUIPosition:matchBtn :@"MatchBtn"];
+    [self resetUIPosition:gameCenterBtn :@"GameCenter"];
+    [self resetUIPosition:MyFriendBtn :@"MyFriend"];
+
+}
+// 初始化UI位置
 -(void)resetUIPosition:(SpriteKitButton*)Button:(NSString*)nodeName{
     [self addChild:Button];
     SKSpriteNode *ButtonPos = (SKSpriteNode*)[self childNodeWithName:nodeName];
@@ -61,8 +70,13 @@
 
 -(void)playerNameLabel:(SKLabelNode*) label {
 
+    SKLabelNode * nameLabel = (SKLabelNode*)[self childNodeWithName:@"playerName"];
     
 }
 
+-(void)changeNameBtn:(SpriteKitButton*) btn {
+
+
+}
 
 @end

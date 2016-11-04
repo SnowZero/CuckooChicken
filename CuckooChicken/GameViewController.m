@@ -7,12 +7,16 @@
 //
 
 #import "GameViewController.h"
+#import "FriendTableViewController.h"
 #import "GameScene.h"
 #import "MainCity.h"
 
 @import Firebase;
 
 @implementation GameViewController
+{
+    MainCity *scene;
+}
 
 - (void)viewDidLoad
 {
@@ -27,7 +31,7 @@
     
     // Create and configure the scene.
 //    GameScene *scene = [GameScene nodeWithFileNamed:@"MainCity"];
-    MainCity *scene = [MainCity nodeWithFileNamed:@"MainCity"];
+    scene = [MainCity nodeWithFileNamed:@"MainCity"];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     // Present the scene.
     scene.vc = self;
@@ -36,6 +40,14 @@
 
 -(void)showAlert:(id)object{
     NSLog(@"dsdsds");
+}
+
+-(void)showMyFriendTabelView{
+    FriendTableViewController *mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"FriendTable"];
+    // 跳到下一頁
+    mvc.vc = self;
+    mvc.myScene = scene;
+    [self presentViewController:mvc animated:YES completion:nil];
 }
 
 - (BOOL)shouldAutorotate

@@ -10,12 +10,15 @@
 #import "FireBaseManager.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "GameViewController.h"
 
 @import Firebase;
 
 @interface SignInViewController () <FBSDKLoginButtonDelegate>
 {
 //    FIRDatabaseReference *ref;
+    FireBaseManager *userDataManager;
+    NSTimer *finishTimer;
 }
 @property (weak, nonatomic) IBOutlet UITextField *gameForMail;
 @property (weak, nonatomic) IBOutlet UITextField *gamePassword;
@@ -29,7 +32,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self showViewImage];
+    userDataManager = [FireBaseManager newFBData];
+    [userDataManager startGetFirebase];
+    
+    //[self showViewImage];
+}
+-(void)checkDataFinish:(NSTimer*)timer{
+    if (userDataManager.userData) {
+        [timer invalidate];
+        timer = nil;
+        [self goToMainCity];
+    }
 }
 - (void) showViewImage {
     
@@ -40,6 +53,11 @@
     
     UIImage *image = [UIImage imageNamed:@"viewImage.png"];
     _showViewBackGroundImage.image = image;
+}
+-(void)goToMainCity{
+    UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+    // 跳到下一頁
+    [self presentViewController:mvc animated:YES completion:nil];
 }
 
 - (IBAction)gameSianIn:(UIButton *)sender {
@@ -87,10 +105,9 @@
         
         // 輸入成功就進入遊戲
         // 準備跳到下一頁的物件
-        MatchPlayersViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
-        mvc.goToMVC = sianInMail;
+        UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
         // 跳到下一頁
-        [self presentViewController:mvc animated:YES completion:nil];
+        finishTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(checkDataFinish:) userInfo:nil repeats:true];
         NSLog(@"成功進入遊戲");
         
         }];
@@ -190,11 +207,9 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
                                       }else{
                                           
                                           // 準備跳到下一頁的物件
-                                          MatchPlayersViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+                                          UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
                                           // 跳到下一頁
-                                          [self presentViewController:mvc animated:YES completion:nil];
-                                          NSLog(@"登入firebase成功");
-                                          NSLog(@"CCC%@",user.uid);
+                                          finishTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(checkDataFinish:) userInfo:nil repeats:true];
                                       }
                                       
                                   }];
