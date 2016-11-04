@@ -38,6 +38,12 @@
     NSLog(@"dsdsds");
 }
 
+-(void)showMyFriendTabelView{
+    UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"FriendTable"];
+    // 跳到下一頁
+    [self presentViewController:mvc animated:YES completion:nil];
+}
+
 - (BOOL)shouldAutorotate
 {
     return YES;

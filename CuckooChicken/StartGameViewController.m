@@ -7,9 +7,16 @@
 //
 
 #import "StartGameViewController.h"
+#import "FireBaseManager.h"
+#import "SignInViewController.h"
+
 @import Firebase;
 
 @interface StartGameViewController ()
+{
+    FireBaseManager *userDataManager;
+    NSTimer *finishTimer;
+}
 
 @end
 
@@ -18,7 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    userDataManager = [FireBaseManager newFBData];
+    [userDataManager startGetFirebase];
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -29,9 +41,8 @@
                                                     FIRUser *_Nullable user) {
         if (user != nil) {
             NSLog(@"使用者以登入，UID為: %@",user.uid);
-            UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
-            // 跳到下一頁
-            [self presentViewController:mvc animated:YES completion:nil];
+            userDataManager.userUID = user.uid;
+            finishTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(checkDataFinish:) userInfo:nil repeats:true];
             
         } else {
             // No user is signed in.
@@ -49,6 +60,19 @@
         }
     }];
 }
+-(void)checkDataFinish:(NSTimer*)timer{
+    if ([userDataManager askUserDataFinish]) {
+        [timer invalidate];
+        timer = nil;
+        [self goToMainCity];
+    }
+}
+-(void)goToMainCity{
+    UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+    // 跳到下一頁
+    [self presentViewController:mvc animated:YES completion:nil];
+}
+
 - (IBAction)loginBtn:(id)sender {
     NSError *error;
     [[FIRAuth auth] signOut:&error];
@@ -68,5 +92,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end

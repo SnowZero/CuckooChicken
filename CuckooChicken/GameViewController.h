@@ -10,5 +10,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameViewController : UIViewController
-//fghjk
+
+-(void)showMyFriendTabelView;
 @end

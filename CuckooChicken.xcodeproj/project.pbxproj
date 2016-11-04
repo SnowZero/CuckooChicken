@@ -101,6 +101,7 @@
 		827097A81DB2277600A624EA /* MatchPlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 827097A71DB2277600A624EA /* MatchPlayersViewController.m */; };
 		8287EAFC1DC9F25900EE0DB7 /* MainCity.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8287EAFB1DC9F25900EE0DB7 /* MainCity.sks */; };
 		8287EAFF1DC9F2A900EE0DB7 /* MainCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8287EAFE1DC9F2A900EE0DB7 /* MainCity.m */; };
+		82B2E1F21DCC9AED0080A46D /* FriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B2E1F11DCC9AED0080A46D /* FriendTableViewController.m */; };
 		82B9E1311D86CE4000A1CA30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1301D86CE4000A1CA30 /* main.m */; };
 		82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1331D86CE4000A1CA30 /* AppDelegate.m */; };
 		82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1361D86CE4000A1CA30 /* GameScene.m */; };
@@ -224,6 +225,8 @@
 		8287EAFB1DC9F25900EE0DB7 /* MainCity.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainCity.sks; sourceTree = "<group>"; };
 		8287EAFD1DC9F2A900EE0DB7 /* MainCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCity.h; sourceTree = "<group>"; };
 		8287EAFE1DC9F2A900EE0DB7 /* MainCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCity.m; sourceTree = "<group>"; };
+		82B2E1F01DCC9AED0080A46D /* FriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewController.h; sourceTree = "<group>"; };
+		82B2E1F11DCC9AED0080A46D /* FriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewController.m; sourceTree = "<group>"; };
 		82B9E12C1D86CE4000A1CA30 /* CuckooChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuckooChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B9E1301D86CE4000A1CA30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82B9E1321D86CE4000A1CA30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -513,6 +516,8 @@
 				E11972741D914FAC00B0AB77 /* SignInViewController.m */,
 				E11972791D91511200B0AB77 /* RegisteredViewController.h */,
 				E119727A1D91511200B0AB77 /* RegisteredViewController.m */,
+				82B2E1F01DCC9AED0080A46D /* FriendTableViewController.h */,
+				82B2E1F11DCC9AED0080A46D /* FriendTableViewController.m */,
 				82B9E1401D86CE4000A1CA30 /* Assets.xcassets */,
 				82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */,
 				82B9E1451D86CE4000A1CA30 /* Info.plist */,
@@ -842,6 +847,7 @@
 				826D73311DC752CB00EE5242 /* GameCenterManager.m in Sources */,
 				E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */,
 				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
+				82B2E1F21DCC9AED0080A46D /* FriendTableViewController.m in Sources */,
 				827097A81DB2277600A624EA /* MatchPlayersViewController.m in Sources */,
 				8287EAFF1DC9F2A900EE0DB7 /* MainCity.m in Sources */,
 			);
