@@ -194,7 +194,7 @@
                                 <state key="normal" image="Button_1.png"/>
                                 <connections>
                                     <action selector="loginBtn:" destination="AGg-Kh-vc4" eventType="touchUpInside" id="fKS-Yn-asm"/>
-                                    <segue destination="ZjE-BU-bgi" kind="show" id="1zH-Bh-MhH"/>
+                                    <segue destination="ZjE-BU-bgi" kind="show" id="J8B-Iz-8Ij"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -427,6 +427,6 @@
         <image name="viewImage.png" width="414" height="736"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1zH-Bh-MhH"/>
+        <segue reference="J8B-Iz-8Ij"/>
     </inferredMetricsTieBreakers>
 </document>

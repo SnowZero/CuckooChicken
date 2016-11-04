@@ -27,6 +27,7 @@
     // Do any additional setup after loading the view.
     userDataManager = [FireBaseManager newFBData];
     [userDataManager startGetFirebase];
+    
 
 }
 
@@ -51,8 +52,7 @@
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"瞭解" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInView"];
                 // 跳到下一頁
-                [self presentViewController:mvc animated:YES completion:nil];
-            }];
+                    finishTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(checkLoginDataFinish:) userInfo:nil repeats:true];            }];
             
             [alertController addAction:cancelAction];
             //把Alert對話框顯示出來
@@ -64,14 +64,22 @@
     if ([userDataManager askUserDataFinish]) {
         [timer invalidate];
         timer = nil;
-        [self goToMainCity];
+        [self goToMainCity:@"MatchVC"];
     }
 }
--(void)goToMainCity{
-    UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];
+-(void)checkLoginDataFinish:(NSTimer*)timer{
+    if ([userDataManager askUserDataFinish]) {
+        [timer invalidate];
+        timer = nil;
+        [self goToMainCity:@"SignInView"];
+    }
+}
+-(void)goToMainCity:(NSString*)vcID{
+    UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:vcID];
     // 跳到下一頁
     [self presentViewController:mvc animated:YES completion:nil];
 }
+
 
 - (IBAction)loginBtn:(id)sender {
     NSError *error;
@@ -79,6 +87,7 @@
     if (!error) {
         NSLog(@"登出成功");
     }
+    finishTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(checkLoginDataFinish:) userInfo:nil repeats:true];
 }
 
 

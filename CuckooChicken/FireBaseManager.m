@@ -19,13 +19,12 @@ static FireBaseManager *firebase = nil;
 +(instancetype)newFBData{
     if (firebase == nil) {
         firebase = [FireBaseManager new];
-        
     }
     return firebase;
 }
 
 - (void)startGetFirebase{
-    finish = false;
+    
     NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
     
     _ref = [[FIRDatabase database] referenceFromURL:strUrl];
@@ -52,11 +51,21 @@ static FireBaseManager *firebase = nil;
     return firebase.userData;
 }
 -(void)setUserFriend:(NSString *)firendID{
-    [[[[[_ref child:@"user"] child:_userUID] child:@"friend"] child:firendID] setValue:@"1"];
-    
+    NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
+    FIRDatabaseReference *ref2 = [[FIRDatabase database] referenceFromURL:strUrl];
+    ref2 = [ref2 child:@"user"];
+    ref2 = [ref2 child:_userUID];
+    ref2 = [ref2 child:@"friend"];
+    ref2 = [ref2 child:firendID];
+    [ref2 setValue:@"1"];    
 }
 -(void)setUserName:(NSString *)userName{
-    [[[[_ref child:@"user"] child:_userUID] child:@"name"] setValue:userName];
+    NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
+    FIRDatabaseReference *ref2 = [[FIRDatabase database] referenceFromURL:strUrl];
+    ref2 = [ref2 child:@"user"];
+    ref2 = [ref2 child:userName];
+    ref2 = [ref2 child:@"name"];
+    [ref2 setValue:userName];
 }
 -(NSString*)getUserName:(NSString *)userID{
    return _userData[@"user"][userID][@"name"];

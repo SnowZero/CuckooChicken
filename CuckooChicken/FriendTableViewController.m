@@ -8,12 +8,14 @@
 
 #import "FriendTableViewController.h"
 #import "FireBaseManager.h"
+#import "MatchManager.h"
 
 @interface FriendTableViewController ()
 {
     FireBaseManager *userDataManager;
     NSDictionary *friendData;
     NSDictionary *otherUserData;
+    MatchManager *matchManager;
 }
 
 @end
@@ -36,8 +38,8 @@
     //移除Separator
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
-                                     [UIImage imageNamed:@"GameOverBackground"]];
-
+                                     [UIImage imageNamed:@"group.png"]];
+    matchManager = [MatchManager new];
 }
 
 
@@ -71,6 +73,12 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    [self showMatchFriendAlert];
+}
+-(void)showMatchFriendAlert{
+    [matchManager matchButton:_vc :_myScene];
+}
 
 /*
 // Override to support conditional editing of the table view.

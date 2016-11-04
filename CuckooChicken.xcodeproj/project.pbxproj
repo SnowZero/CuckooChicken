@@ -574,7 +574,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82B9E1481D86CE4000A1CA30 /* Build configuration list for PBXNativeTarget "CuckooChicken" */;
 			buildPhases = (
-				BAEC7AF91A232EC82FF91867 /* 📦 Check Pods Manifest.lock */,
+				BAEC7AF91A232EC82FF91867 /* [CP] Check Pods Manifest.lock */,
 				9BB39BB8E35FD027585BEC00 /* [CP] Check Pods Manifest.lock */,
 				82B9E1281D86CE4000A1CA30 /* Sources */,
 				82B9E1291D86CE4000A1CA30 /* Frameworks */,
@@ -778,14 +778,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BAEC7AF91A232EC82FF91867 /* 📦 Check Pods Manifest.lock */ = {
+		BAEC7AF91A232EC82FF91867 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

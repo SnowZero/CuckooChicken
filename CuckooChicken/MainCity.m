@@ -30,14 +30,16 @@
 //    NSLog(@"sdsdsd");MatchBtn GameCentet Button1 MyFriend
     //[self authPlayer];
     userDataManager = [FireBaseManager newFBData];
-    [userDataManager startGetFirebase];
+    //[userDataManager startGetFirebase];
     gameCenter = [GameCenterManager new];
     [gameCenter authPlayer:_vc];
+    NSLog(@"UID : %@",userDataManager.userUID);
     MatchManager *match = [MatchManager new];
-    [userDataManager setUserName:@"小明"];
+    NSLog(@"%@",userDataManager.userUID);
+    [userDataManager setUserName:@"小王"];
     NSString *name = [userDataManager getUserName:userDataManager.userUID];
     NSLog(@"dataName: %@",name);
-    
+
     //UI Burron
     SpriteKitButton *matchBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"Button_6.png" activeButtonImage:@"Button_7.png" buttonAction:^{
         //[self MatchButton];
