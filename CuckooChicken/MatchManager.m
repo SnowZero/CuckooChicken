@@ -128,8 +128,9 @@
         userType.playerType = PLAYER_TYPE_ATTACK;
         userType.enemyType = PLAYER_TYPE_DEFENSE;
         userType.gameRoomKey = key;
-        userType.enemyUID = tmp[@"guest"];
+        
         [self gotoGameViewController];
+        userType.enemyUID = tmp[@"guest"];
         
     }
     //close Timer
