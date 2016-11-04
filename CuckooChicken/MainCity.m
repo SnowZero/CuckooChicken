@@ -59,7 +59,10 @@
     [ButtonPos removeFromParent];
 }
 
+-(void)playerNameLabel:(SKLabelNode*) label {
 
+    
+}
 
 
 @end
