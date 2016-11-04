@@ -30,7 +30,8 @@
 //    NSLog(@"sdsdsd");MatchBtn GameCentet Button1 MyFriend
     //[self authPlayer];
     userDataManager = [FireBaseManager newFBData];
-    //[userDataManager startGetFirebase];
+    [userDataManager startGetFirebase];
+    [self startGetUserUID];
     gameCenter = [GameCenterManager new];
     [gameCenter authPlayer:_vc];
     NSLog(@"UID : %@",userDataManager.userUID);
@@ -66,6 +67,16 @@
     Button.position = ButtonPos.position;
     Button.defaultButton.size = Button.activeButton.size = ButtonPos.size;
     [ButtonPos removeFromParent];
+}
+-(void)startGetUserUID{
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user != nil) {
+            userDataManager.userUID = user.uid;
+        }else{
+            NSLog(@"UID error");
+        }
+    }];
 }
 
 
