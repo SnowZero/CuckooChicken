@@ -82,12 +82,14 @@
 -(void)playerNameLabel:(SKLabelNode*) label {
 
     SKLabelNode * nameLabel = (SKLabelNode*)[self childNodeWithName:@"playerName"];
+    [userDataManager setUserName:@""];
+    NSString * name3 = [userDataManager getUserName:userDataManager.userUID];
     
 }
 
 -(void)changeNameBtn:(SpriteKitButton*) btn {
 
-
+    SKSpriteNode * changeNameButton = (SKSpriteNode*)[self childNodeWithName:@"changeBtn"];
 }
 
 @end
