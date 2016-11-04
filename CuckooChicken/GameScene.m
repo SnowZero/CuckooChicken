@@ -413,6 +413,9 @@ typedef void(^FIRBTask)(void);
     defenseHPBar.size = CGSizeMake(defenseHpMaxSize.width*defenseHP/100, defenseHPBar.size.height);
 }
 -(void)showInviteFriendAlert{
+    if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
+        userData.enemyUID = fireData[@"GameRoom"][userData.gameRoomKey][@"guest"];
+    }
     NSString *message = [NSString stringWithFormat:@"您要邀請[%@]為好友嗎？", [userData getUserName:userData.enemyUID]];
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

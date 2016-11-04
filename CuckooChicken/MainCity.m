@@ -59,6 +59,8 @@
     [self resetUIPosition:gameCenterBtn :@"GameCenter"];
     [self resetUIPosition:MyFriendBtn :@"MyFriend"];
 
+    [userDataManager setUserName:@"小明"];
+    NSString *name2 = [userDataManager getUserName:userDataManager.userUID];
 }
 // 初始化UI位置
 -(void)resetUIPosition:(SpriteKitButton*)Button:(NSString*)nodeName{
