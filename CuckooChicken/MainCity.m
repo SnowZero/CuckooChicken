@@ -16,6 +16,7 @@
 @import Firebase;
 
 @implementation MainCity {
+    FIRDatabaseReference *ref;
     NSDictionary *fireData;
     NSTimer *timer;
     FireBaseManager *userDataManager;
@@ -61,6 +62,7 @@
 
     [userDataManager setUserName:@"小明"];
     NSString *name2 = [userDataManager getUserName:userDataManager.userUID];
+    
 }
 // 初始化UI位置
 -(void)resetUIPosition:(SpriteKitButton*)Button:(NSString*)nodeName{
@@ -84,14 +86,67 @@
 -(void)playerNameLabel:(SKLabelNode*) label {
 
     SKLabelNode * nameLabel = (SKLabelNode*)[self childNodeWithName:@"playerName"];
-    [userDataManager setUserName:@""];
-    NSString * name3 = [userDataManager getUserName:userDataManager.userUID];
+    
+    [[[ref child:@"users"] child:userDataManager.userUID]
+     setValue:@{@"name":userDataManager.userUID}];
+    
+    // 在Database裡從玩家的UID來尋找要更改名稱的的玩家
+    [userDataManager getUserName:userDataManager.userUID];
+    
+    
+    [self changeNameBtn:alertController];
+    
+}
+// 初始化UIbtn
+-(void)changeNameBtn:(SpriteKitButton*) btn {
+    
+    SKSpriteNode * changeNameButton = (SKSpriteNode*)[self childNodeWithName:@"changeBtn"];
+    
+    [self addChild:changeNameButton];
     
 }
 
--(void)changeNameBtn:(SpriteKitButton*) btn {
+-(void)changeTheNameAlertController {
 
-    SKSpriteNode * changeNameButton = (SKSpriteNode*)[self childNodeWithName:@"changeBtn"];
+    // 創出一個更改名稱的 alert
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"更改玩家名稱" message:@"在下方輸入要更改的名稱" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
+        // 再加進1個 TextField
+        textField.placeholder = @"請輸入ID";
+        
+    }];
+    // 製作確定跟取消的按鈕
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSString *idField = [[alertController textFields][0] text];
+        
+        [[[[ref child:@"users"] child:userDataManager.userData] child:@"username"] setValue:userDataManager.userData];
+        
+        // 在Database裡從玩家的UID來尋找要更改名稱的的玩家，已進行更改名稱
+        [userDataManager getUserName:userDataManager.userUID];
+        //        NSLog(@"玩家UID是： %@",userDataManager.userUID);
+        // 將更改完的名稱存到Firebase裡的Database裡
+        [userDataManager setUserName:idField];
+        NSLog(@"更改成功");
+    }];
+    
+    //將按鈕加到 alert 上面
+    [alertController addAction:ok];
+    [alertController addAction:cancel];
+    //將 alert 呈現在畫面上
+    [_vc presentViewController:alertController animated:YES completion:nil];
+}
+// 讓更改名稱按鈕有按下動作的反應
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch * touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    SKSpriteNode *touchedNode = (SKSpriteNode *)[self nodeAtPoint:location];
+    if ([touchedNode.name isEqualToString:@"changeBtn"]) {
+        
+        [self changeTheNameAlertController];
+        NSLog(@"有按到");
+    }
 }
 
 @end
