@@ -38,10 +38,10 @@
     NSLog(@"UID : %@",userDataManager.userUID);
     MatchManager *match = [MatchManager new];
     NSLog(@"%@",userDataManager.userUID);
-    [userDataManager setUserName:@"小王"];
-    NSString *name = [userDataManager getUserName:userDataManager.userUID];
-    NSLog(@"dataName: %@",name);
-
+//    [userDataManager setUserName:@"小王"];
+//    NSString *name = [userDataManager getUserName:userDataManager.userUID];
+//    NSLog(@"dataName: %@",name);
+    
     //UI Burron
     SpriteKitButton *matchBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"Button_6.png" activeButtonImage:@"Button_7.png" buttonAction:^{
         //[self MatchButton];
@@ -60,8 +60,8 @@
     [self resetUIPosition:gameCenterBtn :@"GameCenter"];
     [self resetUIPosition:MyFriendBtn :@"MyFriend"];
 
-    [userDataManager setUserName:@"小明"];
-    NSString *name2 = [userDataManager getUserName:userDataManager.userUID];
+//    [userDataManager setUserName:@"小明"];
+//    NSString *name2 = [userDataManager getUserName:userDataManager.userUID];
     
 }
 // 初始化UI位置
@@ -86,23 +86,12 @@
 -(void)playerNameLabel:(SKLabelNode*) label {
 
     SKLabelNode * nameLabel = (SKLabelNode*)[self childNodeWithName:@"playerName"];
-    
-    [[[ref child:@"users"] child:userDataManager.userUID]
-     setValue:@{@"name":userDataManager.userUID}];
+//    SKLabelNode * nameLabel = [SKLabelNode labelNodeWithFontNamed:@"playerName"];
     
     // 在Database裡從玩家的UID來尋找要更改名稱的的玩家
-    [userDataManager getUserName:userDataManager.userUID];
-    
-    
-    [self changeNameBtn:alertController];
-    
-}
-// 初始化UIbtn
--(void)changeNameBtn:(SpriteKitButton*) btn {
-    
-    SKSpriteNode * changeNameButton = (SKSpriteNode*)[self childNodeWithName:@"changeBtn"];
-    
-    [self addChild:changeNameButton];
+    NSString * userIDLabel = [userDataManager getUserName:userDataManager.userUID];
+    NSLog(@"玩家的名字： %@",userDataManager.userUID);
+    nameLabel.text = userIDLabel;
     
 }
 
@@ -121,11 +110,9 @@
         
         NSString *idField = [[alertController textFields][0] text];
         
-        [[[[ref child:@"users"] child:userDataManager.userData] child:@"username"] setValue:userDataManager.userData];
-        
         // 在Database裡從玩家的UID來尋找要更改名稱的的玩家，已進行更改名稱
         [userDataManager getUserName:userDataManager.userUID];
-        //        NSLog(@"玩家UID是： %@",userDataManager.userUID);
+        
         // 將更改完的名稱存到Firebase裡的Database裡
         [userDataManager setUserName:idField];
         NSLog(@"更改成功");
@@ -146,6 +133,7 @@
         
         [self changeTheNameAlertController];
         NSLog(@"有按到");
+        
     }
 }
 
