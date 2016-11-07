@@ -63,7 +63,7 @@ static FireBaseManager *firebase = nil;
     NSString *strUrl = [NSString stringWithFormat:@"https://cuckoo-chicken.firebaseio.com/"];
     FIRDatabaseReference *ref2 = [[FIRDatabase database] referenceFromURL:strUrl];
     ref2 = [ref2 child:@"user"];
-    ref2 = [ref2 child:userName];
+    ref2 = [ref2 child:_userUID];
     ref2 = [ref2 child:@"name"];
     [ref2 setValue:userName];
 }

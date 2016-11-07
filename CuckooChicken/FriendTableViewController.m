@@ -72,12 +72,13 @@
 
     return cell;
 }
-
--(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"點擊");
     [self showMatchFriendAlert];
 }
+
 -(void)showMatchFriendAlert{
-    [matchManager matchButton:_vc :_myScene];
+    [matchManager matchButton:self :_myScene];
 }
 
 /*
