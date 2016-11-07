@@ -112,6 +112,7 @@
 		82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */; };
 		82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B9E1521D86CFCD00A1CA30 /* ViewController.m */; };
 		82C11ACA1DC8B08900BBC854 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C11AC91DC8B08900BBC854 /* heart.png */; };
+		82C552DC1DD07FE500E7F325 /* FriendMatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C552DB1DD07FE500E7F325 /* FriendMatchManager.m */; };
 		82DBFF2F1DC4527A00E4647C /* GameCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DBFF2E1DC4527A00E4647C /* GameCenter.png */; };
 		82DBFF381DC46C5800E4647C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DBFF371DC46C5800E4647C /* GameKit.framework */; };
 		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
@@ -243,6 +244,8 @@
 		82B9E1511D86CFCD00A1CA30 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82B9E1521D86CFCD00A1CA30 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82C11AC91DC8B08900BBC854 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		82C552DA1DD07FE500E7F325 /* FriendMatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendMatchManager.h; path = CuckooChicken/FriendMatchManager.h; sourceTree = "<group>"; };
+		82C552DB1DD07FE500E7F325 /* FriendMatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendMatchManager.m; path = CuckooChicken/FriendMatchManager.m; sourceTree = "<group>"; };
 		82DBFF2E1DC4527A00E4647C /* GameCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameCenter.png; sourceTree = "<group>"; };
 		82DBFF371DC46C5800E4647C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuckooChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -551,6 +554,8 @@
 				827097A41DB200AA00A624EA /* FireBaseManager.m */,
 				824284151DCA2AA90006AAC0 /* MatchManager.h */,
 				824284161DCA2AA90006AAC0 /* MatchManager.m */,
+				82C552DA1DD07FE500E7F325 /* FriendMatchManager.h */,
+				82C552DB1DD07FE500E7F325 /* FriendMatchManager.m */,
 				820720C01DC8C9EA005D47A5 /* CuckooChicken-Bridging-Header.h */,
 			);
 			name = Model;
@@ -848,6 +853,7 @@
 				E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */,
 				82B9E1531D86CFCD00A1CA30 /* ViewController.m in Sources */,
 				82B2E1F21DCC9AED0080A46D /* FriendTableViewController.m in Sources */,
+				82C552DC1DD07FE500E7F325 /* FriendMatchManager.m in Sources */,
 				827097A81DB2277600A624EA /* MatchPlayersViewController.m in Sources */,
 				8287EAFF1DC9F2A900EE0DB7 /* MainCity.m in Sources */,
 			);

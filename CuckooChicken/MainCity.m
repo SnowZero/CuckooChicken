@@ -52,7 +52,7 @@
     }];
     SpriteKitButton *MyFriendBtn = [[SpriteKitButton alloc] initWithDefaultButtonImage:@"找朋友.png" activeButtonImage:@"找朋友.png" buttonAction:^{
         [_vc showMyFriendTabelView];
-
+        
     }];
     // 第一個輸入要建立的Btn  第二個找畫面上Btn的位置
     [self resetUIPosition:matchBtn :@"MatchBtn"];

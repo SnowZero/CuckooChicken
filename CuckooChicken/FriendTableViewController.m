@@ -8,14 +8,14 @@
 
 #import "FriendTableViewController.h"
 #import "FireBaseManager.h"
-#import "MatchManager.h"
+#import "FriendMatchManager.h"
 
 @interface FriendTableViewController ()
 {
     FireBaseManager *userDataManager;
     NSDictionary *friendData;
     NSDictionary *otherUserData;
-    MatchManager *matchManager;
+    FriendMatchManager *matchManager;
 }
 
 @end
@@ -79,6 +79,9 @@
 
 -(void)showMatchFriendAlert{
     [matchManager matchButton:self :_myScene];
+}
+- (IBAction)backMainBtn:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 /*

@@ -69,7 +69,7 @@
                                 <navigationItem title="Title" id="PKK-hA-Y79">
                                     <barButtonItem key="leftBarButtonItem" title="Back" id="5Kh-c7-0MG">
                                         <connections>
-                                            <segue destination="BV1-FR-VrT" kind="show" id="ZKe-MY-iJ7"/>
+                                            <action selector="backMainBtn:" destination="cho-ya-bqM" id="PZD-za-fIT"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
