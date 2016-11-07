@@ -37,6 +37,7 @@
     [gameCenter authPlayer:_vc];
     NSLog(@"UID : %@",userDataManager.userUID);
     MatchManager *match = [MatchManager new];
+    [self playerNameLabel];
     NSLog(@"%@",userDataManager.userUID);
 //    [userDataManager setUserName:@"小王"];
 //    NSString *name = [userDataManager getUserName:userDataManager.userUID];
@@ -59,6 +60,7 @@
     [self resetUIPosition:matchBtn :@"MatchBtn"];
     [self resetUIPosition:gameCenterBtn :@"GameCenter"];
     [self resetUIPosition:MyFriendBtn :@"MyFriend"];
+    
 
 //    [userDataManager setUserName:@"小明"];
 //    NSString *name2 = [userDataManager getUserName:userDataManager.userUID];
@@ -83,7 +85,7 @@
     }];
 }
 
--(void)playerNameLabel:(SKLabelNode*) label {
+-(void)playerNameLabel {
 
     SKLabelNode * nameLabel = (SKLabelNode*)[self childNodeWithName:@"playerName"];
 //    SKLabelNode * nameLabel = [SKLabelNode labelNodeWithFontNamed:@"playerName"];
@@ -115,6 +117,7 @@
         
         // 將更改完的名稱存到Firebase裡的Database裡
         [userDataManager setUserName:idField];
+        [self playerNameLabel];
         NSLog(@"更改成功");
     }];
     
