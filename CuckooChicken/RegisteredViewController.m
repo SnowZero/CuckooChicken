@@ -91,7 +91,7 @@
         [self presentViewController:alertcontroller animated:YES completion:nil];
         
         NSLog(@"註冊成功，跳到下一頁了");
-//        [self setDisplayName:user];
+
     }];
 
 }
