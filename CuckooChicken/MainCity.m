@@ -92,7 +92,7 @@
     
     // 在Database裡從玩家的UID來尋找要更改名稱的的玩家
     NSString * userIDLabel = [userDataManager getUserName:userDataManager.userUID];
-    NSLog(@"玩家的名字： %@",userDataManager.userUID);
+    NSLog(@"玩家的名字:%@",userIDLabel);
     nameLabel.text = userIDLabel;
     
 }
@@ -100,7 +100,7 @@
 -(void)changeTheNameAlertController {
 
     // 創出一個更改名稱的 alert
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"更改玩家名稱" message:@"在下方輸入要更改的名稱" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"更改玩家名稱" message:@"請在下方輸入要更改的名稱" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
         // 再加進1個 TextField
         textField.placeholder = @"請輸入ID";
@@ -112,6 +112,9 @@
         
         NSString *idField = [[alertController textFields][0] text];
         
+        // 加入Timer可以讓ID更新能夠同步
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(playerNameLabel) userInfo:nil repeats:NO];
+            
         // 在Database裡從玩家的UID來尋找要更改名稱的的玩家，已進行更改名稱
         [userDataManager getUserName:userDataManager.userUID];
         
@@ -119,14 +122,17 @@
         [userDataManager setUserName:idField];
         [self playerNameLabel];
         NSLog(@"更改成功");
-    }];
+        
+        }];
     
     //將按鈕加到 alert 上面
     [alertController addAction:ok];
     [alertController addAction:cancel];
     //將 alert 呈現在畫面上
     [_vc presentViewController:alertController animated:YES completion:nil];
+    
 }
+
 // 讓更改名稱按鈕有按下動作的反應
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch * touch = [touches anyObject];
