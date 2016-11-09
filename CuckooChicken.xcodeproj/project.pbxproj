@@ -79,6 +79,11 @@
 		822635CA1DC08AC60065E3CE /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 822635C91DC08AC60065E3CE /* Monster.m */; };
 		823C08261DBB59A30046E94A /* BulletGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08251DBB59A30046E94A /* BulletGalaga.png */; };
 		823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */ = {isa = PBXBuildFile; fileRef = 823C08BE1DBF29F00046E94A /* UI_blood.png */; };
+		823EF9571DD34E2700300497 /* UI_MainCityBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 823EF9561DD34E2700300497 /* UI_MainCityBar.png */; };
+		823EF95A1DD353F700300497 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823EF9591DD353F700300497 /* AVFoundation.framework */; };
+		823EF95C1DD354AE00300497 /* MainCity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 823EF95B1DD354AE00300497 /* MainCity.mp3 */; };
+		823EF95F1DD358F300300497 /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 823EF95E1DD358F300300497 /* AudioManager.m */; };
+		823EF9611DD35CED00300497 /* Fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 823EF9601DD35CED00300497 /* Fire.mp3 */; };
 		824284171DCA2AA90006AAC0 /* MatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 824284161DCA2AA90006AAC0 /* MatchManager.m */; };
 		826D73311DC752CB00EE5242 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 826D73301DC752CB00EE5242 /* GameCenterManager.m */; };
 		826D73331DC7538800EE5242 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 826D73321DC7538800EE5242 /* GoogleService-Info.plist */; };
@@ -198,6 +203,12 @@
 		822635C91DC08AC60065E3CE /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
 		823C08251DBB59A30046E94A /* BulletGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BulletGalaga.png; sourceTree = "<group>"; };
 		823C08BE1DBF29F00046E94A /* UI_blood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_blood.png; sourceTree = "<group>"; };
+		823EF9561DD34E2700300497 /* UI_MainCityBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_MainCityBar.png; sourceTree = "<group>"; };
+		823EF9591DD353F700300497 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		823EF95B1DD354AE00300497 /* MainCity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MainCity.mp3; sourceTree = "<group>"; };
+		823EF95D1DD358F300300497 /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioManager.h; path = CuckooChicken/AudioManager.h; sourceTree = "<group>"; };
+		823EF95E1DD358F300300497 /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioManager.m; path = CuckooChicken/AudioManager.m; sourceTree = "<group>"; };
+		823EF9601DD35CED00300497 /* Fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fire.mp3; sourceTree = "<group>"; };
 		824284151DCA2AA90006AAC0 /* MatchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchManager.h; path = CuckooChicken/MatchManager.h; sourceTree = "<group>"; };
 		824284161DCA2AA90006AAC0 /* MatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchManager.m; path = CuckooChicken/MatchManager.m; sourceTree = "<group>"; };
 		826D732F1DC752CB00EE5242 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterManager.h; path = CuckooChicken/GameCenterManager.h; sourceTree = "<group>"; };
@@ -268,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823EF95A1DD353F700300497 /* AVFoundation.framework in Frameworks */,
 				1B8FBC1247055B6CF0A1E290 /* Pods_CuckooChicken.framework in Frameworks */,
 				0203B1751DBE1C27009DEE71 /* FBSDKCoreKit.framework in Frameworks */,
 				0203B1771DBE1C27009DEE71 /* FBSDKShareKit.framework in Frameworks */,
@@ -337,6 +349,7 @@
 		023088C71DB36CAD0037180E /* BackgroundImage */ = {
 			isa = PBXGroup;
 			children = (
+				823EF9561DD34E2700300497 /* UI_MainCityBar.png */,
 				82DBFF2E1DC4527A00E4647C /* GameCenter.png */,
 				026FDDC21DBF44460078B703 /* viewImage_2.png */,
 				026FDDC01DBF3A7C0078B703 /* GameBackground.png */,
@@ -400,6 +413,7 @@
 		7030CA1CE3166D9D15E4BA4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				823EF9591DD353F700300497 /* AVFoundation.framework */,
 				82DBFF371DC46C5800E4647C /* GameKit.framework */,
 				0203B1701DBE1C26009DEE71 /* Bolts.framework */,
 				0203B1711DBE1C26009DEE71 /* FBSDKCoreKit.framework */,
@@ -427,6 +441,15 @@
 				823C08BE1DBF29F00046E94A /* UI_blood.png */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		823EF9581DD350E800300497 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				823EF95B1DD354AE00300497 /* MainCity.mp3 */,
+				823EF9601DD35CED00300497 /* Fire.mp3 */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 		826D73341DC7541600EE5242 /* GameScene */ = {
@@ -556,6 +579,8 @@
 				824284161DCA2AA90006AAC0 /* MatchManager.m */,
 				82C552DA1DD07FE500E7F325 /* FriendMatchManager.h */,
 				82C552DB1DD07FE500E7F325 /* FriendMatchManager.m */,
+				823EF95D1DD358F300300497 /* AudioManager.h */,
+				823EF95E1DD358F300300497 /* AudioManager.m */,
 				820720C01DC8C9EA005D47A5 /* CuckooChicken-Bridging-Header.h */,
 			);
 			name = Model;
@@ -565,6 +590,7 @@
 		E119F18B1DBBC3FC00EA023A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				823EF9581DD350E800300497 /* Music */,
 				82B9E12F1D86CE4000A1CA30 /* Supporting Files */,
 				023088C61DB36BE30037180E /* GameBackground */,
 			);
@@ -692,6 +718,8 @@
 				023088CF1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png in Resources */,
 				826D73411DC75E9600EE5242 /* Magician1.png in Resources */,
 				023088E61DB370080037180E /* 狀態.png in Resources */,
+				823EF9611DD35CED00300497 /* Fire.mp3 in Resources */,
+				823EF9571DD34E2700300497 /* UI_MainCityBar.png in Resources */,
 				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
 				826D73371DC75A9300EE5242 /* pirate1.png in Resources */,
 				023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */,
@@ -701,6 +729,7 @@
 				820720BC1DC8C1FC005D47A5 /* Fail.png in Resources */,
 				023088DA1DB36E580037180E /* ViewBackground.png in Resources */,
 				023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */,
+				823EF95C1DD354AE00300497 /* MainCity.mp3 in Resources */,
 				0203B1881DBE1F7F009DEE71 /* character_1.png in Resources */,
 				023088DD1DB36E920037180E /* Back.png in Resources */,
 				0203B1A11DBE1F8C009DEE71 /* Loading_9.png in Resources */,
@@ -844,6 +873,7 @@
 				822635CA1DC08AC60065E3CE /* Monster.m in Sources */,
 				82B9E1341D86CE4000A1CA30 /* AppDelegate.m in Sources */,
 				827097A51DB200AA00A624EA /* FireBaseManager.m in Sources */,
+				823EF95F1DD358F300300497 /* AudioManager.m in Sources */,
 				82B9E1371D86CE4000A1CA30 /* GameScene.m in Sources */,
 				E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */,
 				E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */,

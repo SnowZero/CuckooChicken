@@ -16,6 +16,7 @@
     NSDictionary *friendData;
     NSDictionary *otherUserData;
     FriendMatchManager *matchManager;
+    NSArray *friendArray;
 }
 
 @end
@@ -32,6 +33,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     userDataManager = [FireBaseManager newFBData];
+    userDataManager.vc = self;
+    userDataManager.isTabelView = true;
     friendData = userDataManager.userData[@"user"][userDataManager.userUID][@"friend"];
     otherUserData = userDataManager.userData[@"user"];
     NSLog(@"dataName: %@",userDataManager.userData[@"name"]);
@@ -39,7 +42,8 @@
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
                                      [UIImage imageNamed:@"group.png"]];
-    matchManager = [MatchManager new];
+    matchManager = [FriendMatchManager new];
+    friendArray = [friendData allKeys];
 }
 
 
@@ -61,7 +65,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSArray *friendArray = [friendData allKeys];
+    
     cell.textLabel.text = [userDataManager getUserName:friendArray[indexPath.row]];
     cell.imageView.image = [UIImage imageNamed:@"配對.png"];
     //cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"配對.png"]];
@@ -74,13 +78,12 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"點擊");
-    [self showMatchFriendAlert];
+     [matchManager matchButton:self :_myScene:friendArray[indexPath.row]];
 }
 
--(void)showMatchFriendAlert{
-    [matchManager matchButton:self :_myScene];
-}
+
 - (IBAction)backMainBtn:(id)sender {
+    userDataManager.isTabelView = false;
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

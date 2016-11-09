@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SceneKit/SceneKit.h>
 
 #define PLAYER_TYPE_ATTACK @"PlayerAttack"
 #define PLAYER_TYPE_DEFENSE @"PlayerDefense"
@@ -23,6 +24,8 @@
 @property(strong,nonatomic) NSString *userUID;
 @property(strong,nonatomic) NSString *enemyUID;
 @property(strong,nonatomic) FIRDatabaseReference *ref;
+@property(strong,nonatomic) UIViewController *vc;
+@property(assign,nonatomic) bool isTabelView;
 
 +(instancetype) newFBData;
 
@@ -31,8 +34,10 @@
 -(bool)askUserDataFinish;
 -(NSDictionary*) getData;
 - (void)startGetFirebase;
+- (void)startGetFirebase:(UIViewController*)vc:(SKScene*)myScene:(bool)isTabelView;
 -(void)setUserFriend:(NSString*)firendID;
 -(void)setUserName:(NSString*)userName;
 -(NSString*)getUserName:(NSString*)userID;
+-(bool)checkIsUserFriend:(NSString*)enemyUID;
 
 @end

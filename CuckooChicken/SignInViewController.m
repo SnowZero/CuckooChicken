@@ -35,7 +35,7 @@
     userDataManager = [FireBaseManager newFBData];
     [userDataManager startGetFirebase];
     
-    //[self showViewImage];
+    [self showViewImage];
 }
 -(void)checkDataFinish:(NSTimer*)timer{
     if (userDataManager.userData) {
@@ -267,7 +267,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     [loadingWordsView startAnimating];
     [_loadingView startAnimating];
     
-    [self performSelector:@selector(stopAnimating:) withObject:_loadingView afterDelay:8.0];
+    [self performSelector:@selector(stopAnimating:) withObject:_loadingView afterDelay:3.0];
 }
 
 #pragma Mark is Start Show Loading View  Make:Two

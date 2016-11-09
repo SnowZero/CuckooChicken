@@ -14,6 +14,7 @@
 #import "CuckooChicken-Swift.h"
 #import "MatchPlayersViewController.h"
 #import "MainCity.h"
+#import "AudioManager.h"
 
 @import Firebase;
 
@@ -49,6 +50,7 @@ typedef void(^FIRBTask)(void);
     NSTimer *timerGame;
     int timeCount;
     int defenseHP;
+    AudioManager *audioManager;
 }
 
 -(void)didMoveToView:(SKView *)view {
@@ -67,6 +69,9 @@ typedef void(^FIRBTask)(void);
     [self startFirebase];
     [self createUIStart];
     
+
+    audioManager = [AudioManager stariAudio];
+    [audioManager FirePlay];
 
     
    /* Setup your scene here */
@@ -415,21 +420,29 @@ typedef void(^FIRBTask)(void);
 -(void)showInviteFriendAlert{
     if ([userData.playerType isEqualToString:PLAYER_TYPE_ATTACK]) {
         userData.enemyUID = fireData[@"GameRoom"][userData.gameRoomKey][@"guest"];
+    }else{
+        userData.enemyUID = fireData[@"GameRoom"][userData.gameRoomKey][@"host"];
     }
-    NSString *message = [NSString stringWithFormat:@"您要邀請[%@]為好友嗎？", [userData getUserName:userData.enemyUID]];
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [userData setUserFriend:userData.enemyUID];
+    if (![userData checkIsUserFriend:userData.enemyUID]) {
+        NSString *message = [NSString stringWithFormat:@"您要邀請[%@]為好友嗎？", [userData getUserName:userData.enemyUID]];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [userData setUserFriend:userData.enemyUID];
+            [self goToHome];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self goToHome];
+        }];
+        [alertController addAction:ok];
+        [alertController addAction:cancelAction];
+        //把Alert對話框顯示出來
+        
+        [_vc presentViewController:alertController animated:YES completion:nil];
+    }else
+    {
         [self goToHome];
-    }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [self goToHome];
-    }];
-    [alertController addAction:ok];
-    [alertController addAction:cancelAction];
-    //把Alert對話框顯示出來
-    
-    [_vc presentViewController:alertController animated:YES completion:nil];
+    }
+
 }
 
 -(void)goToHome{
@@ -443,6 +456,7 @@ typedef void(^FIRBTask)(void);
     scene.vc = _vc;
     // Present the scene.
     [skView presentScene:scene];
+    [audioManager MainCityPlay];
 
 }
 

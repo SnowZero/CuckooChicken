@@ -12,13 +12,15 @@
 #import "GameScene.h"
 #import "MatchManager.h"
 #import "GameCenterManager.h"
+#import "FriendMatchManager.h"
+
 
 @import Firebase;
 
 @implementation MainCity {
     FIRDatabaseReference *ref;
     NSDictionary *fireData;
-    NSTimer *timer;
+    NSTimer *invitationTimer;
     FireBaseManager *userDataManager;
     NSString *roomKey;
     UIAlertController *alertController;
@@ -31,14 +33,14 @@
 //    NSLog(@"sdsdsd");MatchBtn GameCentet Button1 MyFriend
     //[self authPlayer];
     userDataManager = [FireBaseManager newFBData];
-    [userDataManager startGetFirebase];
+    [userDataManager startGetFirebase:_vc:self:false];
+    userDataManager.vc = _vc;
     [self startGetUserUID];
     gameCenter = [GameCenterManager new];
     [gameCenter authPlayer:_vc];
     NSLog(@"UID : %@",userDataManager.userUID);
     MatchManager *match = [MatchManager new];
     [self playerNameLabel];
-    NSLog(@"%@",userDataManager.userUID);
 //    [userDataManager setUserName:@"小王"];
 //    NSString *name = [userDataManager getUserName:userDataManager.userUID];
 //    NSLog(@"dataName: %@",name);
@@ -61,11 +63,12 @@
     [self resetUIPosition:gameCenterBtn :@"GameCenter"];
     [self resetUIPosition:MyFriendBtn :@"MyFriend"];
     
+    // 監控好友邀請
 
-//    [userDataManager setUserName:@"小明"];
-//    NSString *name2 = [userDataManager getUserName:userDataManager.userUID];
+
     
 }
+
 // 初始化UI位置
 -(void)resetUIPosition:(SpriteKitButton*)Button:(NSString*)nodeName{
     [self addChild:Button];
@@ -117,7 +120,7 @@
         
         // 將更改完的名稱存到Firebase裡的Database裡
         [userDataManager setUserName:idField];
-        [self playerNameLabel];
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(playerNameLabel) userInfo:nil repeats:NO];
         NSLog(@"更改成功");
     }];
     
@@ -132,7 +135,7 @@
     UITouch * touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
     SKSpriteNode *touchedNode = (SKSpriteNode *)[self nodeAtPoint:location];
-    if ([touchedNode.name isEqualToString:@"changeBtn"]) {
+    if ([touchedNode.name isEqualToString:@"changeBtn"] || [touchedNode.name isEqualToString:@"changeLabel"]) {
         
         [self changeTheNameAlertController];
         NSLog(@"有按到");

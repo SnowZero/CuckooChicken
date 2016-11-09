@@ -9,6 +9,8 @@
 #import "StartGameViewController.h"
 #import "FireBaseManager.h"
 #import "SignInViewController.h"
+#import "AudioManager.h"
+#import <AVFoundation/AVFoundation.h>
 
 @import Firebase;
 
@@ -16,6 +18,7 @@
 {
     FireBaseManager *userDataManager;
     NSTimer *finishTimer;
+    AVAudioPlayer *audioPlay;
 }
 
 @end
@@ -27,8 +30,8 @@
     // Do any additional setup after loading the view.
     userDataManager = [FireBaseManager newFBData];
     [userDataManager startGetFirebase];
-    
-
+    AudioManager *audioManager = [AudioManager stariAudio];
+    [audioManager MainCityPlay];
 }
 
 
