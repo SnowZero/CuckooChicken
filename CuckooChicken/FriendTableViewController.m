@@ -67,12 +67,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.textLabel.text = [userDataManager getUserName:friendArray[indexPath.row]];
-    cell.imageView.image = [UIImage imageNamed:@"配對.png"];
+    cell.imageView.image = [UIImage imageNamed:@"egg-1.png"];
+    
+
     //cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"配對.png"]];
     //設定文字背景為透明
     [cell.textLabel setBackgroundColor:[UIColor clearColor]];
     //設定背景
-    [cell setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"group.png"]]];
+    [cell setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FriendCellRow.png"]]];
 
     return cell;
 }

@@ -18,7 +18,6 @@
     NSTimer * test;
     NSDictionary * post;
 }
-@property (weak, nonatomic) IBOutlet UILabel *viewLabel;
 
 @end
 
