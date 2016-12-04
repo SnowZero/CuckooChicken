@@ -203,8 +203,11 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
                                       
                                       if (error) {
                                           NSLog(@"TTTT");
-                                          NSLog(@"%@",error);
-                                      }else{
+                                          NSLog(@"%@",error.description);
+                                      }else if (result.isCancelled) {
+
+                                          NSLog(@"Cancelled");
+                                      }else {
                                           
                                           // 準備跳到下一頁的物件
                                           UIViewController * mvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MatchVC"];

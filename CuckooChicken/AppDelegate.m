@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 
 @import Firebase;
@@ -34,6 +35,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+    
+    [FBSDKLoginButton class];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

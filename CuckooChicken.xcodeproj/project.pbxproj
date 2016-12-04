@@ -32,30 +32,18 @@
 		0203B1A31DBE1F8C009DEE71 /* Loading_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1971DBE1F8C009DEE71 /* Loading_11.png */; };
 		0203B1A41DBE1F8C009DEE71 /* turnBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1981DBE1F8C009DEE71 /* turnBackground_1.png */; };
 		0203B1AD1DBE2FD6009DEE71 /* backimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1AB1DBE2FD6009DEE71 /* backimage.png */; };
-		0203B1AE1DBE2FD6009DEE71 /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203B1AC1DBE2FD6009DEE71 /* Button.png */; };
 		023088CE1DB36D4C0037180E /* 招喚01.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CA1DB36D4C0037180E /* 招喚01.png */; };
 		023088CF1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CB1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png */; };
 		023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CC1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png */; };
 		023088D11DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088CD1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png */; };
 		023088D31DB36E000037180E /* Group_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088D21DB36E000037180E /* Group_01.png */; };
-		023088DA1DB36E580037180E /* ViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088D61DB36E580037180E /* ViewBackground.png */; };
 		023088DB1DB36E580037180E /* Optionview.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088D71DB36E580037180E /* Optionview.png */; };
-		023088DD1DB36E920037180E /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088DC1DB36E920037180E /* Back.png */; };
-		023088E01DB36F210037180E /* 技能點數.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088DE1DB36F210037180E /* 技能點數.png */; };
-		023088E11DB36F210037180E /* 小基金幣.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088DF1DB36F210037180E /* 小基金幣.png */; };
-		023088E51DB370080037180E /* 配對.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088E21DB370080037180E /* 配對.png */; };
-		023088E61DB370080037180E /* 狀態.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088E31DB370080037180E /* 狀態.png */; };
-		023088E71DB370080037180E /* 抽扭蛋.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088E41DB370080037180E /* 抽扭蛋.png */; };
-		023088EC1DB3701A0037180E /* 技能選擇圖.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088E91DB3701A0037180E /* 技能選擇圖.png */; };
-		023088ED1DB3701A0037180E /* 小兵選擇圖.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088EA1DB3701A0037180E /* 小兵選擇圖.png */; };
 		023088F41DB370A80037180E /* 牧師兵區域治療.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088EF1DB370A80037180E /* 牧師兵區域治療.png */; };
 		023088F51DB370A80037180E /* 魔法兵激光.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088F01DB370A80037180E /* 魔法兵激光.png */; };
 		023088F61DB370A80037180E /* 盾兵技能.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088F11DB370A80037180E /* 盾兵技能.png */; };
 		023088F71DB370A80037180E /* 盜賊兵技能轉換.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088F21DB370A80037180E /* 盜賊兵技能轉換.png */; };
 		023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */ = {isa = PBXBuildFile; fileRef = 023088F31DB370A80037180E /* 弓箭兵自動生成.png */; };
-		026FDDC11DBF3A7C0078B703 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDC01DBF3A7C0078B703 /* GameBackground.png */; };
 		026FDDC31DBF44460078B703 /* viewImage_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDC21DBF44460078B703 /* viewImage_2.png */; };
-		026FDDC51DBF49230078B703 /* Text_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDC41DBF49230078B703 /* Text_1.png */; };
 		026FDDC71DBF50670078B703 /* Button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDC61DBF50670078B703 /* Button_1.png */; };
 		026FDDCB1DBF53390078B703 /* Button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDC81DBF53390078B703 /* Button_2.png */; };
 		026FDDCC1DBF53390078B703 /* Button_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 026FDDC91DBF53390078B703 /* Button_3.png */; };
@@ -113,13 +101,14 @@
 		82C11ACA1DC8B08900BBC854 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C11AC91DC8B08900BBC854 /* heart.png */; };
 		82C552DC1DD07FE500E7F325 /* FriendMatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C552DB1DD07FE500E7F325 /* FriendMatchManager.m */; };
 		82DBFF381DC46C5800E4647C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DBFF371DC46C5800E4647C /* GameKit.framework */; };
-		E105D0431DEFC8A0006F3C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105D0421DEFC8A0006F3C1C /* Assets.xcassets */; };
 		E105D0451DEFCF89006F3C1C /* character_2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0441DEFCF89006F3C1C /* character_2 copy.png */; };
 		E105D0481DEFD0C4006F3C1C /* GameCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0461DEFD0C4006F3C1C /* GameCenter.png */; };
 		E105D0491DEFD0C4006F3C1C /* 找朋友.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0471DEFD0C4006F3C1C /* 找朋友.png */; };
 		E105D04B1DEFD231006F3C1C /* viewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D04A1DEFD231006F3C1C /* viewImage.png */; };
 		E105D0531DEFFD0E006F3C1C /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0521DEFFD0E006F3C1C /* Group.png */; };
 		E105D0651DF018AA006F3C1C /* FriendCellRow.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0641DF018AA006F3C1C /* FriendCellRow.png */; };
+		E105D0671DF04464006F3C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105D0661DF04464006F3C1C /* Assets.xcassets */; };
+		E105D0691DF05339006F3C1C /* Text_1.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0681DF05339006F3C1C /* Text_1.png */; };
 		E11972751D914FAC00B0AB77 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11972741D914FAC00B0AB77 /* SignInViewController.m */; };
 		E119727B1D91511200B0AB77 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E119727A1D91511200B0AB77 /* RegisteredViewController.m */; };
 		E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2BE1DB8EFE90091ABEF /* AppState.m */; };
@@ -153,30 +142,18 @@
 		0203B1971DBE1F8C009DEE71 /* Loading_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading_11.png; sourceTree = "<group>"; };
 		0203B1981DBE1F8C009DEE71 /* turnBackground_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turnBackground_1.png; sourceTree = "<group>"; };
 		0203B1AB1DBE2FD6009DEE71 /* backimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backimage.png; sourceTree = "<group>"; };
-		0203B1AC1DBE2FD6009DEE71 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		023088CA1DB36D4C0037180E /* 招喚01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "招喚01.png"; sourceTree = "<group>"; };
 		023088CB1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.19.35.png"; sourceTree = "<group>"; };
 		023088CC1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.20.55.png"; sourceTree = "<group>"; };
 		023088CD1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "螢幕快照 2016-10-13 20.20.32.png"; sourceTree = "<group>"; };
 		023088D21DB36E000037180E /* Group_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group_01.png; sourceTree = "<group>"; };
-		023088D61DB36E580037180E /* ViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewBackground.png; sourceTree = "<group>"; };
 		023088D71DB36E580037180E /* Optionview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Optionview.png; sourceTree = "<group>"; };
-		023088DC1DB36E920037180E /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
-		023088DE1DB36F210037180E /* 技能點數.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "技能點數.png"; sourceTree = "<group>"; };
-		023088DF1DB36F210037180E /* 小基金幣.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小基金幣.png"; sourceTree = "<group>"; };
-		023088E21DB370080037180E /* 配對.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "配對.png"; sourceTree = "<group>"; };
-		023088E31DB370080037180E /* 狀態.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "狀態.png"; sourceTree = "<group>"; };
-		023088E41DB370080037180E /* 抽扭蛋.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "抽扭蛋.png"; sourceTree = "<group>"; };
-		023088E91DB3701A0037180E /* 技能選擇圖.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "技能選擇圖.png"; sourceTree = "<group>"; };
-		023088EA1DB3701A0037180E /* 小兵選擇圖.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小兵選擇圖.png"; sourceTree = "<group>"; };
 		023088EF1DB370A80037180E /* 牧師兵區域治療.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "牧師兵區域治療.png"; sourceTree = "<group>"; };
 		023088F01DB370A80037180E /* 魔法兵激光.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "魔法兵激光.png"; sourceTree = "<group>"; };
 		023088F11DB370A80037180E /* 盾兵技能.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "盾兵技能.png"; sourceTree = "<group>"; };
 		023088F21DB370A80037180E /* 盜賊兵技能轉換.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "盜賊兵技能轉換.png"; sourceTree = "<group>"; };
 		023088F31DB370A80037180E /* 弓箭兵自動生成.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弓箭兵自動生成.png"; sourceTree = "<group>"; };
-		026FDDC01DBF3A7C0078B703 /* GameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackground.png; sourceTree = "<group>"; };
 		026FDDC21DBF44460078B703 /* viewImage_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewImage_2.png; sourceTree = "<group>"; };
-		026FDDC41DBF49230078B703 /* Text_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Text_1.png; sourceTree = "<group>"; };
 		026FDDC61DBF50670078B703 /* Button_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_1.png; sourceTree = "<group>"; };
 		026FDDC81DBF53390078B703 /* Button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_2.png; sourceTree = "<group>"; };
 		026FDDC91DBF53390078B703 /* Button_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_3.png; sourceTree = "<group>"; };
@@ -253,13 +230,14 @@
 		82C552DB1DD07FE500E7F325 /* FriendMatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendMatchManager.m; path = CuckooChicken/FriendMatchManager.m; sourceTree = "<group>"; };
 		82DBFF371DC46C5800E4647C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		897BFD7655E4E09520B6811D /* Pods_CuckooChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuckooChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E105D0421DEFC8A0006F3C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E105D0441DEFCF89006F3C1C /* character_2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "character_2 copy.png"; sourceTree = "<group>"; };
 		E105D0461DEFD0C4006F3C1C /* GameCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameCenter.png; sourceTree = "<group>"; };
 		E105D0471DEFD0C4006F3C1C /* 找朋友.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "找朋友.png"; sourceTree = "<group>"; };
 		E105D04A1DEFD231006F3C1C /* viewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewImage.png; sourceTree = "<group>"; };
 		E105D0521DEFFD0E006F3C1C /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
 		E105D0641DF018AA006F3C1C /* FriendCellRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriendCellRow.png; sourceTree = "<group>"; };
+		E105D0661DF04464006F3C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E105D0681DF05339006F3C1C /* Text_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Text_1.png; sourceTree = "<group>"; };
 		E11972731D914FAC00B0AB77 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		E11972741D914FAC00B0AB77 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		E11972791D91511200B0AB77 /* RegisteredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
@@ -303,7 +281,6 @@
 				026FDDC91DBF53390078B703 /* Button_3.png */,
 				026FDDCA1DBF53390078B703 /* Button_4.png */,
 				0203B1AB1DBE2FD6009DEE71 /* backimage.png */,
-				0203B1AC1DBE2FD6009DEE71 /* Button.png */,
 				0203B1811DBE1F7F009DEE71 /* Background.png */,
 				0203B18D1DBE1F8C009DEE71 /* Loading_1.png */,
 				0203B18E1DBE1F8C009DEE71 /* Loading_2.png */,
@@ -321,7 +298,6 @@
 				0203B1831DBE1F7F009DEE71 /* character_2.png */,
 				0203B1841DBE1F7F009DEE71 /* character_3.png */,
 				0203B1851DBE1F7F009DEE71 /* character_4.png */,
-				026FDDC41DBF49230078B703 /* Text_1.png */,
 				0203B1861DBE1F7F009DEE71 /* character_5.png */,
 				0203B1791DBE1F68009DEE71 /* turn_1.png */,
 				0203B17A1DBE1F68009DEE71 /* turn_2.png */,
@@ -349,16 +325,6 @@
 			children = (
 				823EF9561DD34E2700300497 /* UI_MainCityBar.png */,
 				026FDDC21DBF44460078B703 /* viewImage_2.png */,
-				026FDDC01DBF3A7C0078B703 /* GameBackground.png */,
-				023088E21DB370080037180E /* 配對.png */,
-				023088E91DB3701A0037180E /* 技能選擇圖.png */,
-				023088EA1DB3701A0037180E /* 小兵選擇圖.png */,
-				023088E31DB370080037180E /* 狀態.png */,
-				023088E41DB370080037180E /* 抽扭蛋.png */,
-				023088DE1DB36F210037180E /* 技能點數.png */,
-				023088DF1DB36F210037180E /* 小基金幣.png */,
-				023088DC1DB36E920037180E /* Back.png */,
-				023088D61DB36E580037180E /* ViewBackground.png */,
 				023088D71DB36E580037180E /* Optionview.png */,
 				822635A61DBF40660065E3CE /* GameBackground_loop.png */,
 			);
@@ -500,6 +466,7 @@
 				822635C61DC0821F0065E3CE /* CallMonsterBar.png */,
 				826D73351DC75A9300EE5242 /* pirate1.png */,
 				826D73391DC75CF900EE5242 /* pirate2.png */,
+				E105D0681DF05339006F3C1C /* Text_1.png */,
 				82C11AC91DC8B08900BBC854 /* heart.png */,
 			);
 			name = image;
@@ -546,7 +513,7 @@
 				E119727A1D91511200B0AB77 /* RegisteredViewController.m */,
 				82B2E1F01DCC9AED0080A46D /* FriendTableViewController.h */,
 				82B2E1F11DCC9AED0080A46D /* FriendTableViewController.m */,
-				E105D0421DEFC8A0006F3C1C /* Assets.xcassets */,
+				E105D0661DF04464006F3C1C /* Assets.xcassets */,
 				82B9E1421D86CE4000A1CA30 /* LaunchScreen.storyboard */,
 				82B9E1451D86CE4000A1CA30 /* Info.plist */,
 				826D73321DC7538800EE5242 /* GoogleService-Info.plist */,
@@ -636,7 +603,6 @@
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = L69ZDBX9QZ;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -684,12 +650,9 @@
 				0203B18A1DBE1F7F009DEE71 /* character_3.png in Resources */,
 				820720BF1DC8C57B005D47A5 /* Button_new.png in Resources */,
 				E105D04B1DEFD231006F3C1C /* viewImage.png in Resources */,
-				0203B1AE1DBE2FD6009DEE71 /* Button.png in Resources */,
 				82B9E1391D86CE4000A1CA30 /* GameScene.sks in Resources */,
 				023088F41DB370A80037180E /* 牧師兵區域治療.png in Resources */,
 				820720BD1DC8C1FC005D47A5 /* Win.png in Resources */,
-				026FDDC51DBF49230078B703 /* Text_1.png in Resources */,
-				023088E71DB370080037180E /* 抽扭蛋.png in Resources */,
 				E105D0531DEFFD0E006F3C1C /* Group.png in Resources */,
 				026FDDC71DBF50670078B703 /* Button_1.png in Resources */,
 				82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */,
@@ -703,12 +666,11 @@
 				023088F51DB370A80037180E /* 魔法兵激光.png in Resources */,
 				023088F61DB370A80037180E /* 盾兵技能.png in Resources */,
 				82C11ACA1DC8B08900BBC854 /* heart.png in Resources */,
-				E105D0431DEFC8A0006F3C1C /* Assets.xcassets in Resources */,
 				0203B19B1DBE1F8C009DEE71 /* Loading_3.png in Resources */,
+				E105D0671DF04464006F3C1C /* Assets.xcassets in Resources */,
 				0203B17D1DBE1F68009DEE71 /* turn_1.png in Resources */,
 				0203B1AD1DBE2FD6009DEE71 /* backimage.png in Resources */,
 				0203B19A1DBE1F8C009DEE71 /* Loading_2.png in Resources */,
-				023088ED1DB3701A0037180E /* 小兵選擇圖.png in Resources */,
 				826D73421DC75E9600EE5242 /* Magician2.png in Resources */,
 				8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */,
 				0203B1871DBE1F7F009DEE71 /* Background.png in Resources */,
@@ -718,7 +680,6 @@
 				023088D11DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.32.png in Resources */,
 				023088CF1DB36D4C0037180E /* 螢幕快照 2016-10-13 20.19.35.png in Resources */,
 				826D73411DC75E9600EE5242 /* Magician1.png in Resources */,
-				023088E61DB370080037180E /* 狀態.png in Resources */,
 				823EF9611DD35CED00300497 /* Fire.mp3 in Resources */,
 				823EF9571DD34E2700300497 /* UI_MainCityBar.png in Resources */,
 				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
@@ -726,12 +687,11 @@
 				023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */,
 				823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */,
 				023088D31DB36E000037180E /* Group_01.png in Resources */,
+				E105D0691DF05339006F3C1C /* Text_1.png in Resources */,
 				820720BC1DC8C1FC005D47A5 /* Fail.png in Resources */,
-				023088DA1DB36E580037180E /* ViewBackground.png in Resources */,
 				023088D01DB36D4C0037180E /* 螢幕快照 2016-10-13 20.20.55.png in Resources */,
 				823EF95C1DD354AE00300497 /* MainCity.mp3 in Resources */,
 				0203B1881DBE1F7F009DEE71 /* character_1.png in Resources */,
-				023088DD1DB36E920037180E /* Back.png in Resources */,
 				0203B1A11DBE1F8C009DEE71 /* Loading_9.png in Resources */,
 				820720B91DC8C1F1005D47A5 /* GameOverBackground.png in Resources */,
 				826D733A1DC75CF900EE5242 /* pirate2.png in Resources */,
@@ -741,7 +701,6 @@
 				827097A11DB1ED9A00A624EA /* eagle_back2.png in Resources */,
 				026FDDCB1DBF53390078B703 /* Button_2.png in Resources */,
 				827097A01DB1ED9A00A624EA /* eagle_back1.png in Resources */,
-				023088E51DB370080037180E /* 配對.png in Resources */,
 				E105D0451DEFCF89006F3C1C /* character_2 copy.png in Resources */,
 				0203B19E1DBE1F8C009DEE71 /* Loading_6.png in Resources */,
 				026FDDCC1DBF53390078B703 /* Button_3.png in Resources */,
@@ -755,11 +714,7 @@
 				0203B1991DBE1F8C009DEE71 /* Loading_1.png in Resources */,
 				826D73331DC7538800EE5242 /* GoogleService-Info.plist in Resources */,
 				E105D0481DEFD0C4006F3C1C /* GameCenter.png in Resources */,
-				026FDDC11DBF3A7C0078B703 /* GameBackground.png in Resources */,
-				023088E11DB36F210037180E /* 小基金幣.png in Resources */,
 				826D73451DC75F2E00EE5242 /* Priest1.png in Resources */,
-				023088E01DB36F210037180E /* 技能點數.png in Resources */,
-				023088EC1DB3701A0037180E /* 技能選擇圖.png in Resources */,
 				0203B1A21DBE1F8C009DEE71 /* Loading_10.png in Resources */,
 				82B9E13F1D86CE4000A1CA30 /* Main.storyboard in Resources */,
 			);
@@ -1008,7 +963,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L69ZDBX9QZ;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
@@ -1031,13 +986,14 @@
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken.FanHao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CuckooChicken-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1049,7 +1005,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L69ZDBX9QZ;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
@@ -1072,12 +1028,13 @@
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken.FanHao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CuckooChicken-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
