@@ -41,7 +41,7 @@
     //移除Separator
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
-                                     [UIImage imageNamed:@"group.png"]];
+                                     [UIImage imageNamed:@"Group2.png"]];
     matchManager = [FriendMatchManager new];
     friendArray = [friendData allKeys];
 }

@@ -105,7 +105,6 @@
 		E105D0481DEFD0C4006F3C1C /* GameCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0461DEFD0C4006F3C1C /* GameCenter.png */; };
 		E105D0491DEFD0C4006F3C1C /* 找朋友.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0471DEFD0C4006F3C1C /* 找朋友.png */; };
 		E105D04B1DEFD231006F3C1C /* viewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D04A1DEFD231006F3C1C /* viewImage.png */; };
-		E105D0531DEFFD0E006F3C1C /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0521DEFFD0E006F3C1C /* Group.png */; };
 		E105D0651DF018AA006F3C1C /* FriendCellRow.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0641DF018AA006F3C1C /* FriendCellRow.png */; };
 		E105D0671DF04464006F3C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E105D0661DF04464006F3C1C /* Assets.xcassets */; };
 		E105D0691DF05339006F3C1C /* Text_1.png in Resources */ = {isa = PBXBuildFile; fileRef = E105D0681DF05339006F3C1C /* Text_1.png */; };
@@ -114,6 +113,7 @@
 		E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2BE1DB8EFE90091ABEF /* AppState.m */; };
 		E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C11DB8F00F0091ABEF /* Constants.m */; };
 		E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */; };
+		E1F033131DF43BEB00C954AD /* Group2.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F033121DF43BEB00C954AD /* Group2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -234,7 +234,6 @@
 		E105D0461DEFD0C4006F3C1C /* GameCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameCenter.png; sourceTree = "<group>"; };
 		E105D0471DEFD0C4006F3C1C /* 找朋友.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "找朋友.png"; sourceTree = "<group>"; };
 		E105D04A1DEFD231006F3C1C /* viewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewImage.png; sourceTree = "<group>"; };
-		E105D0521DEFFD0E006F3C1C /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
 		E105D0641DF018AA006F3C1C /* FriendCellRow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriendCellRow.png; sourceTree = "<group>"; };
 		E105D0661DF04464006F3C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E105D0681DF05339006F3C1C /* Text_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Text_1.png; sourceTree = "<group>"; };
@@ -249,6 +248,7 @@
 		E16CE2C31DB8F0B00091ABEF /* CuckooChicken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuckooChicken.entitlements; sourceTree = "<group>"; };
 		E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasurementHelper.h; path = CuckooChicken/MeasurementHelper.h; sourceTree = "<group>"; };
 		E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasurementHelper.m; path = CuckooChicken/MeasurementHelper.m; sourceTree = "<group>"; };
+		E1F033121DF43BEB00C954AD /* Group2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group2.png; sourceTree = "<group>"; };
 		E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -345,6 +345,7 @@
 		023088C91DB36D060037180E /* CellBackgroundImage */ = {
 			isa = PBXGroup;
 			children = (
+				E1F033121DF43BEB00C954AD /* Group2.png */,
 				023088D21DB36E000037180E /* Group_01.png */,
 			);
 			name = CellBackgroundImage;
@@ -427,7 +428,6 @@
 				E105D0461DEFD0C4006F3C1C /* GameCenter.png */,
 				E105D0641DF018AA006F3C1C /* FriendCellRow.png */,
 				E105D0471DEFD0C4006F3C1C /* 找朋友.png */,
-				E105D0521DEFFD0E006F3C1C /* Group.png */,
 				8287EAFD1DC9F2A900EE0DB7 /* MainCity.h */,
 				8287EAFE1DC9F2A900EE0DB7 /* MainCity.m */,
 			);
@@ -603,6 +603,7 @@
 				TargetAttributes = {
 					82B9E12B1D86CE4000A1CA30 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L69ZDBX9QZ;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -653,7 +654,6 @@
 				82B9E1391D86CE4000A1CA30 /* GameScene.sks in Resources */,
 				023088F41DB370A80037180E /* 牧師兵區域治療.png in Resources */,
 				820720BD1DC8C1FC005D47A5 /* Win.png in Resources */,
-				E105D0531DEFFD0E006F3C1C /* Group.png in Resources */,
 				026FDDC71DBF50670078B703 /* Button_1.png in Resources */,
 				82B9E1441D86CE4000A1CA30 /* LaunchScreen.storyboard in Resources */,
 				026FDDCF1DBF57160078B703 /* Button_6.png in Resources */,
@@ -684,6 +684,7 @@
 				823EF9571DD34E2700300497 /* UI_MainCityBar.png in Resources */,
 				8270979F1DB1ED9A00A624EA /* egg-2.png in Resources */,
 				826D73371DC75A9300EE5242 /* pirate1.png in Resources */,
+				E1F033131DF43BEB00C954AD /* Group2.png in Resources */,
 				023088F81DB370A80037180E /* 弓箭兵自動生成.png in Resources */,
 				823C08BF1DBF29F00046E94A /* UI_blood.png in Resources */,
 				023088D31DB36E000037180E /* Group_01.png in Resources */,
@@ -963,7 +964,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L69ZDBX9QZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
@@ -986,7 +987,7 @@
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken.FanHao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1005,7 +1006,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CuckooChicken/CuckooChicken.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L69ZDBX9QZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
@@ -1028,7 +1029,7 @@
 				INFOPLIST_FILE = CuckooChicken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap103.CuckooChicken.FanHao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
