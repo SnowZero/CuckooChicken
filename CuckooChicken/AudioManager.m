@@ -22,12 +22,16 @@ static AudioManager *audioManager = nil;
 -(void)MainCityPlay{
 
     NSURL *soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"MainCity" ofType:@"mp3"]];
+    // 音樂重複播放
+    _Audio.numberOfLoops = -1;
     _Audio = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     [_Audio play];
 }
 
 -(void)FirePlay{
     NSURL *soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Fire" ofType:@"mp3"]];
+    // 音樂重複播放
+    _Audio.numberOfLoops = -1;
     _Audio = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     [_Audio play];
 }
