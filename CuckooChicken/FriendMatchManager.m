@@ -7,7 +7,7 @@
 //
 
 #import "FriendMatchManager.h"
-
+#import "GameViewController.h"
 #import "FireBaseManager.h"
 #import "GameScene.h"
 
@@ -20,7 +20,7 @@
     FireBaseManager *userType;
     NSString *roomKey;
     UIAlertController *alertController;
-    UIViewController *vc;
+    GameViewController *vc;
     SKScene *mainScene;
     NSString *friendUID;
     
