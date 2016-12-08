@@ -113,6 +113,7 @@
 		E16CE2BF1DB8EFE90091ABEF /* AppState.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2BE1DB8EFE90091ABEF /* AppState.m */; };
 		E16CE2C21DB8F00F0091ABEF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C11DB8F00F0091ABEF /* Constants.m */; };
 		E16CE2C61DB8F0EA0091ABEF /* MeasurementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */; };
+		E1E77E1A1DF9338400C3AA67 /* Group 13.png in Resources */ = {isa = PBXBuildFile; fileRef = E1E77E191DF9338400C3AA67 /* Group 13.png */; };
 		E1F033131DF43BEB00C954AD /* Group2.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F033121DF43BEB00C954AD /* Group2.png */; };
 		E1F033171DF4691F00C954AD /* 招喚02.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F033161DF4691F00C954AD /* 招喚02.png */; };
 /* End PBXBuildFile section */
@@ -249,6 +250,7 @@
 		E16CE2C31DB8F0B00091ABEF /* CuckooChicken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuckooChicken.entitlements; sourceTree = "<group>"; };
 		E16CE2C41DB8F0EA0091ABEF /* MeasurementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasurementHelper.h; path = CuckooChicken/MeasurementHelper.h; sourceTree = "<group>"; };
 		E16CE2C51DB8F0EA0091ABEF /* MeasurementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasurementHelper.m; path = CuckooChicken/MeasurementHelper.m; sourceTree = "<group>"; };
+		E1E77E191DF9338400C3AA67 /* Group 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 13.png"; sourceTree = "<group>"; };
 		E1F033121DF43BEB00C954AD /* Group2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group2.png; sourceTree = "<group>"; };
 		E1F033161DF4691F00C954AD /* 招喚02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "招喚02.png"; sourceTree = "<group>"; };
 		E9379C843B6FD66F0E3CC2DA /* Pods-CuckooChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuckooChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuckooChicken/Pods-CuckooChicken.release.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		023088C61DB36BE30037180E /* GameBackground */ = {
 			isa = PBXGroup;
 			children = (
+				E1E77E191DF9338400C3AA67 /* Group 13.png */,
 				820720B71DC8C1D5005D47A5 /* GameOverImage */,
 				0203B1781DBE1F46009DEE71 /* LoadingImage */,
 				827097921DB1EB8800A624EA /* GameObject */,
@@ -675,6 +678,7 @@
 				0203B17D1DBE1F68009DEE71 /* turn_1.png in Resources */,
 				0203B1AD1DBE2FD6009DEE71 /* backimage.png in Resources */,
 				0203B19A1DBE1F8C009DEE71 /* Loading_2.png in Resources */,
+				E1E77E1A1DF9338400C3AA67 /* Group 13.png in Resources */,
 				826D73421DC75E9600EE5242 /* Magician2.png in Resources */,
 				8270979D1DB1ED9A00A624EA /* eagle-2.png in Resources */,
 				0203B1871DBE1F7F009DEE71 /* Background.png in Resources */,

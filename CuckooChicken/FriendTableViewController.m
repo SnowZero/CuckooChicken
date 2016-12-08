@@ -44,6 +44,8 @@
                                      [UIImage imageNamed:@"Group2.png"]];
     matchManager = [FriendMatchManager new];
     friendArray = [friendData allKeys];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(22,0,0,0);
 }
 
 
