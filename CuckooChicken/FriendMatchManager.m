@@ -210,8 +210,6 @@
         //        [mainScene.view presentScene:scene];
         //        [vc dismissViewControllerAnimated:true completion:nil];
 
-        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-        UIView *topView = window.rootViewController.view;
         [mainScene.view presentScene:scene];
         //[window.rootViewController dismissViewControllerAnimated:true completion:nil];
         //[self cancelInvitation];
@@ -227,8 +225,8 @@
         // Present the scene.
 //        [mainScene.view presentScene:scene];
 //        [vc dismissViewControllerAnimated:true completion:nil];
-        [mainScene.view presentScene:scene];
         [vc dismissViewControllerAnimated:true completion:nil];
+        [mainScene.view presentScene:scene];
         [self cancelInvitation];
     }];
     
